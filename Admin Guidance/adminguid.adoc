@@ -1,0 +1,10 @@
+= Administrator Guidance for Tools
+:showtitle:
+:toc:
+:sectnums:
+:imagesdir: images
+:revnumber: 0.1
+:revdate: 2019-03-14
+
+== Acknowledgements
+This is designed for an admin to setup the listed tools and to manage the cPP process.
