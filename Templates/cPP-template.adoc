@@ -122,7 +122,7 @@ As defined by the references <<CC1>>, <<CC2>> and <<CC3>>, this cPP:
 
 NOTE: The following paragraph may not be applicable for app cPPs and should be added or edited as appropriate.
 
-_In order to be conformant to this cPP, a ST shall demonstrate Exact Conformance. Exact Conformance, as a subset of Strict Conformance as defined by the CC, is defined as the ST containing all of the SFRs in <<Security Functional Requirements>> (these are the mandatory SFRs) of this cPP Module, and potentially SFRs from <<Consistency Rationale>> (these are selection-based SFRs) and <<Selection-Based Requirements>> (these are optional SFRs) of this cPP. While iteration is allowed, no additional requirements (from the CC parts 2 or 3, or definitions of extended components not already included in this cPP) are allowed to be included in the ST. Further, no SFRs in <<Security Functional Requirements>> of this cPP are allowed to be omitted._
+_In order to be conformant to this cPP, a ST shall demonstrate Exact Conformance. Exact Conformance, as a subset of Strict Conformance as defined by the CC, is defined as the ST containing all of the SFRs in <<Security Functional Requirements>> (these are the mandatory SFRs) of this cPP, and potentially SFRs from <<Consistency Rationale>> (these are selection-based SFRs) and <<Selection-Based Requirements>> (these are optional SFRs) of this cPP. While iteration is allowed, no additional requirements (from the CC parts 2 or 3, or definitions of extended components not already included in this cPP) are allowed to be included in the ST. Further, no SFRs in <<Security Functional Requirements>> of this cPP are allowed to be omitted._
 
 == Security Problem Definition
 
@@ -350,11 +350,11 @@ The second type (in this chapter) comprises requirements that can be included in
 
 
 == Extended Component Definitions
-This appendix contains the definitions for the extended requirements that are used in the cPP Module, including those used in <<Consistency Rationale>> and <<Selection-Based Requirements>> . 
+This appendix contains the definitions for the extended requirements that are used in the cPP, including those used in <<Consistency Rationale>> and <<Selection-Based Requirements>> . 
 
 (Note: formatting conventions for selections and assignments in this chapter are those in <<CC2>>.)
 
-NOTE: If Extended SFRs are created they must be defined here. An example is copied here from the Biometrics Security cPP-Module (because it is short).
+NOTE: If Extended SFRs are created they must be defined here. An example is copied here from the Biometrics Security PP-Module (because it is short).
 
 === Identification and Authentication (FIA)
 
@@ -482,7 +482,7 @@ More specifically, all entropy source health tests and their rationale will be d
 
 .Consistency Rationale for threats and OSPs
 |===
-|cPP Module Threats/OSPs	|Consistency Rationale
+|Threats/OSPs	|Consistency Rationale
 
 |
 |
@@ -491,7 +491,7 @@ More specifically, all entropy source health tests and their rationale will be d
 
 .Consistency Rationale for Assumptions
 |===
-|cPP Module Assumptions	    |Consistency Rationale
+|Assumptions	    |Consistency Rationale
 
 |
 |
@@ -505,7 +505,7 @@ The objectives for the biometric system and its operational environment are cons
 
 .Consistency Rationale for TOE Objectives
 |===
-|cPP Module TOE Objectives	|Consistency Rationale
+|TOE Objectives	|Consistency Rationale
 
 |
 |
@@ -515,7 +515,7 @@ The objectives for the biometric system and its operational environment are cons
 
 .Consistency Rationale for Environmental Objectives
 |===
-|cPP Module Environmental Objectives	|Consistency Rationale
+|Environmental Objectives	|Consistency Rationale
 
 |
 |
