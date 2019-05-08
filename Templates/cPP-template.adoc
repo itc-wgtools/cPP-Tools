@@ -45,8 +45,9 @@ Although the cPP and SD may contain minor editorial errors, the cPP is recognize
 
 For more see the http://www.commoncriteriaportal.org/[Common Criteria Portal].
 
+=== Terminology
 
-=== Acronyms
+==== Acronyms
 .Acronyms
 [%header,cols="1,4"]
 
@@ -62,7 +63,7 @@ For more see the http://www.commoncriteriaportal.org/[Common Criteria Portal].
 |===
 
 
-=== Glossary
+==== Glossary
 For the purpose of this cPP, the following terms and definitions given in _some specific references_ apply. If the same terms and definitions are given in those references, terms and definitions that fit the context of this cPP take precedence.
 
 [glossary]
