@@ -1,0 +1,478 @@
+
+= collaborative Protection Profile Module for _Some Product_
+:showtitle:
+:toc:
+:sectnums:
+:imagesdir: images
+:revnumber: 0.1
+:revdate: 2019-05-08
+
+== Acknowledgements
+This collaborative Protection Profile Module (PP-Module) was developed by the _my iTC name_ international Technical Community (iTC) with representatives from industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
+
+*INDUSTRY*
+
+_Vendors_
+
+*COMMON CRITERIA TESTING LABORATORIES*
+
+_ITSEF Name_
+
+*GOVERNMENT AGENCIES*
+
+_Government Agency Names_
+
+
+== Preface
+
+=== Objectives of Document
+This document presents the Common Criteria (CC) collaborative Protection Profile Module (PP-Module) to express the security functional requirements (SFRs) and security assurance requirements (SARs) for _some technology type_. The Evaluation activities that specify the actions the evaluator performs to determine if a product satisfies the SFRs captured within this PP-Module, are described in <<SD>>.
+
+=== Scope of Document
+The scope of the PP-Module within the development and evaluation process is described in the Common Criteria for Information Technology Security Evaluation. In particular, a PP-Module defines the IT security requirements of a generic type of TOE and specifies the functional security measures to be offered by that TOE to meet stated requirements [<<CC1>>, Section B.14].
+
+=== Intended Readership
+The target audiences of this PP-Module are developers, CC consumers, system integrators, evaluators and schemes. 
+
+Although the PP-Module and SD may contain minor editorial errors, the PP-Module is recognized as living document and the iTC is dedicated to ongoing updates and revisions. Please report any issues to the _this_ iTC. 
+
+=== Related Documents
+[bibliography]
+* [[[CC1]]]	Common Criteria for Information Technology Security Evaluation, Part 1: Introduction and General Model, CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
+* [[[CC2]]] Common Criteria for Information Technology Security Evaluation, Part 2: Security Functional Components, CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
+* [[[CC3]]]	Common Criteria for Information Technology Security Evaluation, Part 3: Security Assurance Components, CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
+* [[[CEM]]]	Common Methodology for Information Technology Security Evaluation, Evaluation Methodology, CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
+
+For more see the http://www.commoncriteriaportal.org/[Common Criteria Portal].
+
+
+=== Acronyms
+.Acronyms
+[%header,cols="1,4"]
+
+|===
+|Acronym |Meaning
+
+|AES
+|Advanced Encryption Standard
+
+|
+|
+
+|===
+
+
+=== Glossary
+For the purpose of this PP-Module, the following terms and definitions given in _some specific references_ apply. If the same terms and definitions are given in those references, terms and definitions that fit the context of this PP-Module take precedence.
+
+[glossary]
+Data Encryption Key (DEK)::
+A key used to encrypt data at rest.
+
+
+=== Revision History
+
+.Revision history
+[%header,cols="1,2,4"]
+|===
+|Version 
+|Date 
+|Description
+
+|0.1
+|_TBD_
+|Initial Release for iTC Review
+
+|
+|
+|
+
+
+|===
+
+== PP-Module Introduction
+
+=== PP-Module Reference Identification
+- PP-Module Reference: {doctitle}
+- PP-Module Version: {revnumber}
+- PP-Module Date: {revdate}
+
+=== TOE Overview
+NOTE: This may be short, but is likely to be 1-2 pages
+
+=== TOE Design
+NOTE: This may not be necessary depending on the technology type. It may already be clear what the design is, or it is covered in the Overview. For example in the NDcPP there is an entire section dedicated to use case/design selections to deal with distributed TOEs.
+
+=== TOE Use Case
+If you are defining use cases (such as specific use scenarios that may have unique requirement selections), put that here.
+
+==== USE CASE 1: first use case
+
+
+==== USE CASE 2: second use case
+
+
+
+== CC Conformance Claims
+As defined by the references <<CC1>>, <<CC2>> and <<CC3>>, this PP-Module:
+
+* conforms to the requirements of Common Criteria v3.1, Revision 5,
+* is Part 2 extended,
+* does not claim conformance to any other security functional requirement packages.
+
+NOTE: The following paragraph may not be applicable for all PP-Modules and should be added or edited as appropriate.
+
+_In order to be conformant to this PP-Module, a ST shall demonstrate Exact Conformance. Exact Conformance, as a subset of Strict Conformance as defined by the CC, is defined as the ST containing all of the SFRs in <<Security Functional Requirements>> (these are the mandatory SFRs) of this PP-Module, and potentially SFRs from <<Consistency Rationale>> (these are selection-based SFRs) and <<Selection-Based Requirements>> (these are optional SFRs) of this PP-Module. While iteration is allowed, no additional requirements (from the CC parts 2 or 3, or definitions of extended components not already included in this PP-Module) are allowed to be included in the ST. Further, no SFRs in <<Security Functional Requirements>> of this PP-Module are allowed to be omitted._
+
+== Security Problem Definition
+
+The security problem is described in terms of the threats that the TOE is expected to address, assumptions about its operational environment, and any organizational security policies that the TOE is expected to enforce.
+
+=== Threats
+
+
+
+=== Assumptions
+
+
+ 
+=== Organizational Security Policies
+
+
+
+== Security Objectives 
+
+
+=== Security Objectives for the TOE
+
+
+
+=== Security Objectives for the Operational Environment
+
+
+
+=== Security Objectives Rationale
+The following table describes how the assumptions, threats, and organizational security policies map to the security objectives.
+
+.Mapping between Security Problem Defintion and Security Objectives
+[%header,cols="1,1,1"]
+|===
+|Threat, Assumption, or OSP 
+|Security Objectives 
+|Rationale
+
+|
+|
+|
+
+|===
+
+== Security Functional Requirements
+
+=== Conventions
+The individual security functional requirements are specified in the sections below.
+The following conventions are used for the completion of operations:
+
+* [_Italicized text within square brackets_] indicates an operation to be completed by the ST author.
+
+* *Bold text* indicates additional text provided as a refinement.
+
+* [*Bold text within square brackets*] indicates the completion of an assignment.
+
+* [text within square brackets] indicates the completion of a selection.
+
+* Number in parentheses after SFR name, e.g. (1) indicates the completion of an iteration.
+
+Extended SFRs are identified by having a label “EXT” at the end of the SFR name.
+
+NOTE: The following sections have been included from CC Part 2 just as reference.
+
+=== Security Audit (FAU)
+
+
+=== Communication (FCO)
+
+
+=== Cryptograhic Support (FCS)
+
+
+=== User Data Protection (FDP)
+
+
+=== Identification and Authentication (FIA)
+
+
+=== Security Management (FMT)
+
+
+=== Privacy (FPR)
+
+
+=== Protection of the TSF (FPT)
+
+
+=== Resource Utilization (FRU)
+
+
+=== TOE Access (FTA)
+
+
+=== Trusted Channels (FTP)
+
+
+
+== Security Assurance Requirements
+This PP-Module does not define any additional assurance requirements above and beyond what is defined in the _Base-PP_ that it extends. Application of the SARs to the TOE boundary described by both the claimed base and this PP-Module is sufficient to demonstrate that the claimed SFRs have been implemented correctly by the TOE.
+
+== Optional Requirements
+
+ST authors are free to choose none, some or all SFRs defined in this chapter. Just the fact that a product supports a certain functionality does not mandate to add any SFR defined in this chapter.
+
+NOTE: This section should contain any SFRs considered "optional" by the iTC. If there are none, then that should be stated (that there are no optional requirements in the PP-Module).
+
+
+== Selection-Based Requirements
+
+As indicated in the introduction to this PP-Module, the baseline requirements (those that shall be performed by the TOE) are contained in <<Security Functional Requirements>>. Additionally, there are two other types of requirements specified in <<Consistency Rationale>> and <<Selection-Based Requirements>>.
+
+The first type (in this chapter) comprises requirements based on selections in other SFRs from the PP-Module: if certain selections are made, then additional requirements in this chapter will need to be included in the body of the ST.
+
+The second type (in this chapter) comprises requirements that can be included in the ST, but are not mandatory for a TOE to claim conformance to this PP-Module.
+
+
+== Extended Component Definitions
+This appendix contains the definitions for the extended requirements that are used in the PP-Module, including those used in <<Consistency Rationale>> and <<Selection-Based Requirements>> . 
+
+(Note: formatting conventions for selections and assignments in this chapter are those in <<CC2>>.)
+
+NOTE: If Extended SFRs are created they must be defined here. An example is copied here from the Biometrics Security PP-Module (because it is short).
+
+=== Identification and Authentication (FIA)
+
+==== Mobile biometric enrolment (FIA_MBE_EXT)
+
+===== Family Behaviour
+
+This component defines the requirements for the TSF to be able to enrol a user, create templates of sufficient quality and prevent presentation attacks.
+
+===== Component levelling
+[#img-FIA-MBE-EXT] 
+.Component levelling 
+[ditaa]
+....
+                                                     +---+
+                                                  +->| 1 |
+                                                  |  +---+
+    +------------------------------------------+  |
+    |                                          |  |  +---+
+    | FIA_MBE_EXT  Mobile biometric enrollment +--+->| 2 |
+    |                                          |  |  +---+
+    +------------------------------------------+  |
+                                                  |  +---+
+                                                  +--| 3 |
+                                                     +---+
+       
+....
+
+FIA_MBE_EXT.1 Mobile biometric enrolment requires the TSF to enrol a user.
+
+FIA_MBE_EXT.2 Quality of biometric templates for mobile biometric enrolment requires the TSF to create templates of sufficient quality.
+
+FIA_MBE_EXT.3 Presentation attack detection for mobile biometric enrolment requires the TSF to prevent presentation attacks during the mobile biometric enrolment.
+
+===== Management: FIA_MBE_EXT.1
+
+There are no management activities foreseen.
+
+===== Management: FIA_MBE_EXT.2
+
+The following actions could be considered for the management functions in FMT:
+
+a)	the management of the TSF data (setting threshold values for quality scores to generate templates) by an administrator.
+
+===== Management: FIA_MBE_EXT.3
+The following actions could be considered for the management functions in FMT:
+
+a)	the management of the TSF data (setting values for detecting artificial presentation attack instruments) by an administrator.
+
+===== Audit: FIA_MBE_EXT.1, FIA_MBE_EXT.2
+The following actions should be auditable if FAU_GEN Security audit data generation is included in the PP/ST:
+
+a)	Basic: Success or failure of the mobile biometric enrollment
+
+===== Audit: FIA_MBE_EXT.3
+The following actions should be auditable if FAU_GEN Security audit data generation is included in the PP/ST:
+
+a)	Basic: Detection of presentation attacks
+
+===== FIA_MBE_EXT.1 Mobile biometric enrolment
+Hierarchical to: No other components
+
+Dependencies: No dependencies
+
+*FIA_MBE_EXT.1.1* The TSF shall provide a mechanism to enrol an authenticated user.
+
+*Application Note {counter:remark_count}*:: User shall be authenticated by the mobile device using the Password Authentication Factor before beginning biometric enrolment.
+
+===== FIA_MBE_EXT.2 Quality of biometric templates for mobile biometric enrolment
+Hierarchical to: No other components
+Dependencies: 	FIA_MBE_EXT.1 Mobile biometric enrolment
+
+*FIA_MBE_EXT.2.1* The TSF shall create templates of sufficient quality.
+
+*Application Note {counter:remark_count}*:: ST author may refine “sufficient quality” to specify quality standards if the TOE follows such standard.
+
+===== FIA_MBE_EXT.3 Presentation attack detection for mobile biometric enrolment
+
+Hierarchical to: No other components
+Dependencies: FIA_MBE_EXT.1 Mobile biometric enrolment
+
+*FIA_MBE_EXT.3.1* The TSF shall prevent use of artificial presentation attack instruments from being successfully enrolled.
+
+== Entropy Documentation and Assessment
+
+NOTE: This section may not always be applicable when talking about PP-Modules (which may rely on entropy from a Base-PP). This particular section is copied from the NDcPP.
+
+This appendix describes the required supplementary information for each entropy source used by the TOE.
+
+The documentation of the entropy source(s) should be detailed enough that, after reading, the evaluator will thoroughly understand the entropy source and why it can be relied upon to provide sufficient entropy. This documentation should include multiple detailed sections: design description, entropy justification, operating conditions, and health testing. This documentation is not required to be part of the TSS.
+
+=== Design Description
+Documentation shall include the design of each entropy source as a whole, including the interaction of all entropy source components. Any information that can be shared regarding the design should also be included for any third-party entropy sources that are included in the product.
+
+The documentation will describe the operation of the entropy source to include how entropy is produced, and how unprocessed (raw) data can be obtained from within the entropy source for testing purposes. The documentation should walk through the entropy source design indicating
+where the entropy comes from, where the entropy output is passed next, any post-processing of the raw outputs (hash, XOR, etc.), if/where it is stored, and finally, how it is output from the entropy source. Any conditions placed on the process (e.g., blocking) should also be described
+in the entropy source design. Diagrams and examples are encouraged.
+
+This design must also include a description of the content of the security boundary of the entropy source and a description of how the security boundary ensures that an adversary outside the boundary cannot affect the entropy rate.
+
+If implemented, the design description shall include a description of how third-party applications can add entropy to the RBG. A description of any RBG state saving between power-off and power-on shall be included.
+
+=== Entropy Justification
+There should be a technical argument for where the unpredictability in the source comes from and why there is confidence in the entropy source delivering sufficient entropy for the uses made of the RBG output (by this particular TOE). This argument will include a description of the expected min-entropy rate (i.e. the minimum entropy (in bits) per bit or byte of source data) and explain that sufficient entropy is going into the TOE randomizer seeding process. This discussion will be part of a justification for why the entropy source can be relied upon to produce bits with entropy.
+
+The amount of information necessary to justify the expected min-entropy rate depends on the type of entropy source included in the product.
+
+For developer-provided entropy sources, in order to justify the min-entropy rate, it is expected that a large number of raw source bits will be collected, statistical tests will be performed, and the min-entropy rate determined from the statistical tests. While no particular statistical tests are required at this time, it is expected that some testing is necessary in order to determine the amount of min-entropy in each output.
+
+For third-party provided entropy sources, in which the TOE vendor has limited access to the design and raw entropy data of the source, the documentation will indicate an estimate of the amount of min-entropy obtained from this third-party source. It is acceptable for the vendor to
+“assume” an amount of min-entropy, however, this assumption must be clearly stated in the documentation provided. In particular, the min-entropy estimate must be specified and the assumption included in the ST.
+
+Regardless of the type of entropy source, the justification will also include how the DRBG is initialized with the entropy stated in the ST, for example by verifying that the min-entropy rate is multiplied by the amount of source data used to seed the DRBG or that the rate of entropy expected based on the amount of source data is explicitly stated and compared to the statistical rate. If the amount of source data used to seed the DRBG is not clear or the calculated rate is not explicitly related to the seed, the documentation will not be considered complete.
+
+The entropy justification shall not include any data added from any third-party application or from any state saving between restarts.
+
+=== Operating Conditions
+The entropy rate may be affected by conditions outside the control of the entropy source itself. For example, voltage, frequency, temperature, and elapsed time after power-on are just a few of the factors that may affect the operation of the entropy source. As such, documentation will also include the range of operating conditions under which the entropy source is expected to generate random data. Similarly, documentation shall describe the conditions under which the entropy source is no longer guaranteed to provide sufficient entropy. Methods used to detect failure or degradation of the source shall be included.
+
+=== Health Testing
+More specifically, all entropy source health tests and their rationale will be documented. This will include a description of the health tests, the rate and conditions under which each health test is performed (e.g., at start up, continuously, or on-demand), the expected results for each health test, TOE behaviour upon entropy source failure, and rationale indicating why each test is believed to be appropriate for detecting one or more failures in the entropy source.
+
+
+== Consistency Rationale
+
+.Consistency Rationale for threats and OSPs
+|===
+|Threats/OSPs	|Consistency Rationale
+
+|
+|
+
+|===
+
+.Consistency Rationale for Assumptions
+|===
+|Assumptions	    |Consistency Rationale
+
+|
+|
+
+
+|===
+
+==== Consistency of Objectives
+
+The objectives for the biometric system and its operational environment are consistent with the <<MDFPP>> based on the following rationale:
+
+.Consistency Rationale for TOE Objectives
+|===
+|TOE Objectives	|Consistency Rationale
+
+|
+|
+
+
+|===
+
+.Consistency Rationale for Environmental Objectives
+|===
+|Environmental Objectives	|Consistency Rationale
+
+|
+|
+
+|===
+
+==== Consistency of Requirements
+
+
+== SFR List
+This table is provided as a reference of all SFRs included in this PP-Module.
+
+The Type column has the following definitions:
+
+Mandatory:: The requirement is mandatory for inclusion in the ST.
+Optional:: The requirement is optional for inclusion in the ST.
+Selection:: The requirement inclusion is determined by selections in other requirements in the ST.
+
+.Security Functional Requirements
+[Header,cols="4,8,2"]
+|===
+|Requirement Class
+|Requirement Components
+|Type
+
+|Security Audit (FAU)
+|
+|
+
+|Communication (FCO)
+|
+|
+
+|Cryptograhic Support (FCS)
+|
+|
+
+|User Data Protection (FDP)
+|
+|
+
+|Identification and Authentication (FIA)
+|
+|
+
+|Security Management (FMT)
+|
+|
+
+|Privacy (FPR)
+|
+|
+
+|Protection of the TSF (FPT)
+|
+|
+
+|Resource Utilization (FRU)
+|
+|
+
+|TOE Access (FTA)
+|
+|
+
+|Trusted Channels (FTP)
+|
+|
+|===
