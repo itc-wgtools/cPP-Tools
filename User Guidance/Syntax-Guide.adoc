@@ -1,0 +1,376 @@
+= AsciiDoc for iTC Syntax Reference
+:showtitle:
+:toc:
+:sectnums:
+:imagesdir: images
+:revnumber: 0.1
+:revdate: 2019-05-14
+:xrefstyle: full
+
+== Overview
+This document is not really for reading, but is to show various syntax/styling for AsciiDoc that would be expected to be used by an iTC in creating/maintaining their documentation.
+
+This guide is really intended to be read directly in the editor as opposed to as a "finished" document as the code for the syntax here is intended as examples to be easily copied into the documents.
+
+The examples here are not intended to be exhaustive, but focused on the syntax that is most likely to be needed in the creation of the documents. 
+
+=== External References
+There are two primary reference sites for more full descriptions along with some recommended practices:
+
+* https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[Quick Reference Guide]
+* https://asciidoctor.org/docs/asciidoc-writers-guide/[Writer's Guide]
+* https://asciidoctor.org/docs/asciidoc-recommended-practices/[Recommended Practices]
+
+Additionally this is a reference for creating embedded graphics with ditaa:
+
+* http://ditaa.sourceforge.net/
+
+These guides have the full syntax supporting by AsciiDoc, while this one is focused on the syntax that is used in the templates provided here and expected to be used in these documents.
+
+== Document Attribute Syntax
+This section focuses on attributes for the whole document, for example the Table of Contents.
+
+=== Document Header
+The following attributes are used for information about the document itself. They will automatically generate a title page with a revision and date on it. There are additional fields that can be added (including authors and such), but at this point these are not likely to be used.
+
+This will show the title when a PDF document is create from this. No information needs to be added after this line. The actual title definition is shown in the <<Section Headers>> section.
+
+:showtitle: 
+
+This will show the version number of the doc
+:revnumber: <some number>
+
+This will show the revision date of the doc
+:revdate: <some date>
+
+These can be accessed elsewhere in the document by surrounding the text with {}.
+
+{revdate} should show the date listed at the top of the document when previewed
+
+=== Table of Contents
+To create a table of contents, the following can be used:
+
+:toc:
+:toclevels: <some number>
+
+This will create a TOC immediately after the title page. The toclevels will allow you to specify the number of levels (the default is 2) shown in the TOC.
+
+To move the TOC to another location, place this line at the beginning:
+
+:toc: macro
+
+And then where you want the TOC to be located, place this line:
+
+toc::[]
+
+The TOC will pick up the contents based on the levels specified as section headers.
+
+=== Internal References/Document Variables
+In addition to the basic atttributes shown here, it is possible to create custom attributes and then reference them anywhere in the document. For example, if you are going to use a URL repeatedly but that it may change (as websites are known to do), it may be easier to note it once in the header with the other attributes and reference it everywhere else. As long as the attribute isn't a built-in one, you can name it anything.
+
+:google-url-example: https://www.google.com
+
+To then reference this, you would just write {google-url-example}.
+
+This can be used for any text, not just a URL.
+
+
+== Section Headers
+Sections are marked using = signs. The number of them specifies the level. There MUST be a space between the = and the text or it will not be rendered as a section.
+
+The first level (one =) is reserved for the document title and is usually the first line in the document.
+
+The first level of sections is therefore marked by ==
+
+=== Section Numbering
+To number the sections (by default no numbers would be added), the following line must be set
+
+:sectnums:
+
+If you need to remove section numbers, use this:
+
+:sectnums!:
+
+This will stop section numbering
+
+=== example of no numbers
+
+It is possible to use these back and forth as needed in the document.
+
+=== Appendices
+To create an Appendix section, you need to add this line before ALL the level 2 section headers (i.e. the == level) you need to be Appendices. If you skip it, the headers will revert to the normal style.
+
+[appendix]
+:sectnums:
+== Appendix test
+
+=== Appendix sub-heading
+
+Note here that the sectnums is enabled for the appendix. Without this the subsections will not be numbered. When this is used, they will be given A.1, A.2, B.1, B.2, etc
+
+:sectnums:
+
+== Normal Text & Paragraphs
+Normal text does not need any markings. Paragraphs will be created automatically either by empty lines (the exception being after headings the next line will start as a paragraph.
+
+Two sentences can be written in one line. Like this is.
+
+Or they can be written on two consecutive lines.
+As long as there is not a blank line between them, they will be processed as a paragraph.
+
+
+
+
+
+Extra line breaks within the document will be ignored when rendering the file, so they can be useful for viewing the document (breaking up content) if needed).
+
+
+
+
+
+
+*Bold*
+
+[underline]#Underline#
+
+_Italics_
+
+[line-through]#Strikethrough#
+
+=== Admonitions
+There are several "admonitions" that can be used.
+
+[NOTE]
+====
+This can call out information
+====
+
+[IMPORTANT]
+====
+this can give a notice something is important
+====
+
+[WARNING]
+====
+Warning symbol
+====
+
+== Lists
+Lists can be ordered or unordered.
+
+=== Unordered Lists
+
+* level 1
+** level 2
+*** level 3
+**** level 4
+***** level 5
+* level 1
+
+=== Ordered Lists
+The default for an ordered list is the 1aiAI for the level.
+
+. level 1
+.. level 2
+... level 3
+.... level 4
+..... level 5
+. level 1
+
+To change the type of numbering, the following can be specified:
+
+[arabic]
+[loweralpha]
+[lowerroman]
+
+There are "upper" versions of these as well. Note that if you decide not to use the default of 1aiAI you will need to specify the syntax before EVERY appropriate level to build your list (i.e. [loweralpha] before the first line, then [arabic] before the second to go the a1, so each level will have to be specifically defined when you first use it. If you don't specify it, the list will default to the normal follow-on (as you can see in the level 3 in the list above and below having the same "i").
+
+[loweralpha]
+. level 1
+[arabic]
+.. level 2
+.. level 2
+... level 3
+.... level 4
+..... level 5
+. level 1
+
+=== Continued lines in lists
+Sometimes you may want to have 2 lines indented as part of the same bullet/list item. This is accomplished by having a + on a line by itself, which will link it to the preceeding item. Note that the second line needs to have a blank line after it.
+
+. level 1
+. level 1 again
++
+test
+
+.. level 2
+... level 3
+.... level 4
+..... level 5
+. level 1
+
+=== Definitions
+Another type of list in AsciiDoc is a "definition".
+
+AES:: Advanced Encryption System
+
+These can be written on one line or 2, the key point being the two colons at the end.
+
+== Links
+There are a few types of links that can be used, internal and external.
+=== Hyperlinks
+A hyperlink can just be added directly https://asciidoctor.org/docs/asciidoc-recommended-practices/ and rendered in the document.
+
+To make it look nice, you can add text to be shown in place of the URL by adding [] with the text after link this:
+
+https://asciidoctor.org/docs/asciidoc-recommended-practices/[Recommended Practices]
+
+Both will be properly rendered in the output.
+
+The attribute reference can be used here as a hyperlink, and using the [] will still replace the URL with the nice text:
+
+{google-url-example}[Google]
+
+=== Internal Links
+Internal links can be referenced anywhere in the document so it is possible to have cross references. The most common example is to section headings.
+
+==== Linking to Section Headers
+<<Links>> is an example that will link to this section, while <<Section Headers>> will link to that section. It is important that any section you plan to link to be uniquely named, so references to sections that may have repeating titles will need to be handled differently. 
+
+When linking to section headers, the xrefstyle attribute determines what is shown. Here are the three ways that the section headers can be referenced:
+
+This shows everything, the section name and the full title
+:xrefstyle: full
+This is the default, just showing the title
+:xrefstyle: basic
+This only shows the section number (no title, but will say Section 2.3)
+:xrefstyle: short
+
+These is set for the entire document, so the selection will be used everywhere.
+
+==== Linking to Internal locations by anchors
+Internal anchors are markers you can place outside of the section headers to allow for cross references in the document. These can be created using two methods:
+
+[[testanchor]]This is a test.
+
+<<testanchor,text>> (here this is shown to link to the line above and replace the anchor name with "text")
+
+Anchors placed inside a Table header will take the name of the table. An anchor placed right before a Section will take the name of the section by default (this can be used to mark sections with the same name individually for cross references or to provide a short name when creating the links in the text).
+
+
+== Tables
+Tables are created in this manner. It is possible to put each row on its own line separate by |, but I have found it is easier read by placing them in their own section like below. Each set of 3 lines starting with a pipe is a single row in the table (with each line being on column to the right).
+
+the [[TestTable]] is an anchor to the table
+
+The [cols="1,1,1",options="header"] line specifies the number of columns and their relative widths (in this case 3 equal columns). The "header" will make the first row a header row.
+
+The cols spacing can be tweaked as needed using small numbers or any relative sizes that are needed (i.e. 15,85 is just a good as 1,3 in terms of acceptable values).
+
+.TestTable
+[[TestTable]]
+[cols="1,1,1",options="header"]
+|===
+|Title 
+|Version 
+|Link
+
+|text
+|0.1
+|some URL
+
+|more text
+|0.8
+|another URL
+
+|yet more text
+|0.3
+|another URL
+
+|===
+
+Tables may also require some special settings. For example, a field may need more than basic text (by default only paragraph text can be used). Here is an example where the first box has a ordered list.
+
+To span rows or columns, an X.Y+ is used before the table box. To span 2 (or more) rows, would have .Y+ before the field, while X.+ would span 2 (or more) columns. Using both will span in both directions.
+
+.Long Table Name
+[cols="1,1,1",options="header"]
+|===
+|Title 
+|Version 
+|Link
+
+a|. text
+. test
+|0.1
+|some URL
+
+.2+|more text
+|0.8
+|another URL
+
+
+|0.3
+|another URL
+
+|===
+
+== Images & Graphics
+The are two ways to have images in the document. One is by embedding externally created images into the document, the other is by using a built-in capability to generate graphics. 
+
+=== Embedding Graphics
+To embed images created externally, an folder for these needs to be specified. This folder is normally a child folder to the location of the document (i.e. /images under the current folder).
+
+:imagesdir: images
+
+To reference an image in the folder: image:CClogo.PNG[,,80]
+
+The above can be used to place the image inline to the text.
+
+You can add text in the [], and the numbers are the size of the image. Note that the image will be presenting with the same ratio when displayed.
+
+To place an image on its own with a lable, use the below example.
+
+[#img-CC]
+.The Common Criteria Logo
+image::CClogo.PNG[,200,50]
+
+=== Creating Graphics
+It is possible to use ditaa using ASCII art. This can be used to create fairly complex diagrams, but mostly is likely to be for simple ones.
+
+The diagram needs to have the [ditaa] and the .... to register as something to be rendered instead of plain text.
+
+[#img-FIA-MBE-EXT] 
+.Component levelling 
+[ditaa]
+....
+                                                     +---+
+                                                  +->| 1 |
+                                                  |  +---+
+    +------------------------------------------+  |
+    |                                          |  |  +---+
+    | FIA_MBE_EXT  Mobile biometric enrollment +--+->| 2 |
+    |                                          |  |  +---+
+    +------------------------------------------+  |
+                                                  |  +---+
+                                                  +->| 3 |
+                                                     +---+
+....
+
+This is a list of color codes which can be added to boxes.
+
+[#img-color codes]
+.Color Codes
+[ditaa]
+....
+Color codes
+/-------------+-------------\
+|cRED RED     |cBLU BLU     |
++-------------+-------------+
+|cGRE GRE     |cPNK PNK     |
++-------------+-------------+
+|cBLK BLK     |cYEL YEL     |
+\-------------+-------------/       
+....
+
+
