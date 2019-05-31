@@ -1,10 +1,11 @@
-= PP-Configuration for _Protection Profile 1_ and _Protection Profile 2_
+= PP-Configuration for _Protection Profile 1_ and _PP-Module 1_
 :showtitle:
 :toc:
 :table-caption: Table
 :revnumber: 0.8
 :revdate: 2019-01-31
 
+:sectnums!:
 == Acknowledgements
 
 This PP-Configuration was developed by the _your_ international Technical Community (iTC) with representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
@@ -18,14 +19,13 @@ This PP-Configuration was developed by the _your_ international Technical Commun
 |===
 
 :sectnums:
-
 == Introduction
 
 === PP-Configuration Overview
-
 The purpose of a PP-Configuration is to combine Protection Profiles (PPs) and PP-Modules for various technology types into a single configuration that can be evaluated as a whole. 
 
-This PP-Configuration _Define the scope of the combined system that would be covered by the PP/PP-Modules in this configuration._
+This PP-Configuration _Define the scope of the combined system that would be covered by the PP(s)/PP-Module(s) in this configuration._
+
 
 === PP-Configuration Reference
 
@@ -56,8 +56,8 @@ _List the PPs/PP-Modules to be covered by this document_
 
 |===
 
-NOTE: If the configuration covers multiple PPs/PP-Modules they must all be listed here. 
-However it should be recognised that in some cases the components may be in transition. For example, combinations with the MDFPP to date have not included the WLAN EP (since it is not yet a PP-Module), even though that is required for the MDFPP, because the WLAN requirements do not interact in any way with the combinations being proposed (to date). If this is a specific configuration though that covers explicitly a Base-PP and more than one PP-Module or other PP, then they should all be listed here.
+WARNING: If the configuration covers multiple PPs/PP-Modules they must all be listed here. 
+However it should be recognised that in some cases the PP-Configuration components may be in transition. For example, combinations with the MDFPP to date have not included the WLAN EP (since it is not yet a PP-Module), even though that is required for the MDFPP. Since the WLAN requirements do not interact in any way with the combinations being proposed (to date), some schemes have allowed this combination during transition. 
 
 === PP-Configuration Components Statements
 _provide statements that explain the rationale for including each of the PP-Configuration components_
@@ -70,7 +70,6 @@ NOTE: As an example from an MDF configuration
 
 ==== Base PP Statements
 NOTE: As an example from an MDF configuration:
-
 The [MDF_BASE-PP] allows it’s use for evaluation of wireless connectivity which is included on the Mobile Devices with the Extended Package for WLAN Client an MDM agent. [MOD_WLAN] is the currently NIAP approved version of that PP-Module.
 [MDF_BASE-PP] also allows that the Extended Package for Mobile Device Management Agents, should be used for evaluation of an MDM Agent component. [MOD_MDM-AGENT] is the currently NIAP approved version of the MDM Agent PP-Module.
 [MDF_BASE-PP] also allows that the Extended Package for IPsec VPN Client, should be used for evaluation of an IPsec VPN client component. [MOD_VPN] is the currently NIAP approved version of the VPN client PP-Module.
@@ -94,7 +93,7 @@ To be conformant to this PP-Configuration, an ST must demonstrate Exact Conforma
 NOTE: This example is from a NIAP-generated PP-Configuration for Exact Conformance. If the PP has other requirements, different conformance statements would be required. Other conformance types are "Strict" and "Demonstrable".
 
 == SAR Statement
-The set of SARs specified for this PP-Configuration are taken from, and identical to, those specified in the Base-PP.
+The set of SARs specified for this PP-Configuration are taken from, and identical to, those specified in the base PP.
 
 NOTE: Normally the above statement is likely to be sufficient for a PP-Configuration. Where there may be some differences (such as merging different PPs), then a table with how the claims are combined and managed will be necessary.
 
