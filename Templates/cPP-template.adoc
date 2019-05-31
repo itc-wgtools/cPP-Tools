@@ -119,11 +119,18 @@ As defined by the references <<CC1>>, <<CC2>> and <<CC3>>, this cPP:
 
 * conforms to the requirements of Common Criteria v3.1, Revision 5,
 * is Part 2 extended,
+* is Part 3 conformant,
 * does not claim conformance to any other security functional requirement packages.
 
-NOTE: The following paragraph may not be applicable for app cPPs and should be added or edited as appropriate.
+NOTE: The following paragraph may not be applicable for all cPPs and should be added or edited as appropriate.
 
 _In order to be conformant to this cPP, a ST shall demonstrate Exact Conformance. Exact Conformance, as a subset of Strict Conformance as defined by the CC, is defined as the ST containing all of the SFRs in <<Security Functional Requirements>> (these are the mandatory SFRs) of this cPP, and potentially SFRs from <<Consistency Rationale>> (these are selection-based SFRs) and <<Selection-Based Requirements>> (these are optional SFRs) of this cPP. While iteration is allowed, no additional requirements (from the CC parts 2 or 3, or definitions of extended components not already included in this cPP) are allowed to be included in the ST. Further, no SFRs in <<Security Functional Requirements>> of this cPP are allowed to be omitted._
+
+=== Components allowed with this cPP in a PP-Configuration
+
+The packages to which exact conformance can be claimed in conjunction with this PP are specified in the ‘Allowed Packages’ list at _specify the location of the list_. 
+PP-Modules that are allowed to specify this cPP as a base PP are specified in the _specify the location of the list_. 
+Other PPs that are allowed to be included in a PP-Configuration along with this cPP are specified in the _specify the location of the list_.
 
 == Security Problem Definition
 
@@ -243,9 +250,9 @@ After the ST has been approved for evaluation, the ITSEF will obtain the TOE, su
 
 |Extended components definition (ASE_ECD.1)
 
-|ST introduction (ASE_INT.1) 
+|ST introduction (ASE_INT.1)�
 
-|Security objectives for the operational environment (ASE_OBJ.1) 
+|Security objectives for the operational environment (ASE_OBJ.1)�
 
 |Stated security requirements (ASE_REQ.1)
 
@@ -254,7 +261,7 @@ After the ST has been approved for evaluation, the ITSEF will obtain the TOE, su
 |TOE summary specification (ASE_TSS.1)
 
 |Development (ADV)
-|Basic functional specification (ADV_FSP.1) 
+|Basic functional specification (ADV_FSP.1)�
 
 .2+|Guidance documents (AGD)
 |Operational user guidance (AGD_OPE.1)
@@ -277,12 +284,12 @@ After the ST has been approved for evaluation, the ITSEF will obtain the TOE, su
 === ASE: Security Target
 The ST is evaluated as per ASE activities defined in the <<CEM>>. In addition, there may be Evaluation Activities specified within the <<SD>> that call for necessary descriptions to be included in the TSS that are specific to the TOE technology type.
 
-NOTE: As an option, the cPP may express a need for a more detailed description of how a TOE satisfies one or more SFRs. The level of detail required by the SD may include proprietary information, or simply information that should not be made public (i.e., provides attackers insight into the operation of the TOE that may increase the likelihood of a successful attack against the product). This information could be submitted as an appendix to the ST or as a separate document. The required information may take the form of a refinement as shown below, and the associated Evaluation Activity would be specified in the SD. 
+NOTE: As an option, the cPP may express a need for a more detailed description of how a TOE satisfies one or more SFRs. The level of detail required by the SD may include proprietary information, or simply information that should not be made public (i.e., provides attackers insight into the operation of the TOE that may increase the likelihood of a successful attack against the product). This information could be submitted as an appendix to the ST or as a separate document. The required information may take the form of a refinement as shown below, and the associated Evaluation Activity would be specified in the SD.�
 
 === ADV: Development
 The design information about the TOE is contained in the guidance documentation available to the end user as well as the TSS portion of the ST, and any additional information required by this cPP that is not to be made public (e.g., Entropy Report).
 
-==== Basic Functional Specification (ADV_FSP.1) 
+==== Basic Functional Specification (ADV_FSP.1)�
 The functional specification describes the TOE Security Functions Interfaces (TSFIs). It is not necessary to have a formal or complete specification of these interfaces. Additionally, because TOEs conforming to this cPP will necessarily have interfaces to the Operational Environment that are not directly invokable by TOE users, there is little point specifying that such interfaces be described in and of themselves since only indirect testing of such interfaces may be possible. For this cPP, the Evaluation Activities for this family focus on understanding the interfaces presented in the TSS in response to the functional requirements and the interfaces presented in the AGD documentation. No additional “functional specification” documentation is necessary to satisfy the Evaluation Activities specified in <<SD>>.
 
 The Evaluation Activities in <<SD>> are associated with the applicable SFRs; since these are directly associated with the SFRs, the tracing in element ADV_FSP.1.2D is implicitly already done and no additional documentation is necessary.
@@ -441,7 +448,7 @@ Dependencies: FIA_MBE_EXT.1 Mobile biometric enrolment
 
 == Entropy Documentation and Assessment
 
-NOTE: This section may not always be applicable when talking about PP-Modules (which may rely on entropy from a Base-PP). This particular section is copied from the NDcPP.
+NOTE: This section may not always be applicable when talking about PP-Modules (which may rely on entropy from a base PP). This particular section is copied from the NDcPP.
 
 This appendix describes the required supplementary information for each entropy source used by the TOE.
 
