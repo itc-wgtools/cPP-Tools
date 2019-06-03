@@ -1,39 +1,14 @@
-= PP-Configuration for _Protection Profile 1_ and _Protection Profile 2_
+= PP-Configuration for _Protection Profile 1_ and _PP-Module 1_
 :showtitle:
 :toc:
 :table-caption: Table
 :revnumber: 0.8
 :revdate: 2019-01-31
 
+:sectnums!:
 == Acknowledgements
 
 This PP-Configuration was developed by the _your_ international Technical Community (iTC) with representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
-
-:sectnums:
-
-== Introduction
-
-=== Overview
-
-The purpose of a PP-Configuration is to define a Target of Evaluation (TOE) that combines Protection Profiles (PPs) and PP-Modules for various technology types into a single configuration that can be evaluated as a whole. 
-
-_Define the scope of the combined system that would be covered by the PP/PP-Modules in this configuration._
-
-=== PP-Configuration Reference
-
-This PP-Configuration is identified as follows:
-
-* _List the PPs/PP-Modules to be covered by this document_
-* As a shorthand reference, it can be identified as "__some short name__"
-
-=== PP-Configuration Components Statement
-
-This PP-Configuration includes the following components:
-
-* Base-PP: _Reference the Base-PP_
-* PP-Module: _Reference the PP-Module (this could also be another PP)_
-
-NOTE: If the configuration covers multiple PPs/PP-Modules they can all be listed here, but this is not required. For example, combinations with the MDFPP to date have not included the WLAN EP (not yet a PP-Module), even though that is required for the MDFPP, because the WLAN requirements do not interact in any way with the combinations being proposed (to date). If this is a specific configuration though that covers explicitly a Base-PP and more than one PP-Module or other PP, then they should all be listed here. 
 
 === Revision History
 
@@ -43,24 +18,112 @@ NOTE: If the configuration covers multiple PPs/PP-Modules they can all be listed
 |0.8 |31 Jan, 2019 |First draft for review
 |===
 
+:sectnums:
+== Introduction
+
+=== PP-Configuration Overview
+The purpose of a PP-Configuration is to combine Protection Profiles (PPs) and PP-Modules for various technology types into a single configuration that can be evaluated as a whole. 
+
+This PP-Configuration _Define the scope of the combined system that would be covered by the PP(s)/PP-Module(s) in this configuration._
+
+
+=== PP-Configuration Reference
+
+This PP-Configuration is identified as follows:
+
+* A long name
+* A shorthand reference
+
+[NOTE]
+====
+PP-Configuration identifiers should be unique within the CCRA catalogues. An example of a shorthand name is "PPC-MDF-0000X" where PPC indicates that it is a PP-Configuration, and "MDF" indicates the base PP.
+====
+
+=== PP-Configuration Components
+This PP-Configuration includes the following components:
+_List the PPs/PP-Modules to be covered by this document_
+
+[cols="1,3"]
+|===
+|[base PP] 
+|One base PP with all version/identification info
+
+|[PP-Module 1] 
+|At least one PP-Module with all version/identification info
+
+|[PP-Module 2] 
+|Some PP-Module with all version/identification info
+
+|[Other PP] 
+|Optionally other PPs with all version/identification info
+
+|===
+
+[WARNING]
+====
+If the configuration covers multiple PPs/PP-Modules they must all be listed here. 
+
+However it should be recognised that in some cases the PP-Configuration components may be in transition. For example, combinations with the MDFPP to date have not included the WLAN EP (since it is not yet a PP-Module), even though that is required for the MDFPP. Since the WLAN requirements do not interact in any way with the combinations being proposed (to date), some schemes have allowed this combination during transition. 
+====
+
+=== PP-Configuration Components Statements
+_provide statements that explain the rationale for including each of the PP-Configuration components_
+
+==== PP-Module Statements
+[NOTE] 
+====
+As an example from an MDF configuration
+
+[MOD_MDM-AGENT] states, in its section 1.4, that the document can be used to can extend the extends the MDF PP and the TOE is a native part of a mobile operating system. The TOE for this EP combined with the MDF PP is the Mobile Device itself plus the MDM Agent.
+
+[MOD_WLAN] states, in its section 1.1, that the document can be used to extend the Mobile Device Fundamentals PP v3.x. when the WLAN client is installed on a self-contained Mobile Device evaluated against that PP.
+
+[MOD_VPN] states in its section 1.1 that this PP-Module is intended for use with Protection Profile for Mobile Device Fundamentals (MDF PP).
+====
+
+==== Base PP Statements
+[NOTE] 
+====
+As an example from an MDF configuration:
+
+The [MDF_BASE-PP] allows it’s use for evaluation of wireless connectivity which is included on the Mobile Devices with the Extended Package for WLAN Client an MDM agent. [MOD_WLAN] is the currently NIAP approved version of that PP-Module.
+
+[MDF_BASE-PP] also allows that the Extended Package for Mobile Device Management Agents, should be used for evaluation of an MDM Agent component. [MOD_MDM-AGENT] is the currently NIAP approved version of the MDM Agent PP-Module.
+
+[MDF_BASE-PP] also allows that the Extended Package for IPsec VPN Client, should be used for evaluation of an IPsec VPN client component. [MOD_VPN] is the currently NIAP approved version of the VPN client PP-Module.
+====
+
 == Conformance Claims
 
 === CC Conformance
+This PP-Configuration, and its components specified in section 1.3, are conformant to Parts 2 (extended) and 3 (conformant) of Common Criteria Version 3.1, Release 5 [CC].
 
-*Conformance Statement*
+[NOTE]
+====
+In some cases some components may conform to different versions of [CC]. In this case a conformance claim would have to be deduced that allowed for that.
+====
+
+=== Technical Decisions
+The following technical decisions were found to be applicable to the PP-Configuration:
+
+*	_List any applicable technical decisions_
+
+=== Conformance Statement
 
 To be conformant to this PP-Configuration, an ST must demonstrate Exact Conformance, as defined by the CC and CEM addenda for Exact Conformance, Selection-Based SFRs, and Optional SFRs (dated May 2017).
 
-NOTE: This example is from a NIAP-generated PP-Configuration for Exact Conformance. If the PP has other requirements, different conformance statements would be required.
+[NOTE]
+====
+This example is from a NIAP-generated PP-Configuration for Exact Conformance. If the PP has other requirements, different conformance statements would be required. Other conformance types are "Strict" and "Demonstrable".
+====
 
-*CC Conformance Claims*
+== SAR Statement
+The set of SARs specified for this PP-Configuration are taken from, and identical to, those specified in the base PP.
 
-This PP-Configuration, and its components specified in section 1.3, are conformant to Parts 2 (extended) and 3 (conformant) of Common Criteria Version 3.1, Release 5 [CC].
-
-=== SAR Statement
-The set of SARs specified for this PP-Configuration are taken from, and identical to, those specified in the Base-PP.
-
-NOTE: Normally the above statement is likely to be sufficient for a PP-Configuration. Where there may be some differences (such as merging different PPs), then a table with how the claims are combined and managed will be necessary.
+[NOTE]
+====
+Normally the above statement is likely to be sufficient for a PP-Configuration. Where there may be some differences (such as merging different PPs), then a table with how the claims are combined and managed will be necessary.
+====
 
 === Related Documents
 
@@ -84,18 +147,3 @@ CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
 Exact Conformance, Selection-Based SFRs, Optional SFRs, +
 Version 0.5, May 2017.
 |===
-
-*Protection Profiles*
-
-NOTE: This section is optional but is a good reference to have (and you can use the references here as shorthand in the document).
-
-[cols="1,3"]
-|===
-|[Base-PP] 
-|Some Base-PP with all version/identification info
-
-|[PP-Module] 
-|Some PP-Module with all version/identification info
-|===
-
-
