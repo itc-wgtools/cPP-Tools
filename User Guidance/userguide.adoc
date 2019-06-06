@@ -1,10 +1,146 @@
-= User Guidance for Tools
+= iTC User Guidance for GitHub
 :showtitle:
 :toc:
 :sectnums:
+:sectnumlevels: 5
 :imagesdir: images
 :revnumber: 0.1
-:revdate: 2019-03-14
+:revdate: 2019-06-05
 
+:!sectnums:
+[abstract]
 == Acknowledgements
-This is designed for a user to participate in the creation and maintenance of the cPP using the provided tools.
+This document was created by the CCUF Team Tools Working Group for the benefit of everyone involved with Common Criteria.
+
+If you want to participate in the maintenance of this or any other documents, send an email to <email address> (likely the group mailing list).
+
+== Background
+This document is intended as an introduction on how to use GitHub for the purposes of participating in an iTC. The CCUF Team Tools WG is providing a set of guidance and templates on using several free tools that can be used to create and maintain the documentation produced by an iTC.
+
+Many of these tools are not necessarily familiar to the people who perform most of the tasks associated with an iTC, so several guides have been created to guide new users to these tools in how they will be used within the iTC.
+
+For more information about the full set of tools and their guides, please see the https://github.com/itc-wgtools/cPP-Tools[CCUF Team Tools] website.
+
+== Intended Audience
+This guide is intended for anyone who is participating in an iTC using GitHub. While there are also guides for more advanced users, this guide will be useful for anyone participating in an iTC using GitHub for managing documentation.
+
+[NOTE]
+====
+This guide is specifically targeted to using GitHub through a web browser. There are additional tools that can be used with GitHub offline that are covered separately and build on the same functions that are described in this guide.
+====
+
+:sectnums:
+== Introduction
+This guide is going to show how to use GitHub for making comments and editing the documents of an iTC. There are many reasons to do this, but among the most important are these:
+
+* Concurrent editing - using GitHub it is possible for multiple people to work on the same document, at the same time, and have all edits tracked independently
+* Comment tracking & history - using GitHub comments on documents (or any questions) can be tracked, discussed, linked to actual edits and eventually closed while remaining available for later review (i.e. that time when you know something was discussed but can no longer remember why you came to a specific decision)
+* Versioning/Release control - GitHub is built for the purpose of maintaining and releasing source code, so provides the tools needed for configuration and release management built-in
+
+By taking advantage of the capabilities of GitHub, an iTC should be able to manage the process of ongoing creation and editing of their PP and SD without trying to email documents around with someone being stuck to integrating all the changes and comments. This more interactive process will hopefully better support ongoing efforts within the community.
+
+=== Changes for GitHub
+While there are many benefits, using GitHub does require some changes to how we would normally work on a document. Most of us are probably familiar with working on Word documents (in your editor of choice), with all the rich WYSIWYG formatting. The problem with these document formats is that they do not readily allow for multiple editors in their binary format.
+
+The primary change for working in GitHub is the change in document format, from a WYSIWYG editor to working in plain text. The great advantage of plain text though is that it allows you to easily focus on the content, and this content can be easily indexed by GitHub to track multiple editors working at the same time. Changes as small as one character are readily tracked in GitHub and can be easily seen.
+
+Of course we don't want plain text Protection Profiles, so we need to have some sort of syntax that allows us to specify things like headers, tables, bullets and such as we expect in our documents. While there are many formats that can be used for this, this guide points to the https://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoctor processor] to generate the styles we expect. The CCUF Team Tools WG has provided a template document titled "Asciidoctor for iTC Syntax Reference" for more information about the syntax that is used to create the styles that are most likely to be used in the iTC documents.
+
+Another change is in how to comment on the documents. While today in a Word document you are most likely to just use the comment feature and highlight the place you are commenting on. Within GitHub this is still possible, but the feature is called an Issue (as opposed to a comment). The great thing about Issues though is that they do not need to be removed from the document when it is published, so the history of the comment and any discussion (and even a resolution) are maintained.
+
+=== Translating into GitHub
+As mentioned, there are some changes to how you would normally work in a Word document to how you will need to work in GitHub, and one of the biggest change is in the terminology, so here is a short description of the two main changes.
+
+Comment -> Issue::
+In a Word document you add Comments to the document. In GitHub you will instead create Issues. An Issue can be created that is tied to a specific point in a document or it can be a topic to discuss (i.e. not tied to a specific document or item within a document).
+
+Change/Edit -> Pull Request::
+In a Word document when Track Changes is enabled, you are able to see the suggested edit and the replaced text. The equivalent in GitHub is to create a Pull Request. This is how GitHub tracks changes made to documents and allows further discussions on the changes.
+
+Version -> Branch (sort of )::
+In GitHub active work is done on a branch. Generally you will work in a "develop" branch which is basically the working copy of the document until these are committed to the "Master" branch. At some point the "Master" is published and this will create say v1.0 of you document (or document set). 
+
+Repository::
+In GitHub a repository is the entirety of all files, Issues, Pull Requests, even the Wiki associated with a project. It is possible that the iTC may create several repositories under the iTC to separate work into different areas. Each repository has its own files, Issues and Pull Requests (though it is possible to link between them).
+
+== Introduction to GitHub
+=== GitHub Account
+The first step to using GitHub is to create an account. These are free (one of the reasons GitHub was chosen) and the sign up is found on the home page.
+
+[#img-GH-signup]
+.GitHub Sign up
+image::UG-000002.PNG[,600,]
+
+Once you have created your account, you should provide the username to the iTC GitHub administrators. This is not required, but is recommended (and is required it you are to have elevated privileges within the iTC).
+
+Once you have created your account, sign in to interact with GitHub.
+
+=== Overview of GitHub Sections
+There are four primary areas within GitHub you will interact with.
+
+[#img-GH-sections]
+.GitHub Sections
+image::UG-000003.png[,400,]
+
+==== Code Overview
+The Code section is like a folder of all the documents contained in the repository. There will be folders with documents inside like you would expect, though there will not be multiple versions of a single file (i.e. iterations of the document), only the one for the branch you are working on.
+
+[#img-GH-code]
+.GitHub Code
+image::UG-000004.png[,600,]
+
+Clicking on a folder will open that folder and show the files inside. The iTC administrator will likely have created folders to hold different, related documents.
+
+[#img-GH-subfolder]
+.GitHub Code Subfolder
+image::UG-000006.png[,600,]
+
+Since we are using Asciidoctor as the file format most of the files you see should end in ".adoc" (though you may also see PDF as output or images that were used in the documents).
+
+Clicking on a file will open the file and display it (GitHub mostly parses the Asciidoctor files, so while not exactly the final output, it will be pretty close).
+
+===== Changing the Branch
+As noted above, branches are used to show different versions (such as the target publishing branch, and any others that are being worked on in the meantime). There will always be two primary branches as noted, and generally work will be done in the develop branch. Additional branches will be created during the editing process. To switch between branches, click the Branch button and select the branch you want to work on.
+
+[#img-GH-branch]
+.GitHub Change Branch
+image::UG-000007.png[,300,]
+
+Changing the branch will show you the current state of the files stored within that branch. So for example if the develop branch has added a new image that isn't present in the existing Master (i.e. the current release), switching to the Master branch would not show that image while the devlop branch will.
+
+The administrator will set the default branch you should work on (usually develop), so you probably will not need to change branches often.
+
+==== Issues Overview
+The Issues area is basically the comments section. From here you can see open issues and directly create new ones.
+
+[#img-GH-Issues]
+.GitHub Issues
+image::UG-000008.png[,600,]
+
+Clicking on an Issue title will open the Issue, showing the conversation in a style similar to a forum (each person's post in order of them being added from the first to the last at the bottom).
+
+[#img-GH-Issue-View]
+.GitHub Issue View
+image::UG-000009.png[,600,]
+
+Working with Issues will be described in the section <<Using Issues>>.
+
+==== Pull Requests Overview
+The Pull Requests area is the editing review section. From here you can see edits that have been made to documents that are waiting to be accepted and merged into the current branch. 
+
+==== Wiki Overview
+The wiki is what you would expect, a wiki. You can create and edit pages here. This is useful for tracking things like meeting agenda/minutes and other useful information for everyone (like overviews of progress, direction, etc).
+
+Live everything else in GitHub, every page change is fully tracked including who made the edits and when.
+
+ADD SCREENSHOTS
+
+
+== Using Issues
+
+The conversation shows who made the comments (blacked out here), and other information, such as the labels that have been added (for filtering). 
+
+In the box at the bottom (showing *Write* and *Leave a comment*) you can add to the Issue conversation. Clicking the image:UG-000010.PNG[,,50] button will add your contribution.
+
+To create a new Issue, click the image:UG-000011.PNG[,,50] button, provide a title and your description.
+
