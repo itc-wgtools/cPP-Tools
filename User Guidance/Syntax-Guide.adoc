@@ -1,4 +1,4 @@
-= AsciiDoc for iTC Syntax Reference
+= Asciidoctor for iTC Syntax Reference
 :showtitle:
 :toc:
 :sectnums:
@@ -8,7 +8,7 @@
 :xrefstyle: full
 
 == Overview
-This document is not really for reading, but is to show various syntax/styling for AsciiDoc that would be expected to be used by an iTC in creating/maintaining their documentation.
+This document is not really for reading, but is to show various syntax/styling for Asciidoctor that would be expected to be used by an iTC in creating/maintaining their documentation.
 
 This guide is really intended to be read directly in the editor as opposed to as a "finished" document as the code for the syntax here is intended as examples to be easily copied into the documents.
 
@@ -25,7 +25,7 @@ Additionally this is a reference for creating embedded graphics with ditaa:
 
 * http://ditaa.sourceforge.net/
 
-These guides have the full syntax supporting by AsciiDoc, while this one is focused on the syntax that is used in the templates provided here and expected to be used in these documents.
+These guides have the full syntax supporting by Asciidoctor, while this one is focused on the syntax that is used in the templates provided here and expected to be used in these documents.
 
 == Document Attribute Syntax
 This section focuses on attributes for the whole document, for example the Table of Contents.
@@ -210,7 +210,7 @@ test
 . level 1
 
 === Definitions
-Another type of list in AsciiDoc is a "definition".
+Another type of list in Asciidoctor is a "definition".
 
 AES:: Advanced Encryption System
 
@@ -327,9 +327,11 @@ To reference an image in the folder: image:CClogo.PNG[,,80]
 
 The above can be used to place the image inline to the text.
 
-You can add text in the [], and the numbers are the size of the image. Note that the image will be presenting with the same ratio when displayed.
+You can add text (a title) in the [], and the numbers are the size of the image. Note that the image will be presenting with the same ratio when displayed. These are in [title,width,height].
 
-To place an image on its own with a lable, use the below example.
+It is possible to just specify either the width or height and not both. The image will be automatically scaled to match the provided size.
+
+To place an image on its own with a label, use the below example.
 
 [#img-CC]
 .The Common Criteria Logo
