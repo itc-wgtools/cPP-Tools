@@ -127,6 +127,8 @@ Clicking on an Issue title will open the Issue, showing the conversation in a st
 .GitHub Issue View
 image::UG-000009.png[,600,]
 
+
+
 Working with Issues will be described in the section <<Using Issues>>.
 
 ==== Pull Requests Overview
@@ -151,6 +153,8 @@ image::UG-000015.png[,500,]
 It may show different information (such as reviews have occurred and be green), but this shows the status of reviews on the Pull request and whether it is ready to be merged.
 
 Merging is the process of accepting the proposed edit and making it part of the main working document (i.e. making it part of the branch).
+
+Working with Pull requests will be described in the section <<Using Pull requests>>.
 
 ==== Wiki Overview
 The wiki is what you would expect, a wiki. You can create and edit pages here. This is useful for tracking things like meeting agenda/minutes and other useful information for everyone (like overviews of progress, direction, etc).
@@ -207,11 +211,49 @@ In addition to being able to cross-link to other items, you may want to referenc
 Referencing a person this way does two things. The first is it allows you to direct your comments to someone (such as replying to something said earlier when multiple are contributing). The second is that it specifically notifies that person they have been mentioned in the item so they know to check.
 
 == Using Issues
+The Issues area is one of the two areas where you will probably spend most of your time in GitHub. As noted before, this is where conversations about your iTC will happen. In many cases, eventually this will lead to a Pull request, but the point of Issues is to talk about different aspects of the iTC work.
 
+=== Reviewing Issues
+Reviewing Issues is similar to commenting in any forum application. At the bottom of the Issue thread there will be a dialog box showing two tabs, image:UG-000020.PNG[,,80]. Any comments you want to make should be entered in the dialog box. Clicking the image:UG-000010.PNG[,,50] button will add your contribution.
 
-The conversation shows who made the comments (blacked out here), and other information, such as the labels that have been added (for filtering). 
+=== Creating New Issues
+While reviewing existing issues is important, creating new Issues is a common task. 
 
-In the box at the bottom (showing *Write* and *Leave a comment*) you can add to the Issue conversation. Clicking the image:UG-000010.PNG[,,50] button will add your contribution.
+To create a new Issue, click the image:UG-000011.PNG[,,50] button, provide a title and your description. Once you have entered your Issue, click the image:UG-000024.PNG[,,75] button to create the Issue.
 
-To create a new Issue, click the image:UG-000011.PNG[,,50] button, provide a title and your description.
+==== Additional Issue Fields
+When creating (or reviewing) and Issue, there are several other fields that can be assigned. These fields can help assign specific people to review the Issue (they will get a notification about being assigned) as well as providing fields that can be used to filter the Issue.
 
+Each of these fields can be configuring using the gear icon.
+
+The Projects field may be used by the administrator but is not covered here.
+
+[#img-GH-Issue-Fields]
+.GitHub Issue Additional Fields
+image::UG-000021.png[,200,]
+
+These additional fields can be changed or assigned at any time, so submitting without them does not cause any problems, but as always, providing more information is better.
+
+===== Assignees
+This field allows you to assign other iTC members to review your Issue. There is no limit to the number that can be assigned though they must be selected individually.
+
+===== Labels
+The Labels field allows you to specify categories for the Issue. The specific Labels will be created by the administrator, but can be anything.
+
+[#img-GH-Issue-Labels]
+.GitHub Issue Labeling
+image::UG-000022.png[,200,]
+
+As you can see in the example there are labels for specific topic areas as well as generic topics like bug or enhancement. If there are labels that will help categorize your Issue for others, you should select them from the available list. There is no limit to the number of Labels that can be assigned.
+
+===== Milestone
+The Milestone field allows you to specify a release target. Generally this would be some date for release, but may also be internal timelines for completion. If Milestones are being used, an appropriate Milestone should be selected.
+
+[#img-GH-Issue-Milestone]
+.GitHub Issue Milestones
+image::UG-000023.png[,200,]
+
+Only one Milestone may be selected.
+
+== Permalinks in Issues
+One of the most important type of links that can be created, especially in an Issue, is a permalink. 
