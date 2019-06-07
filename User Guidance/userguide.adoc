@@ -12,7 +12,7 @@
 == Acknowledgements
 This document was created by the CCUF Team Tools Working Group for the benefit of everyone involved with Common Criteria.
 
-If you want to participate in the maintenance of this or any other documents, send an email to <email address> (likely the group mailing list).
+If you want to participate in the maintenance of this or any other documents, send an email to ccuf-team-tools-wg@googlegroups.com.
 
 == Background
 This document is intended as an introduction on how to use GitHub for the purposes of participating in an iTC. The CCUF Team Tools WG is providing a set of guidance and templates on using several free tools that can be used to create and maintain the documentation produced by an iTC.
@@ -29,6 +29,10 @@ This guide is intended for anyone who is participating in an iTC using GitHub. W
 This guide is specifically targeted to using GitHub through a web browser. There are additional tools that can be used with GitHub offline that are covered separately and build on the same functions that are described in this guide.
 ====
 
+== Resources
+
+ADD REFERENCES HERE TO OTHER TTWG DOCS
+
 :sectnums:
 == Introduction
 This guide is going to show how to use GitHub for making comments and editing the documents of an iTC. There are many reasons to do this, but among the most important are these:
@@ -44,7 +48,7 @@ While there are many benefits, using GitHub does require some changes to how we 
 
 The primary change for working in GitHub is the change in document format, from a WYSIWYG editor to working in plain text. The great advantage of plain text though is that it allows you to easily focus on the content, and this content can be easily indexed by GitHub to track multiple editors working at the same time. Changes as small as one character are readily tracked in GitHub and can be easily seen.
 
-Of course we don't want plain text Protection Profiles, so we need to have some sort of syntax that allows us to specify things like headers, tables, bullets and such as we expect in our documents. While there are many formats that can be used for this, this guide points to the https://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoctor processor] to generate the styles we expect. The CCUF Team Tools WG has provided a template document titled "Asciidoctor for iTC Syntax Reference" for more information about the syntax that is used to create the styles that are most likely to be used in the iTC documents.
+Of course we don't want plain text Protection Profiles, so we need to have some sort of syntax that allows us to specify things like headers, tables, bullets and such as we expect in our documents. While there are many formats that can be used for this, this guide points to the https://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoctor processor] to generate the styles we expect. The CCUF Team Tools WG has provided a template document titled __**Asciidoctor for iTC Syntax Reference**__ for more information about the syntax that is used to create the styles that are most likely to be used in the iTC documents.
 
 Another change is in how to comment on the documents. While today in a Word document you are most likely to just use the comment feature and highlight the place you are commenting on. Within GitHub this is still possible, but the feature is called an Issue (as opposed to a comment). The great thing about Issues though is that they do not need to be removed from the document when it is published, so the history of the comment and any discussion (and even a resolution) are maintained.
 
@@ -54,8 +58,8 @@ As mentioned, there are some changes to how you would normally work in a Word do
 Comment -> Issue::
 In a Word document you add Comments to the document. In GitHub you will instead create Issues. An Issue can be created that is tied to a specific point in a document or it can be a topic to discuss (i.e. not tied to a specific document or item within a document).
 
-Change/Edit -> Pull Request::
-In a Word document when Track Changes is enabled, you are able to see the suggested edit and the replaced text. The equivalent in GitHub is to create a Pull Request. This is how GitHub tracks changes made to documents and allows further discussions on the changes.
+Change/Edit -> Pull request (PR)::
+In a Word document when Track Changes is enabled, you are able to see the suggested edit and the replaced text. The equivalent in GitHub is to create a Pull request. This is how GitHub tracks changes made to documents and allows further discussions on the changes.
 
 Version -> Branch (sort of )::
 In GitHub active work is done on a branch. Generally you will work in a "develop" branch which is basically the working copy of the document until these are committed to the "Master" branch. At some point the "Master" is published and this will create say v1.0 of you document (or document set). 
@@ -128,15 +132,82 @@ Working with Issues will be described in the section <<Using Issues>>.
 ==== Pull Requests Overview
 The Pull Requests area is the editing review section. From here you can see edits that have been made to documents that are waiting to be accepted and merged into the current branch. 
 
+[#img-GH-Pull-requests]
+.GitHub Pull requests
+image::UG-000012.png[,600,]
+
+Clicking on a Pull request title will open the Pull request, showing the conversation about the Pull request as well as links to the changes that have been suggested. The view is similar to the Issues view.
+
+[#img-GH-Pull-request-View]
+.GitHub Pull request View
+image::UG-000014.png[,600,]
+
+At the bottom of any Pull request you will see something like this. 
+
+[#img-GH-Pull requests]
+.GitHub Pull requests
+image::UG-000015.png[,500,]
+
+It may show different information (such as reviews have occurred and be green), but this shows the status of reviews on the Pull request and whether it is ready to be merged.
+
+Merging is the process of accepting the proposed edit and making it part of the main working document (i.e. making it part of the branch).
+
 ==== Wiki Overview
 The wiki is what you would expect, a wiki. You can create and edit pages here. This is useful for tracking things like meeting agenda/minutes and other useful information for everyone (like overviews of progress, direction, etc).
 
 Live everything else in GitHub, every page change is fully tracked including who made the edits and when.
 
-ADD SCREENSHOTS
+[#img-GH-Wiki]
+.GitHub Wiki
+image::UG-000016.png[,600,]
 
+As with any wiki, page content can be created to cover any topics that are needed.
+
+== Writing in GitHub
+=== Using Markdown/Asciidoctor
+When using GitHub, all the comments and documentation edits you make are in plain text. As noted in <<Changes for GitHub>> the documentation is all intended to be written in using the Asciidoctor syntax. But comments (or the wiki) in GitHub uses its own implementation of Markdown. These are similar but not quite the same.
+
+For more information specifically about how to use the Asciidoctor syntax, review the document __**Asciidoctor for iTC Syntax Reference**__ provided by the CCUF Team Tools WG. This document specifically provides examples of the syntax that is expected to be needed in the iTC documentation.
+
+When editing comments or wiki entries though, the GitHub markdown needs to be used. The easiest way to use this is by using the highlighted icons at the top of the editor.
+
+[#img-GH-Markdown]
+.GitHub Markdown
+image::UG-000017.png[,500,]
+
+These icons let you adjust the size, set bullets, make quotes, etc. These will automatically insert the proper markdown symbols for you. To see what the output will look like, click the Preview tab and the text will be rendered.
+
+[NOTE]
+====
+You will use the same comment box for all the text entry, whether for a comment or when editing a Pull request. The specific syntax you use, Asciidoctor or GitHub markdown is completely dependent on what you are doing. 
+
+Do not worry about making a mistake about which syntax to use though, as GitHub makes it easy to edit and make changes.
+====
+
+More information about GitHub markdown can be found https://guides.github.com/features/mastering-markdown/[here].
+
+=== Internal link references
+One of the more powerful features of the Issue and Pull request system is the ability to cross-link between related items. This is accomplished by starting with the number sign #. This will then bring up a menu of all the open Issues and Pull requests in the repository to select from. If you happen to know the number of the item you are trying to reference, you can start typing the number to narrow the choices (and if you just type the entire number the result is the same).
+
+[#img-GH-Internal-Linking]
+.GitHub Internal Linking
+image::UG-000018.png[,500,]
+
+This will automatically create a hyperlink to the other item in the text.
+
+In the item that is referenced, there will be an added note to the conversation (which is linked to the referencing item).
+
+[#img-GH-Internal-cross-reference]
+.GitHub Internal Cross Reference
+image::UG-000019.png[,500,]
+
+=== Referencing a Person
+In addition to being able to cross-link to other items, you may want to reference a specific person in a comment. This can be done using the @ symbol. When typing @ you will see a list of people (by their username) in the repository (or you can type the username if you know it).
+
+Referencing a person this way does two things. The first is it allows you to direct your comments to someone (such as replying to something said earlier when multiple are contributing). The second is that it specifically notifies that person they have been mentioned in the item so they know to check.
 
 == Using Issues
+
 
 The conversation shows who made the comments (blacked out here), and other information, such as the labels that have been added (for filtering). 
 
