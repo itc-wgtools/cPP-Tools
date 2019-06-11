@@ -140,6 +140,7 @@ image::UG-000012.png[,600,]
 
 Clicking on a Pull request title will open the Pull request, showing the conversation about the Pull request as well as links to the changes that have been suggested. The view is similar to the Issues view.
 
+[[prview]]
 [#img-GH-Pull-request-View]
 .GitHub Pull request View
 image::UG-000014.png[,600,]
@@ -255,5 +256,82 @@ image::UG-000023.png[,200,]
 
 Only one Milestone may be selected.
 
-== Permalinks in Issues
-One of the most important type of links that can be created, especially in an Issue, is a permalink. 
+=== Permalinks in Issues
+One of the most important type of links that can be created, especially in an Issue, is a permalink. A permalink is a direct reference to a location within a file and marks the location permanently (so it will be tracked to that location regardless of the changes that may occur over time. 
+
+[IMPORTANT]
+====
+When referencing a specific location within a document, you should always add a permalink to the line.
+====
+
+Because of the types of documents being used, the following is the process for adding a permalink.
+
+[NOTE]
+====
+Open a second tab in the browser (so you can have the file and the Comment open at the same time).
+====
+
+. In the Code area select the file you are making a comment on.
+. Click the Blame button
+
+.Open File to Blame
+image::UG-000026.png[caption="Permalink - "]
+
+[start=3]
+. Press the "y" key on your keyboard (this will change the URL to ensure you get the proper link)
+. Click the line number you are referencing (highlighted in yellow)
+
+.Click the Line Number
+image::UG-000027.png[caption="Permalink - "]
+
+[start=5]
+. Select the URL that is shown. It should end with *#Lxx* where *xx* is the line number you selected.
+
+.Copy the URL
+image::UG-000028.png[caption="Permalink - "]
+
+[start=6]
+. Paste the URL into your comment and add your comment.
+
+==== Multi-line Permalinks
+When a comment involves multiple lines, it is possible to link directly to the multiple lines as well, and not just picking one.
+
+This can be done two ways (replace the above steps with these):
+
+[start=4]
+. After selecting the line number, hold the Shift key and click the end line number
+
+.Click Multiple Lines
+image::UG-000029.png[caption="Permalink - "]
+
+Or this way:
+
+[start=6]
+. After pasting the URL into the Comment, add *-Lxx* to the end of the line where *xx* is the last line.
+
+For a multi-line selection, the end of the URL should look like *#L12-L15* to select lines 12-15 in the document.
+
+== Using Pull Requests
+The Pull requests area is where you will make suggested edits to the documents the iTC is working on. In addition to edits, Pull requests provide the ability to comment on the suggested changes in the same way as an Issue, allowing for discussions directly related to the changes to be housed in the same place.
+
+=== Reviewing Pull Request Comments
+Reviewing Pull requests is similar to commenting in any forum application. At the bottom of the Pull request thread there will be a dialog box showing two tabs, image:UG-000020.PNG[,,80]. Any comments you want to make should be entered in the dialog box. Clicking the image:UG-000010.PNG[,,50] button will add your contribution.
+
+In addition to seeing comments, you will also see a list of all the changes that have been made in this Pull request. This can be small or large, depending on what the contributor has edited. See the figure <<img-GH-Pull-request-View,GitHub Pull request View>> for an example of the additional information that is displayed.
+
+=== Reviewing Pull Request Changes
+When someone has made changes and created a Pull request, you can view them before they have been committed to the branch. This lets you comment on the changes or propose your own.
+
+To view the changes, you need to look at either the Commits or the Files Changed views. 
+
+[#img-GH-PR-Files-Changed]
+.GitHub Pull Request Files Changed
+image::UG-000030.png[,400,]
+
+==== Commits View of a Pull Request
+In the Commits view
+
+=== Adding Comments into Pull Requests
+Sometimes, instead of commenting in general, you may prefer to enter a comment directly where a change is being requested (or where you would like to see a change). The comment is similar to any other comment in a Pull request or Issue, but instead of being shown within the full discussion it will be seen inline to the document.
+
+To do this type of comment, first you need to review the
