@@ -1,11 +1,12 @@
 = iTC User Guidance for GitHub
 :showtitle:
 :toc:
+:toclevels: 5
 :sectnums:
 :sectnumlevels: 5
 :imagesdir: images
 :revnumber: 0.1
-:revdate: 2019-06-05
+:revdate: 2019-06-12
 
 :!sectnums:
 [abstract]
@@ -222,36 +223,41 @@ While reviewing existing issues is important, creating new Issues is a common ta
 
 To create a new Issue, click the image:UG-000011.PNG[,,50] button, provide a title and your description. Once you have entered your Issue, click the image:UG-000024.PNG[,,75] button to create the Issue.
 
-==== Additional Issue Fields
-When creating (or reviewing) and Issue, there are several other fields that can be assigned. These fields can help assign specific people to review the Issue (they will get a notification about being assigned) as well as providing fields that can be used to filter the Issue.
+[NOTE]
+====
+If you start to create an Issue and then move off to something else (another page) and then come back to create a new Issue, the previously entered content will still be shown in the window. This is a feature of the website.
+====
+
+==== Additional Fields
+When creating (or reviewing) and Issue (or Pull request), there are several other fields that can be assigned. These fields can help assign specific people to review the Issue (they will get a notification about being assigned) as well as providing fields that can be used to filter the Issue.
 
 Each of these fields can be configuring using the gear icon.
 
 The Projects field may be used by the administrator but is not covered here.
 
-[#img-GH-Issue-Fields]
-.GitHub Issue Additional Fields
+[#img-GH-Fields]
+.GitHub Additional Fields
 image::UG-000021.png[,200,]
 
 These additional fields can be changed or assigned at any time, so submitting without them does not cause any problems, but as always, providing more information is better.
 
 ===== Assignees
-This field allows you to assign other iTC members to review your Issue. There is no limit to the number that can be assigned though they must be selected individually.
+This field allows you to assign other iTC members to review your Issue (or Pull request). There is no limit to the number that can be assigned though they must be selected individually.
 
 ===== Labels
-The Labels field allows you to specify categories for the Issue. The specific Labels will be created by the administrator, but can be anything.
+The Labels field allows you to specify categories for the Issue (or Pull request). The specific Labels will be created by the administrator, but can be anything.
 
-[#img-GH-Issue-Labels]
-.GitHub Issue Labeling
+[#img-GH-Labels]
+.GitHub Labeling
 image::UG-000022.png[,200,]
 
-As you can see in the example there are labels for specific topic areas as well as generic topics like bug or enhancement. If there are labels that will help categorize your Issue for others, you should select them from the available list. There is no limit to the number of Labels that can be assigned.
+As you can see in the example there are labels for specific topic areas as well as generic topics like bug or enhancement. If there are labels that will help categorize your Issue (or Pull requst) for others, you should select them from the available list. There is no limit to the number of Labels that can be assigned.
 
 ===== Milestone
 The Milestone field allows you to specify a release target. Generally this would be some date for release, but may also be internal timelines for completion. If Milestones are being used, an appropriate Milestone should be selected.
 
-[#img-GH-Issue-Milestone]
-.GitHub Issue Milestones
+[#img-GH-Milestone]
+.GitHub Milestones
 image::UG-000023.png[,200,]
 
 Only one Milestone may be selected.
@@ -309,12 +315,12 @@ Or this way:
 [start=6]
 . After pasting the URL into the Comment, add *-Lxx* to the end of the line where *xx* is the last line.
 
-For a multi-line selection, the end of the URL should look like *#L12-L15* to select lines 12-15 in the document.
+For a multi-line selection, the end of the URL should look like *#L12-L16* to select lines 12-16 in the document.
 
 == Using Pull Requests
 The Pull requests area is where you will make suggested edits to the documents the iTC is working on. In addition to edits, Pull requests provide the ability to comment on the suggested changes in the same way as an Issue, allowing for discussions directly related to the changes to be housed in the same place.
 
-=== Reviewing Pull Request Comments
+=== Reviewing Pull Request Conversation
 Reviewing Pull requests is similar to commenting in any forum application. At the bottom of the Pull request thread there will be a dialog box showing two tabs, image:UG-000020.PNG[,,80]. Any comments you want to make should be entered in the dialog box. Clicking the image:UG-000010.PNG[,,50] button will add your contribution.
 
 In addition to seeing comments, you will also see a list of all the changes that have been made in this Pull request. This can be small or large, depending on what the contributor has edited. See the figure <<img-GH-Pull-request-View,GitHub Pull request View>> for an example of the additional information that is displayed.
@@ -322,16 +328,197 @@ In addition to seeing comments, you will also see a list of all the changes that
 === Reviewing Pull Request Changes
 When someone has made changes and created a Pull request, you can view them before they have been committed to the branch. This lets you comment on the changes or propose your own.
 
-To view the changes, you need to look at either the Commits or the Files Changed views. 
+To view the changes, you should to look at either the Commits or the Files changed views. 
 
 [#img-GH-PR-Files-Changed]
 .GitHub Pull Request Files Changed
 image::UG-000030.png[,400,]
 
-==== Commits View of a Pull Request
-In the Commits view
+It is possible to view the files from the Conversation display, since it shows both comments and commits to the Pull request. 
 
-=== Adding Comments into Pull Requests
+To view an individual change, click on the 6 character string (circled in the figure below). This string is a portion of the checksum that is calculated on the change and how GitHub tracks each change individually.
+
+[#img-GH-PR-Conversation-Commits]
+.GitHub Pull Request Conversation Commits
+image::UG-000050.png[,400,]
+
+==== Commits View of a Pull Request
+In the Commits view you will see all the commits to the Pull request. Commits are the individual updates that have been made over time. For example the author of the Pull request may have made an initial change, and then someone else suggested a second change. Each of these individual changes are tracked by GitHub. 
+
+To view an individual change, click on the 6 character string (circled in the figure below).
+
+[#img-GH-PR-Commits-View]
+.GitHub Pull Request Commits View
+image::UG-000031.png[,600,]
+
+==== Files Changed View of a Pull Request
+In the Files changed view you will see a list of all the files in the Pull request and all the changes in each of the files. 
+
+=== Pull Request Changes Display
+Whether you access an individual commit via the Commits view or from the Files changed view, you will see the same basic display of changes.
+
+[#img-GH-PR-Changes]
+.GitHub Pull Request Changes
+image::UG-000035.png[,600,]
+
+On the left side of the display is the original file and the left contains the result proposed by the Pull request. 
+
+On the left you see lines with a "-" and highlighted in red. These are things from the original that are removed (or possibly just edited). On the right you see lines with a "+" and highlighted in green. These are things from the Pull request that are added. Note that in the case of line 49 that the original shows the line as deleted and the Pull request shows it added, but with the fourth "=" in darker green. This means that the change is actually that additional "=" (this is repeated on line 65). Also note how the Pull request lines are off in numbering due to the addition of "=== Terminology" on line 48, yet the rest of the file remains in sync.
+
+By reviewing the changes side-by-side you can easily see how the Pull request will update the document.
+
+=== Adding Comments Directly into Pull Requests
 Sometimes, instead of commenting in general, you may prefer to enter a comment directly where a change is being requested (or where you would like to see a change). The comment is similar to any other comment in a Pull request or Issue, but instead of being shown within the full discussion it will be seen inline to the document.
 
-To do this type of comment, first you need to review the
+While displaying the changes, place the cursor over the line where you want to make the comment. As you move the cursor over each line, a blue + should show up next to the line number.
+
+[#img-GH-PR-Direct-Comment]
+.GitHub Pull Request Direct Comment
+image::UG-000036.png[,600,]
+
+Clicking the + will open the comment dialog.
+
+[#img-GH-PR-Direct-Comment-Single]
+.GitHub Pull Request Add single comment
+image::UG-000037.png[,600,]
+
+To just add the comment, click the image:UG-000039.PNG[,,90] button. The image:UG-000038.PNG[,,60] button will be covered in <<Approving Pull Requests>>.
+
+==== Resolving Comments in a Pull Request
+When a comment is created directly in a Pull request, it will appear in the file view.
+
+[#img-GH-PR-Resolve-Comment]
+.GitHub Pull Request Resolving a Comment
+image::UG-000062.png[,600,]
+
+To close a comment you should reply and then click image:UG-000063.PNG[,,80]. It is expected that any reply would have a reason for closing the comment (such as a Pull request to make an edit or a reason to not change anything).
+
+=== Creating a New Pull Request
+There are many ways to create a new Pull request. The instructions here is the simplest flow, especially for single changes.
+
+[NOTE]
+====
+If you need to make large changes to complicated documents, it may be best to perform the edits offline (this is covered in the iTC Advanced User Guide for GitHub).
+====
+
+The first step in creating a Pull request is to select the file you need to edit. Generally you will do this from the Code view.
+
+[IMPORTANT]
+====
+The default branch is likely the develop branch (this is the recommended configuration). If you need to work in a different, check <<Changing the Branch>> to switch.
+====
+
+When you have opened a file in the code view, you will see this bar at the top of the content.
+
+[#img-GH-File-Edit-Bar]
+.GitHub File Edit Bar
+image::UG-000040.png[,600,]
+
+Click the pencil to edit the file. The window that opens is the editor for GitHub.
+
+[#img-GH-Editor]
+.GitHub Editor
+image::UG-000041.png[,600,]
+
+You can make any changes you need to at this point. It is also possible to search for content using *Ctrl-F* (if you have clicked inside the editor).
+
+Once you have made your changes, you need to save them to a new branch. The new branch will form the basis of your Pull request.
+
+[#img-GH-Create-Branch]
+.GitHub Create Branch
+image::UG-000043.png[,600,]
+
+In the dialog box you should add a title (what is the point of the changes) and a description about them (maybe why the changes are being proposed).
+
+GitHub will automatically propose a branch name (using your username and then "-patch-X" where X is a number if there are other patches from the same person). You can rename this if you wish, but it does not matter.
+
+Once the editing has been completed and you have added a description, click image:UG-000044.PNG[,,80].
+
+This then brings you to the Open a pull request page. 
+
+[#img-GH-Open-PR]
+.GitHub Open a Pull Request
+image::UG-000045.png[,600,]
+
+The title and comments you provided on the editing page will be copied here. You can also add <<Additional Fields>> here, including requesting specific people to review your Pull request.
+
+To create the Pull request, click the image:UG-000046.PNG[,,80] button.
+
+[IMPORTANT]
+====
+While Pull requests can encompass very large changes, in many cases it is best for them to be small (or at least a single topic). This doesn't mean making individual spelling changes into individual Pull requests, but massive changes all over a document can be difficult for reviewers to track and fully accept. 
+
+By keeping changes to either a small number of edits or to a single topic of edits (say a change to an SFR and all its follow-on changes to other SFRs and related text), then the requests are more easily digestible for review and approval.
+====
+
+=== Working with Draft Pull Requests
+While working on a Pull request you may need to stop and save your work so you can complete it later.
+
+==== Creating a Draft Pull Request
+To create a draft Pull request, follow the steps to create a Pull request, but on the Open a pull request page, click the dropdown on the image:UG-000046.PNG[,,80] button.
+
+[#img-GH-Draft-PR]
+.GitHub Create a Draft Pull Request
+image::UG-000047.png[,200,]
+
+When the Pull request is created it will be marked as a draft.
+
+[#img-GH-Draft-View]
+.GitHub Draft Pull Request View
+image::UG-000049.png[,250,]
+
+==== Continuing Work on a Draft Pull Request
+A draft Pull request is a holding place for your commit, and you can edit it in the same manner as any other Pull request. The key difference is that only the owner can actually review and edit a draft Pull request.
+
+To continue editing your Pull request, you can follow the steps in <<Reviewing Pull Request Changes>>. While you should always pick the last commit to start from, when you go to edit the file all the commits in this branch will show up, so it doesn't have a real impact as to which commit you use for your draft.
+
+When you are done editing, you should see the option to commit the changes directly to your branch. This will allow you to continue adding to your draft Pull request. This will create a second commit (or third, etc.) to the Pull request.
+
+[#img-GH-Draft-Commit]
+.GitHub Draft Pull Request Commit
+image::UG-000051.png[,500,]
+
+==== Publishing a Draft Pull Request
+Once you have completed your edits and are ready to publish the draft Pull request, open the Pull request and on the Conversation view you should see *This pull request is still a work in progress*. 
+
+[#img-GH-Draft-Ready-for-Review]
+.GitHub Draft Pull Request Ready for Review
+image::UG-000052.png[,500,]
+
+Click image:UG-000053.PNG[,,70] to make the Pull request public. The Pull request will now be visible to everyone and can be merged into the document.
+
+=== Approving Pull Requests
+As with any document with multiple editors, at some point there needs to be an agreement about what to pur in the document. GitHub provides the ability to require approvals of Pull requests before they can be accepted (merged) into the working (or final) document. 
+
+When people are assigned to review a Pull request they are given a notification of the request. This can be seen when the user views the Pull request.
+
+[#img-GH-PR-Review-Notice]
+.GitHub Pull Request Review Notification
+image::UG-000054.png[,600,]
+
+You can click image:UG-000055.png[,,60] to open the Review Changes dialog.
+
+Alternately, you can see this by going to the Files changed view and clicking the image:UG-000057.png[,,60] button.
+
+[#img-GH-PR-Files-Review]
+.GitHub Pull Request Files changed Review
+image::UG-000056.png[,600,]
+
+The result of either of these buttons is the Review dialog.
+
+[#img-GH-PR-Review]
+.GitHub Pull Request Review
+image::UG-000058.png[,400,]
+
+There is a dialog box to enter your thoughts/comments on the Pull request and then three options:
+
+Comment::
+Just a comment on the Pull request, added to the conversation.
+
+Approve::
+Your approval to merge this Pull request into the branch.
+
+Request changes::
+This is basically a non-approval with a specific request to change something. To be useful the expected change should be specified in the dialog box. A change request must be resolved or rejected by an administrator before the Pull request can be merged.
+
+Once you have made your comments and selected an approval status, click image:UG-000059.png[,,60].
