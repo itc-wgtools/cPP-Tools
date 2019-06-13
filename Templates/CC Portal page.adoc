@@ -1,17 +1,18 @@
 = _your_ international Technical Community (iTC)
 :showtitle:
-:toc:
-:table-caption: Table
-:revnumber: 0.8
+:revnumber: 0.1
 :revdate: 2019-06-13
+
+:iTC-longame: Your
+:iTC-shortname: YOUR-iTC
 
 :sectnums!:
 == Acknowledgements
-The _your_ international Technical Community (iTC) also known as _your short name_ is comprised of representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
+The {iTC-longame} international Technical Community (iTC) also known as {iTC-shortname} is comprised of representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
 
 == Introduction
 
-The _your_ international Technical Community (iTC) was approved and established by the CCRA Committee in _October 2018_ after review and approval of the Essential Security Requirements (ESR) document for _your technology type_. The initial Essential Security Requirements (ESR) was produced by the _name of committee before the iTC was established_. 
+The iTC-longame international Technical Community (iTC) was approved and established by the CCRA Committee in _October 2018_ after review and approval of the Essential Security Requirements (ESR) document for _your technology type_. The initial Essential Security Requirements (ESR) was produced by the _name of committee before the iTC was established_. 
 
 The iTC is sponsored by _X_ national CCRA signatory schemes: _list of schemes_.
 
