@@ -36,7 +36,7 @@ ADD REFERENCES HERE TO OTHER TTWG DOCS
 
 :sectnums:
 == Introduction
-This guide is going to show how to use GitHub for making comments and editing the documents of an iTC. There are many reasons to do this, but among the most important are these:
+This guide will show how to use GitHub for making comments and editing the documents of an iTC. There are many reasons to do this, but among the most important are these:
 
 * Concurrent editing - using GitHub it is possible for multiple people to work on the same document, at the same time, and have all edits tracked independently
 * Comment tracking & history - using GitHub comments on documents (or any questions) can be tracked, discussed, linked to actual edits and eventually closed while remaining available for later review (i.e. that time when you know something was discussed but can no longer remember why you came to a specific decision)
@@ -76,7 +76,7 @@ The first step to using GitHub is to create an account. These are free (one of t
 .GitHub Sign up
 image::UG-000002.PNG[,600,]
 
-Once you have created your account, you should provide the username to the iTC GitHub administrators. This is not required, but is recommended (and is required it you are to have elevated privileges within the iTC).
+Once you have created your account, you should provide the username to the iTC GitHub administrators. This is not required, but is recommended (and is required if you are to have elevated privileges within the iTC).
 
 Once you have created your account, sign in to interact with GitHub.
 
@@ -127,8 +127,6 @@ Clicking on an Issue title will open the Issue, showing the conversation in a st
 [#img-GH-Issue-View]
 .GitHub Issue View
 image::UG-000009.png[,600,]
-
-
 
 Working with Issues will be described in the section <<Using Issues>>.
 
