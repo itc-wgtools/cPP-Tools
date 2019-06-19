@@ -3,8 +3,9 @@
 :toc:
 :sectnums:
 :imagesdir: images
-:revnumber: 0.1
-:revdate: 2019-05-14
+:icons: font
+:revnumber: 0.2
+:revdate: 2019-06-19
 :xrefstyle: full
 
 == Overview
