@@ -141,6 +141,12 @@ _Italics_
 === Admonitions
 There are several "admonitions" that can be used.
 
+Admonitions require that the following be placed in the heading of the document:
+
+:icons: font
+
+If this isn't included, while the icons will show up in the editors, they will not be produced in the HTML or PDF output files.
+
 [NOTE]
 ====
 This can call out information
