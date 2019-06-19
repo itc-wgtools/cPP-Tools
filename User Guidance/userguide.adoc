@@ -5,8 +5,9 @@
 :sectnums:
 :sectnumlevels: 5
 :imagesdir: images
-:revnumber: 0.1
-:revdate: 2019-06-12
+:icons: font
+:revnumber: 0.2
+:revdate: 2019-06-19
 
 :!sectnums:
 [abstract]

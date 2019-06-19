@@ -4,6 +4,7 @@
 :toc:
 :sectnums:
 :imagesdir: images
+:icons: font
 :revnumber: 0.1
 :revdate: 2019-05-08
 
