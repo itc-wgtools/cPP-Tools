@@ -5,7 +5,7 @@
 :imagesdir: images
 :icons: font
 :revnumber: 0.2
-:revdate: 2019-06-19
+:revdate: 2019-06-20
 :xrefstyle: full
 
 == Overview
@@ -54,7 +54,7 @@ To create a table of contents, the following can be used:
 :toc:
 :toclevels: <some number>
 
-This will create a TOC immediately after the title page. The toclevels will allow you to specify the number of levels (the default is 2) shown in the TOC.
+This will create a TOC immediately after the title page. The toclevels will allow you to specify the number of levels (the default is 2) shown in the TOC. This MUST be in the headings to work.
 
 To move the TOC to another location, place this line at the beginning:
 
@@ -98,11 +98,17 @@ This will stop section numbering
 
 It is possible to use these back and forth as needed in the document.
 
+By default only 3 levels will be numbered (i.e. if you have ===== for a fourth level it will not be numbered in the TOC). To have a higher number of levels, use
+
+:sectlevels: <some number>
+
+This MUST be in the header section (not later in the document) to work. Even if you aren't starting numbering until later in the document, this MUST be in the heading.
+
+:sectnums:
 === Appendices
 To create an Appendix section, you need to add this line before ALL the level 2 section headers (i.e. the == level) you need to be Appendices. If you skip it, the headers will revert to the normal style.
 
 [appendix]
-:sectnums:
 == Appendix test
 
 === Appendix sub-heading
@@ -260,7 +266,11 @@ Internal anchors are markers you can place outside of the section headers to all
 
 [[testanchor]]This is a test.
 
+[#test2]#test2#
+
 <<testanchor,text>> (here this is shown to link to the line above and replace the anchor name with "text")
+
+<<test2>> (this is a link to test2, note how the name is the one in brackets. you can use the ",text" to change what is displayed)
 
 Anchors placed inside a Table header will take the name of the table. An anchor placed right before a Section will take the name of the section by default (this can be used to mark sections with the same name individually for cross references or to provide a short name when creating the links in the text).
 
