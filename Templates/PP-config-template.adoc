@@ -2,13 +2,17 @@
 :showtitle:
 :toc:
 :table-caption: Table
+:icons: font
 :revnumber: 0.8
 :revdate: 2019-01-31
+
+:iTC-longname: Coffee Maker
+:iTC-shortname: CM-iTC
 
 :sectnums!:
 == Acknowledgements
 
-This PP-Configuration was developed by the _your_ international Technical Community (iTC) with representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
+This PP-Configuration was developed by the {iTC-longname} international Technical Community (iTC) also known as {iTC-shortname} with representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
 
 === Revision History
 
@@ -129,21 +133,21 @@ Normally the above statement is likely to be sufficient for a PP-Configuration. 
 
 **Common Criteria**footnote:[For details see http://www.commoncriteriaportal.org/]
 
-[cols=",",]
+[cols="1,3",]
 |===
-|[CC1] |Common Criteria for Information Technology Security Evaluation, +
+|[#CC1]#[CC1]# |Common Criteria for Information Technology Security Evaluation, +
 Part 1: Introduction and General Model, +
 CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
-|[CC2] |Common Criteria for Information Technology Security Evaluation, +
+|[#CC2]#[CC2]# |Common Criteria for Information Technology Security Evaluation, +
 Part 2: Security Functional Components, +
 CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
-|[CC3] |Common Criteria for Information Technology Security Evaluation, +
+|[#CC3]#[CC3]# |Common Criteria for Information Technology Security Evaluation, +
 Part 3: Security Assurance Components, +
 CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
-|[CEM] |Common Methodology for Information Technology Security Evaluation, +
+|[#CEM]#[CEM]# |Common Methodology for Information Technology Security Evaluation, +
 Evaluation Methodology, +
 CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
-|[addenda] |CC and CEM addenda, +
+|[#addenda]#[addenda]# |CC and CEM addenda, +
 Exact Conformance, Selection-Based SFRs, Optional SFRs, +
 Version 0.5, May 2017.
 |===
