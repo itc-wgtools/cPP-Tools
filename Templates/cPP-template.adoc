@@ -1,16 +1,21 @@
-
-= collaborative Protection Profile for _Some Product_
+= collaborative Protection Profile for _Coffee Maker_
 :showtitle:
-:toc:
+:toc: macro
+:toclevels: 7
 :sectnums:
+:sectnumlevels: 7
 :imagesdir: images
 :icons: font
 :revnumber: 0.1
 :revdate: 2019-05-08
 
+:iTC-longname: Coffee Maker
+:iTC-shortname: CM-iTC
+
 :sectnums!:
+
 == Acknowledgements
-This collaborative Protection Profile (cPP) was developed by the _my iTC name_ international Technical Community (iTC) with representatives from industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
+This collaborative Protection Profile (cPP) was developed by the {iTC-longname} international Technical Community (iTC) also known as {iTC-shortname} with representatives from industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
 
 *INDUSTRY*
 
@@ -23,56 +28,6 @@ _ITSEF Name_
 *GOVERNMENT AGENCIES*
 
 _Government Agency Names_
-
-
-== Preface
-
-=== Objectives of Document
-This document presents the Common Criteria (CC) collaborative Protection Profile (cPP) to express the security functional requirements (SFRs) and security assurance requirements (SARs) for _some technology type_. The Evaluation activities that specify the actions the evaluator performs to determine if a product satisfies the SFRs captured within this cPP, are described in <<SD>>.
-
-
-=== Scope of Document
-The scope of the cPP within the development and evaluation process is described in the Common Criteria for Information Technology Security Evaluation. In particular, a cPP defines the IT security requirements of a generic type of TOE and specifies the functional security measures to be offered by that TOE to meet stated requirements [<<CC1>>, Section B.14].
-
-=== Intended Readership
-The target audiences of this cPP are developers, CC consumers, system integrators, evaluators and schemes. 
-
-Although the cPP and SD may contain minor editorial errors, the cPP is recognized as living document and the iTC is dedicated to ongoing updates and revisions. Please report any issues to the _this_ iTC. 
-
-=== Related Documents
-[bibliography]
-* [[[CC1]]]	Common Criteria for Information Technology Security Evaluation, Part 1: Introduction and General Model, CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
-* [[[CC2]]] Common Criteria for Information Technology Security Evaluation, Part 2: Security Functional Components, CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
-* [[[CC3]]]	Common Criteria for Information Technology Security Evaluation, Part 3: Security Assurance Components, CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
-* [[[CEM]]]	Common Methodology for Information Technology Security Evaluation, Evaluation Methodology, CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
-
-For more see the http://www.commoncriteriaportal.org/[Common Criteria Portal].
-
-=== Terminology
-
-==== Acronyms
-.Acronyms
-[%header,cols="1,4"]
-
-|===
-|Acronym |Meaning
-
-|AES
-|Advanced Encryption Standard
-
-|
-|
-
-|===
-
-
-==== Glossary
-For the purpose of this cPP, the following terms and definitions given in _some specific references_ apply. If the same terms and definitions are given in those references, terms and definitions that fit the context of this cPP take precedence.
-
-[glossary]
-Data Encryption Key (DEK)::
-A key used to encrypt data at rest.
-
 
 === Revision History
 
@@ -93,7 +48,33 @@ A key used to encrypt data at rest.
 
 
 |===
+toc::[]
+
+== Preface
+
+=== Objectives of Document
+This document presents the Common Criteria (CC) collaborative Protection Profile (cPP) to express the security functional requirements (SFRs) and security assurance requirements (SARs) for _some technology type_. The Evaluation activities that specify the actions the evaluator performs to determine if a product satisfies the SFRs captured within this cPP, are described in <<SD>>.
+
+=== Scope of Document
+The scope of the cPP within the development and evaluation process is described in the Common Criteria for Information Technology Security Evaluation. In particular, a cPP defines the IT security requirements of a generic type of TOE and specifies the functional security measures to be offered by that TOE to meet stated requirements [<<CC1>>, Section B.14].
+
+=== Intended Readership
+The target audiences of this cPP are developers, CC consumers, system integrators, evaluators and schemes. 
+
+Although the cPP and SD may contain minor editorial errors, the cPP is recognized as living document and the iTC is dedicated to ongoing updates and revisions. Please report any issues to the {iTC-shortname}. 
+
+=== Related Documents
+[bibliography]
+* [#CC1]#[CC1]# Common Criteria for Information Technology Security Evaluation, Part 1: Introduction and General Model, CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
+* [#CC2]#[CC2]# Common Criteria for Information Technology Security Evaluation, Part 2: Security Functional Components, CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
+* [#CC3]#[CC3]# Common Criteria for Information Technology Security Evaluation, Part 3: Security Assurance Components, CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
+* [#CEM]#[CEM]# Common Methodology for Information Technology Security Evaluation, Evaluation Methodology, CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
+
+For more see the http://www.commoncriteriaportal.org/[Common Criteria Portal].
+
+
 :sectnums:
+
 == PP Introduction
 
 === PP Reference Identification
@@ -260,7 +241,7 @@ After the ST has been approved for evaluation, the ITSEF will obtain the TOE, su
 |Assurance Class
 |Assurance Components
 
-.7+|Security Target (ASE)
+.7+.^|Security Target (ASE)
 |Conformance Claims (ASE_CCL.1)
 
 |Extended components definition (ASE_ECD.1)
@@ -278,12 +259,12 @@ After the ST has been approved for evaluation, the ITSEF will obtain the TOE, su
 |Development (ADV)
 |Basic functional specification (ADV_FSP.1)
 
-.2+|Guidance documents (AGD)
+.2+.^|Guidance documents (AGD)
 |Operational user guidance (AGD_OPE.1)
 
 |Preparative procedures (AGD_PRE.1)
 
-.2+|Life cycle support (ALC)
+.2+.^|Life cycle support (ALC)
 |Labeling of the TOE (ALC_CMC.1)
 
 |TOE CM coverage (ALC_CMS.1)
@@ -455,7 +436,7 @@ Dependencies: No dependencies
 
 *FIA_MBE_EXT.1.1* The TSF shall provide a mechanism to enrol an authenticated user.
 
-*Application Note {counter:remark_count}*:: User shall be authenticated by the mobile device using the Password Authentication Factor before beginning biometric enrolment.
+*Application Note {counter:appnote_count}*:: User shall be authenticated by the mobile device using the Password Authentication Factor before beginning biometric enrolment.
 
 ===== FIA_MBE_EXT.2 Quality of biometric templates for mobile biometric enrolment
 Hierarchical to: No other components
@@ -463,7 +444,7 @@ Dependencies: 	FIA_MBE_EXT.1 Mobile biometric enrolment
 
 *FIA_MBE_EXT.2.1* The TSF shall create templates of sufficient quality.
 
-*Application Note {counter:remark_count}*:: ST author may refine “sufficient quality” to specify quality standards if the TOE follows such standard.
+*Application Note {counter:appnote_count}*:: ST author may refine “sufficient quality” to specify quality standards if the TOE follows such standard.
 
 ===== FIA_MBE_EXT.3 Presentation attack detection for mobile biometric enrolment
 
@@ -536,7 +517,7 @@ More specifically, all entropy source health tests and their rationale will be d
 
 |===
 
-==== Consistency of Objectives
+=== Consistency of Objectives
 
 The objectives for the biometric system and its operational environment are consistent with the <<MDFPP>> based on the following rationale:
 
@@ -559,7 +540,7 @@ The objectives for the biometric system and its operational environment are cons
 
 |===
 
-==== Consistency of Requirements
+=== Consistency of Requirements
 
 
 == SFR List
@@ -621,4 +602,28 @@ Selection:: The requirement inclusion is determined by selections in other requi
 |Trusted Channels (FTP)
 |
 |
+|===
+
+[appendix]
+== Glossary
+For the purpose of this cPP, the following terms and definitions given in _some specific references_ apply. If the same terms and definitions are given in those references, terms and definitions that fit the context of this cPP take precedence.
+
+[glossary]
+Data Encryption Key (DEK)::
+A key used to encrypt data at rest.
+
+[appendix]
+== Acronyms
+.Acronyms
+[%header,cols="1,4"]
+
+|===
+|Acronym |Meaning
+
+|AES
+|Advanced Encryption Standard
+
+|
+|
+
 |===
