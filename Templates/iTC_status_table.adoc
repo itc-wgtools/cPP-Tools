@@ -1,7 +1,5 @@
 = _Coffee Maker_ iTC (CMiTC) Status _2019-06-14_
-
 :showtitle:
-:toc:
 :table-caption: Table
 :revnumber: 0.1
 :revdate: 2019-06-13
