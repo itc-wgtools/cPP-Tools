@@ -1,0 +1,61 @@
+= _your_ international Technical Community (iTC)
+:showtitle:
+:revnumber: 0.1
+:revdate: 2019-06-13
+
+:iTC-longname: Your
+:iTC-shortname: YOUR-iTC
+
+:sectnums!:
+== Acknowledgements
+The {iTC-longame} international Technical Community (iTC) also known as {iTC-shortname} is comprised of representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
+
+== Introduction
+
+The iTC-longame international Technical Community (iTC) was approved and established by the CCRA Committee in _October 2018_ after review and approval of the Essential Security Requirements (ESR) document for _your technology type_. The initial Essential Security Requirements (ESR) was produced by the _name of committee before the iTC was established_. 
+
+The iTC is sponsored by _X_ national CCRA signatory schemes: _list of schemes_.
+
+https://www.commoncriteriaportal.org/<SOME_LINK_TO_THE_ESR_PDF>[Essential Security Requirements].
+
+The iTC is open to stakeholders with an interest in the security functionality of _technology type_. To join the iTC, please message: _XXX.itc@gmail.com_.
+
+The homepage for the work of the {iTC-longname} iTC is here: <URL to the iTC Homepage>
+
+== Position Statements
+
+CCRA signatory nations may publish Position Statements in regard to the work items of the iTC.
+
+https://www.commoncriteriaportal.org/communities/<LINK_TO_THE_POSITION_STATEMENTS>.cfm/[Position Statements].
+
+== Security Problem Definition (SPD)
+
+The iTC released the draft Security Problem Definition (SPD) document for public review on _Date_. The public review closed on _Date_. 
+
+All comments from the public review were addressed and further comments may be received during the public review of the iTC work items.
+
+https://www.commoncriteriaportal.org/communities/<SOME_LINK_TO_THE_SPD_PDF>[SPD document]
+[NOTE]
+====
+If the iTC produces several documents there may be more than one SPD document.
+====
+
+== Work Items
+
+The iTC has published:
+
+ *  a _cPP for something_ 
+ *  a PP-Module that addresses _something_
+ *  a PP-Module that addresses _something else_
+ *  a security functional package that addresses _something_
+ 
+The iTC also issues interpretations addressing issues in the application of these documents.
+https://www.yoursite.com/interpretations_link/[Interpretations].
+
+The iTC is currently developing:
+
+ *  a _cPP for something_ 
+ *  a PP-Module that addresses _something_
+ *  a PP-Module that addresses _something else_
+ *  a security functional package that addresses _something_
+
