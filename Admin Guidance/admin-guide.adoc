@@ -1,12 +1,11 @@
-= Administrator Guidance for Tools
+= iTC Administrator Tools Guidance
 :showtitle:
 :toc:
-:sectnums:
+:icons: font
 :imagesdir: images
 :revnumber: 0.2
 :revdate: 2019-06-21
 
-:sectnums!:
 == Acknowledgements
 This is designed for an admin to setup the listed tools and to manage the cPP process.
 
