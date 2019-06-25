@@ -75,7 +75,7 @@ The first step to using GitHub is to create an account. These are free (one of t
 
 [#img-GH-signup]
 .GitHub Sign up
-image::UG-000002.PNG[,,]
+image::UG-000002.png[,,]
 
 Once you have created your account, you should provide the username to the iTC GitHub administrators. This is not required, but is recommended (and is required if you are to have elevated privileges within the iTC).
 
@@ -223,11 +223,11 @@ The Issues area is one of the two areas where you will probably spend most of yo
 === Reviewing Issues
 Reviewing Issues is similar to commenting in any forum application. At the bottom of the Issue thread there will be a dialog box showing two tabs:
 
-image:UG-000020.PNG[,,]
+image:UG-000020.png[,,]
 
 Any comments you want to make should be entered in the dialog box. Clicking the 
 
-image:UG-000010.PNG[,,]
+image:UG-000010.png[,,]
 
 button will add your contribution.
 
@@ -236,11 +236,11 @@ While reviewing existing issues is important, creating new Issues is a common ta
 
 To create a new Issue, click the 
 
-image:UG-000011.PNG[,,] 
+image:UG-000011.png[,,] 
 
 button, provide a title and your description. Once you have entered your Issue, click the 
 
-image:UG-000024.PNG[,,] 
+image:UG-000024.png[,,] 
 
 button to create the Issue.
 
@@ -347,11 +347,11 @@ The Pull requests area is where you will make suggested edits to the documents t
 === Reviewing Pull Request Conversation
 Reviewing Pull requests is similar to commenting in any forum application. At the bottom of the Pull request thread there will be a dialog box showing two tabs: 
 
-image:UG-000020.PNG[,,]
+image:UG-000020.png[,,]
 
 Any comments you want to make should be entered in the dialog box. Clicking the 
 
-image:UG-000010.PNG[,,] 
+image:UG-000010.png[,,] 
 
 button will add your contribution.
 
@@ -416,11 +416,11 @@ image::UG-000037.png[,,]
 
 To just add the comment, click: 
 
-image:UG-000039.PNG[,,] 
+image:UG-000039.png[,,] 
 
 The 
 
-image:UG-000038.PNG[,,] 
+image:UG-000038.png[,,] 
 
 button will be covered in <<Approving Pull Requests>>.
 
@@ -433,7 +433,7 @@ image::UG-000062.png[,,]
 
 To close a comment you should reply and then click:
 
-image:UG-000063.PNG[,,]
+image:UG-000063.png[,,]
 
 It is expected that any reply would have a reason for closing the comment (such as a Pull request to make an edit or a reason to not change anything).
 
@@ -476,7 +476,7 @@ In the dialog box you should add a title (what is the point of the changes) and 
 
 GitHub will automatically propose a branch name (using your username and then "-patch-X" where X is a number if there are other patches from the same person). You can rename this if you wish, but it does not matter.
 
-Once the editing has been completed and you have added a description, click image:UG-000044.PNG[,,80].
+Once the editing has been completed and you have added a description, click image:UG-000044.png[,,80].
 
 This then brings you to the Open a pull request page. 
 
@@ -488,7 +488,7 @@ The title and comments you provided on the editing page will be copied here. You
 
 To create the Pull request, click:
 
-image:UG-000046.PNG[,,]
+image:UG-000046.png[,,]
 
 [IMPORTANT]
 ====
@@ -503,7 +503,7 @@ While working on a Pull request you may need to stop and save your work so you c
 ==== Creating a Draft Pull Request
 To create a draft Pull request, follow the steps to create a Pull request, but on the Open a pull request page, click the dropdown on the 
 
-image:UG-000046.PNG[,,]
+image:UG-000046.png[,,]
 
 Once the Draft Pull Request has been selected, the button will change to show the draft status.
 
@@ -537,7 +537,7 @@ image::UG-000052.png[,,]
 
 To make the Pull request public click:
 
-image:UG-000053.PNG[,,]
+image:UG-000053.png[,,]
 
 The Pull request will now be visible to everyone and can be merged into the document.
 
