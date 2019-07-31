@@ -114,18 +114,14 @@ The CCDB should be informed via the CCDB Liaison whenever changes are made to th
 Editorial decisions (including correction of technical inconsistencies) are made at the discretion of the Technical Editor, in consultation with the Core SMEs and {iTC-shortname} Chair when needed.
 
 ==== Technical decisions
-Ideally, technical decisions are made by reaching group consensus. In most cases, the Core SMEs will be able to propose a resolution that is acceptable to the {iTC-shortname} and the originator of the issue. 
+Ideally, technical decisions are made by reaching group consensus (see <<Voting>> for a definition). In most cases, the Core SMEs will be able to propose a resolution that is acceptable to the {iTC-shortname} and the originator of the issue. 
+
 As a guideline, decisions are made according to the following process:
 
-. An issue is posted by a member, preferably including the member’s proposed solution
-. The Core SMEs considers the issue and comments
-. The Core SMEs post a proposed resolution
-. Technical Editor and original issuer reviews the proposed resolution
-. Technical Editor makes a judgment
-.. Needs further study – notify the {iTC-shortname}, send back to (3)
-.. Needs a vote – iTC votes, then send back to (5)
-.. Proposed resolution is accepted – notify the {iTC-shortname}, implement, and close issue
-. Implement 5(c) and close the issue.
+. Decisions may be made via email or during an in-person meeting or telephone conference call. In the case of email, the {iTC-shortname} will provide one or two weeks to make the decision. For in person or telephone conference calls, only members that attend the meeting will be able to participate in making the decision.
+. Consensus is the default and strongly preferred method for resolution. However, if after a month consensus cannot be reached for a particular issue, then majority voting will be implemented.
+. If there are members that disagree with a decision, they can request the reason for the objection to be documented.
+. Once a decision has been made by the group it will be adopted and implemented. However, as a means to change direction or scope, any member can try to build a consensus for reversing a prior decision.
 
 Other {iTC-shortname} members are encouraged to post comments in response to issues and proposed resolutions at any time.
 
@@ -136,7 +132,7 @@ Decision shall be taken on the basis of the consensus principle.
 
 [quote,ISO/IEC Guide 2:2004]
 ____
-consensus: General agreement, characterized by the absence of sustained opposition to substantial issues by any important part of the concerned interests and by a process that involves seeking to take into account the views of all parties concerned and to reconcile any conflicting arguments.
+Consensus: General agreement, characterized by the absence of sustained opposition to substantial issues by any important part of the concerned interests and by a process that involves seeking to take into account the views of all parties concerned and to reconcile any conflicting arguments.
 
 NOTE Consensus need not imply unanimity.
 ____
