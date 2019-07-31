@@ -274,4 +274,5 @@ Other SMEs can come from a wide range of background, including government techni
 == References
 * [#1]#[1]# {iTC-longname} Essential Security Requirements, {iTC-website}[Online] (link when draft published)
 * [#2]#[2]# {iTC-longname} International Technical Community - Key Persons and Affiliations, {iTC-website}[Online] (link when available)
-* [#3]#[3]# Establishing International Technical Communities and collaborative Protection Profiles development, http://www.commoncriteriaportal.org/files/communities/Establishing%20iTCs%20and%20cPP%20development%20-%20v0-7.pdf
+* [#3]#[3]# Establishing International Technical Communities and collaborative Protection Profiles development, http://www.commoncriteriaportal.org/files/communities/Establishing%20iTCs%20and%20cPP%20development%20-%20v0-7.pdf[Online]
+* [#4]#[4]# ISO CODE OF CONDUCT FOR THE TECHNICAL WORK, https://www.iso.org/publication/PUB100397.html[Online]
