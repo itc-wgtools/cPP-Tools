@@ -4,8 +4,8 @@
 :table-caption: Table
 :imagesdir: images
 :icons: font
-:revnumber: 0.1
-:revdate: 2019-05-08
+:revnumber: 0.2
+:revdate: 2019-07-30
 :xrefstyle: full
 
 :iTC-longname: Coffee Maker
@@ -141,6 +141,11 @@ consensus: General agreement, characterized by the absence of sustained oppositi
 NOTE Consensus need not imply unanimity.
 ____
 
+[IMPORTANT]
+====
+When creating your ToR, it is important to understand that this section is not the only way to accomplish voting procedures for an iTC, but is a good one to follow. Any well-documented and transparent set of voting procedures should be acceptable for use.
+====
+
 Voting is used infrequently as a way to formally decide on a particular issue or on the proposed completion of a development phase. 
 
 Voting is limited specifically to the members defined at the time the vote is called. Membership in the {iTC-shortname} is defined as inclusion on the {iTC-shortname} mailing list.
@@ -180,16 +185,27 @@ Votes submitted shall be explicit: positive, negative, or abstention. A positive
 
 A vote is approved if:
 
-. A two-thirds majority of the counted votes of the {iTC-shortname} are positive, and
-. Not more than one-quarter of the counted votes cast are negative.
+. A two-thirds majority of the Counted votes of the {iTC-shortname} are positive, and
+. Not more than one-quarter of the Counted votes cast are negative.
 
 Counted votes are determined by the following conditions:
 
-* Only one vote per organization is made (an organization submitting multiple non-matching votes is allowed to determine the final vote to be counted before voting is closed)
+* Only one vote per organization is made
 * Negative votes are accompanied by a technical reasons
+
+[NOTE]
+====
+An organization submitting multiple non-matching votes is allowed to determine the final vote to be counted before voting is closed. The onus is on the organization to ensure the proper vote. A set of non-matching votes will cause the organization votes to not be considered Counted votes.
+====
 
 Abstentions and negative votes not accompanied by technical reasons are not considered to be Counted votes in the final total. They will be noted in the record only.
 
+[IMPORTANT]
+====
+An iTC may decide they need to have different classes of voting based on different "classes" of actions. For example moving to a Public Review Draft may require a higher vote than accepting changes into the Master branch (or other classifications). It is acceptable to specify different voting requirements based on different needs as long as it is clearly defined when the types of votes need to be used.
+
+For simplicity and speed it is recommended to use consensus voting whenever possible.
+====
 
 === Meetings
 Meetings are held at times, with frequency, and in forms that are determined by the {iTC-shortname} members.
