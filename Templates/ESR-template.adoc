@@ -128,9 +128,9 @@ Requirements specified here specify security-relevant behaviour that is not expe
 == Outside the Scope of Evaluation
 [NOTE]
 ====
-This defines aspects of the device that may be critical to its overall functionality (or commonly available functionality) but may not perform any relevant security functions to the scope of the evaluation defined here. Things listed here can be explicitly excluded from consideration for requirements.
+Things listed here can be explicitly excluded from consideration for requirements. For example types of attacks that may not be readily able to be handled or are just considered out of scope (such as for USB where a device is compromised and returned to the user). 
 
-Things listed here may end up being used in ESRs for PP-Modules based on a base-PP later.
+Things listed here may end up being used in ESRs for PP-Modules based on a base-PP later. For example, additional functionality of the device (such as a VPN gateway on top of a network device) may be excluded here.
 ====
 
 * Additional security functionality that a security-enabled network device may employ (e.g., firewall, virtual private networking) is outside the scope, as these will be specified in other ESRs.
