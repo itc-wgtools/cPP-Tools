@@ -71,6 +71,6 @@ The Common Criteria portal website (www.commoncriteriaportal.org) provides the d
 More details of the process surrounding the creation of an iTC and cPPs are given in the document ‘Establishing International Technical Communities and collaborative Protection Profiles development <<1>>’. 
  
 == References  
-[#1]#[1]# “Establishing International Technical Communities and collaborative Protection Profiles development,” [Online]. Available https://www.commoncriteriaportal.org/files/communities/Establishing%20%iTCs%20%and%20%cPP%20%development%20%-%20%v0-7.pdf[here].
+[#1]#[1]# “Establishing International Technical Communities and collaborative Protection Profiles development,” [Online]. Available https://www.commoncriteriaportal.org/files/communities/Establishing%20iTCs%20and%20cPP%20development%20-%20v0-7.pdf[here].
 
 
