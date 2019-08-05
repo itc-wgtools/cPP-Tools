@@ -4,7 +4,7 @@
 :table-caption!:
 :icons: font
 :revnumber: 0.1
-:revdate: 2019-05-08
+:revdate: 2019-08-05
 :xrefstyle: full
 
 :iTC-longname: Coffee Maker
@@ -74,13 +74,13 @@
 |
 |
 
-|Draft SPD approved by iTC
+|Draft SPD comments reviewed by {iTC-shortname}
 |
 |
 |
 |
 
-|Draft SPD comments reviewed by iTC
+|Draft SPD approved by {iTC-shortname}
 |
 |
 |
@@ -130,13 +130,13 @@
 |
 |
 
-|Draft Security Requirements approved by iTC
+|Draft Security Requirements approved by {iTC-shortname}
 |
 |
 |
 |
 
-|Draft Evaluation Activities approved by iTC
+|Draft Evaluation Activities approved by {iTC-shortname}
 |
 |
 |
@@ -186,7 +186,7 @@
 
 5.+^.|*Draft {iTC-longname} collaborative Protection Profile (cPP)*
 
-|Draft cPP by iTC (TOE, Assurance Reqs, rationale, etc.)
+|Draft cPP by {iTC-shortname} (TOE, Assurance Reqs, rationale, etc.)
 |
 |
 |
@@ -272,39 +272,27 @@
 |
 |
 
-|“Supporting Document for {iTC-longname}” approved by CCDB
-|
-|
-|
-|
-
 5.+^.|*Evaluation/Certification of {iTC-longname} cPP/SDs*
 
-|Evaluation of cPP
+|Evaluation of cPP/SD
 |
 |
 |
 |
 
-|Evaluation of SDs
+|Certification of cPP/Ss
 |
 |
 |
 |
 
-|Certification of cPP/SDs
+|CCDB approval of cPP/SD
 |
 |
 |
 |
 
-|CCDB approval of cPP/SDs
-|
-|
-|
-|
-
-5.+^.|*Final {iTC-longname} cPP/SDs*
+5.+^.|*Final {iTC-longname} cPP/SD*
 
 |Publish cPP and SD
 |
