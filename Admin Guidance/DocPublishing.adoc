@@ -1,0 +1,13 @@
+= Publishing iTC Documents
+:showtitle:
+:toc:
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-01
+
+== Introduction
+Description of the command lines needed to create the HTML and PDF versions of the adoc files. 
+
+== References
+https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5[Publishing to github.io]

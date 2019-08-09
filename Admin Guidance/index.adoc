@@ -1,0 +1,236 @@
+= iTC Administrator Tools Overview
+:showtitle:
+:toc:
+:toclevels: 7
+:sectnums:
+:sectnumlevels: 7
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-01
+
+
+:sectnums!:
+
+== Acknowledgements
+This is designed for an admin to setup the listed tools and to manage the cPP process.
+
+This document intends to communicate to iTC admins how to setup tools and some basic automation to manage the cPP creation process. The scope covers both client side tools necessary for workflow, operating systems, and backup strategies. Finally, focus is heavily on FOSS (Free Open Source Software) because cost should not be a barrier to iTC participation in the development of a cPP.
+
+== Audience
+The intended audience for this overview are those people who will manage the technical processes of the iTC. This may be the chair or it may be someone else (ideally there should be multiple people providing this support).
+
+[IMPORTANT]
+====
+Ideally the person who is responsible for GitHub should be someone familiar with it. While this guide provides what is needed to get an iTC up and running it is not meant to be an exhaustive guide for GitHub and all its capabilities.
+====
+
+== Resources
+* link:GitHubClients.html[GitHub Clients Overview]
+* link:GitHubTraining.html[GitHub Training References]
+* link:AsciidoctorPublish.html[Asciidoctor Publishing Output]
+
+:sectnums:
+== Introduction
+The administrators of the iTC will need to have some level of technical skills to manage the cPP creation process. This is true regardless of the tools in use, but is more explicitly laid out here because the tools here are not "sending Word documents around" but require the use of specific development tools to provide a foundation for the long term health of the cPP process.
+
+This site is laid out to focus on the administration of the two primary tools recommended for use: GitHib and Asciidoctor. There are other suggested tools to help the iTC fill out the workflow process, but these are the two primary tools that are used in this process.
+
+== GitHub
+https://github.com[GitHub] is a well known source code repository site that also provides free accounts and usage (perfect for our purposes). While it may seem strange to use a source code repository site for creating and managing the cPP creation process, there are several good reasons for doing this:
+
+* It provides a central repository of information that anyone can access
+* Revision control system with access control, branching, and submission approval built-in
+* Discussions on issues are easily facilitated in browser
+* Wiki can be used to communicate meeting minutes, document development status, etc.
+
+By using GitHub as the central repository, many of the problems with collaboration are solved, from multiple concurrent editors to discussion/decision history. It does bring its own problems for our purposes, which will be discussed in the <<Asciidoctor>> section.
+
+=== GitHub Setup
+[NOTE]
+====
+The steps here assume that the person who will manage the GitHub repository already has a GitHub account (a free account is sufficient).
+====
+
+To setup the iTC organization and repository, do the following:
+
+. Login to https://github.com with your account
+. Choose what the iTC group's Organization and Repositories should be named
+. Click the down arrow in the upper right corner of the page next to the user icon
+. Click "New Organization", and enter the agreed on Organization name
+.. Select the "My personal account" option for the owner of the new Organization
+. Click "Your repositories", and then click New in the upper right quadrant of the screen
+. Choose the Organization as the owner (it will default to your account) and enter the Respository name, add a description if necessary, and finally click Create repository. The rest can be left as default
+. The next screen after creation is useful for getting up and running. Read the Quick setup steps, commands used, etc.
+
+=== Organization Settings
+==== Organization Owners
+Once the Organization has been created, the first thing that should be done is to assign at least one more Owner for the organization.
+
+[NOTE]
+====
+This assumes that the other users who will be owners have already created GitHub accounts for themselves.
+====
+
+To set another Owner for the organization, go to the Organization page and click on the People tab at the top.
+
+. Click the Invite button on the top right
+. Enter the username of the person who will become another Owner
+. Choose Owner as the role in the organization and click Send Invitation
+
+Once the user accepts the invitation, they will automatically be added as an Owner.
+
+If the user already exists within the list of People in the Organization, then clicking the Gear icon to the right of their name and selecting "Change role..." will let you change their role accordingly.
+
+=== GitHub Repository Collaborators
+GitHub public repositories are visible to anyone with a GitHub account. This means that anyone can submit issues or make comments. The limitation here though is that only collaborators (members) of the repository can have permissions which let them actually edit the documents contained in the repository. In GitHub, the most common permission used for collaborators is Write.
+
+To add Collaborators, go to the Repository:
+
+. Click the Settings tab
+. Select the Collaborators & teams from the left side
+. Scroll to the bottom and enter the username of the person who will be working in the repository and click Add collaborator
+
+They will be added to the list of collaborators. If the permission does not show Write, select the menu item and choose Write.
+
+=== Repository Branches
+One of the most important aspects of working in GitHub is the use of Branches. This is how you manage the process of creating the documents. When created, a repository has a single branch, Master. This should be reserved for the current "published" content. Ongoing work though, should be done in a different branch, which would then be merged into the Master on some periodic basis. This second, working branch needs to be created and set to the default working branch.
+
+To create and set the new branch for the repository:
+
+. Go to the Code tab
+. Click the Branch: master menu button
+. Enter the name of the new branch in the dialog box (the recommended name would be working) and then click the Create branch at the bottom of the window
+. Click the Settings tab
+. Select Branches from the left side
+. Click the "master" menu button, and select the branch you just created (working)
+. Click the Update button and accept the change
+
+This will set the working branch to be the default branch that everyone will work against. This provides a more unrestricted environment since everyone will be working against a copy that is not the published version.
+
+==== Branch Protection Rules
+Once the branches have been setup, rules should be configured to protect the branches. This protection forces changes to be reviewed before they can be merged into the document, thereby preventing accidental changes and also forcing review of the changes before they become part of the document.
+
+While each branch should have protection, the amount of protection is usually different. In general, each branch should be protected based on its importance. For example, the Master is the "official" version, and so should have a higher bar of approval before being changed, while the Working branch is where work on the next iteration is being done, and so should be more easily updated.
+
+The <<Branch Protection>> table shows some examples of the levels to set the approvals at. What these settings mean is how many users must approve a change before it can be merged into the specified branch. 
+
+.Branch Protection
+[cols="1,1,1",options="header"]
+|===
+|Branch
+|Ratio
+|Example
+
+|Master
+|50%
+|5 (for 10 members)
+
+|Working
+|25%
+|2 or 3 (for 10 members)
+
+|===
+
+The numbers should be set to something workable for the iTC. While there may be 50 members in an iTC, maybe only 14 may be active (obviously this will vary), so setting the publication to Master at 25 could prevent ever being able to make changes to the published branch. Generally it would be recommended to base these numbers on the active collaborators within the iTC, with the possibility of a slightly higher number for the Master.
+
+These numbers can be changed at any time, so start low and work up based on the number of active collaborators.
+
+To set a rule:
+
+. Click the Settings tab
+. Select Branches from the left side
+. Click the Add rule button on the right hand side
+. Type in the name of the branch to be protected in the Branch name pattern
+. Check the box in Require pull requewst reviews before merging
+. Select the number in the Required approving reviews dropdown
+. Click Create
+
+Do this for both the Master and the Working branches.
+
+=== GitHub Backups
+One of the most important thing to do is have a backup of the Organization repository. While online services are usually safe, occasionally there have been reports about repositories being lost in GitHub (and not when someone actually deleted it).
+
+While there are simple measures for making sure all the branches are backed up, the concern here is to have the entirety of the repository backed up, from the branches to the Issues, Pull Requests, Wiki, etc.
+
+[IMPORTANT]
+====
+The following steps require someone with familiarity or knowledge of Python.
+====
+
+Automatic download and archival of this GitHub content can be facilitated by using a script and cron on a Linux system to pull the data. 
+
+[NOTE]
+====
+Python can be installed and run in automated manners on Windows systems as well, but this example uses a Linux system.
+====
+
+Perform the following:
+
+. Use pip to install the software:
++
+ sudo su && pip install github-backup
+
+. Generate an access Token
+.. Login to GitHub
+.. Click the user avatar icon, and click Settings.
+.. Click Developer settings in the left hand list.
+.. Click Personal access tokens.
+.. Click Generate new token in the upper right quadrant.
+.. Define the permissions for the access token. It's recommended to avoid adding permissions to access GPG keys, or similar security tokens. It's unnecessary for the purpose of backups.
+.. Click Generate token at the bottom of the page. 
+.. Once generated then copy it to a safe place, because you'll never see the code again.
+. Create a crontab entry with your desired download schedule, and designate a location to store the data.
+. To backup one repository (and accompanying data):
++
+ github-backup USERNAME -P -t ACCESS_TOKEN -o BACKUP_DIR --all -O -R REPOSITORY
+
+[NOTE]
+====
+Replace the items in all caps with your respective information.
+====
+
+If multiple repositories are desired, or other syntactical adjustments are necessary, read the help pages for github-backup:
+
+ github-backup --help
+
+== Asciidoctor
+[quote, Asciidoctor website] 
+____
+Asciidoctor is a fast, open source text processor and publishing toolchain for converting AsciiDoc content to HTML5, DocBook, PDF, and other formats. Asciidoctor is written in Ruby and runs on all major operating systems. The Asciidoctor project is hosted on GitHub.
+____
+
+=== Background
+The second major tool being used here is Asciidoctor. The reason for this is because of how GitHub works. Git functionality (and hence GitHub) is centered around the use of text files. This makes a lot of sense in the programming world where the code is eventually compiled into binaries that run things. The downside of course is that we expect nice output such as that available from Word or similar applications in the creation of our documentation, and these all use binary formats. The problem here is that the binary formats do not allow for the easy comparisons or multi-editor usage, but these are built-in capabilities of Git and GitHub.
+
+So the question then is how to use GitHub while also being able to have rich output text, and this is where Asciidoctor comes in. Asciidoctor uses text files as the input, basically as a lightweight markup language (think HTML but with a LOT less bracketing), and provides the ability to create rich output such as HTML or PDF (the two main concerns for us). By utilizing Asciidoctor within GitHub, you get the benefits of GitHub while making the document editing hopefully not completely painful.
+
+=== Asciidoctor Setup
+While documents are written in the Asciidoctor syntax, the Asciidoctor toolchain must be installed to process the Asciidoctor files into HTML or PDF output. Asciidoctor is distributed as a RubyGem, and so can be installed on any system where a late version of Ruby (2.5.5 or later recommended) can be installed.
+
+==== Installing Ruby
+
+A Ruby for Windows installer can be found https://rubyinstaller.org/downloads/[here]. Pick one with the devkit (I'm not sure if this is strictly needed, but prefer to have everything to make sure there are no problems). 
+
+[NOTE]
+====
+This is not the only way to install Ruby, but is being used here as a reference.
+====
+
+==== Installing the Asciidoctor Toolchain
+
+Once Ruby has been installed, start "Command prompt with Ruby". The execute the following commands:
+
+ gem install asciidoctor
+ gem install asciidoctor-pdf
+ gem install asciidoctor-diagram
+
+This will install the components of the Asciidoctor toolchain.
+
+==== Installing CCUF Custom Components
+The following components need to be installed:
+
+[IMPORTANT]
+====
+This needs to be completed!!!!!!!
+====

@@ -1,0 +1,56 @@
+= GitHub Clients Overview
+:showtitle:
+:toc:
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-01
+
+== Introduction
+While many users may be satisfied with using GitHub in their web browser (which is likely sufficient for the majority of iTC members), some will need the ability to work offline. For that you will need some sort of git client that works with GitHub.
+
+There are no hard and fast rules here; Find the client that works best for you whether it's a GUI or command line, for pay or not. To get you started however here's a short list of available clients. All examples are FOSS.
+
+=== GitHub Clients
+
+* GitAhead
++
+This git GUI client is pretty elegant, and has decent features. It's also fairly user friendly.
+
+URL:: https://gitahead.github.io/gitahead.com/
+
+* GitHub Desktop
++
+This GUI client is cross-platform for only Mac and Windows, but has decent features.
+
+URL:: https://desktop.github.com/
+
+=== IDE's supporting GIT
+This section outlines a couple IDE's that support both Asciidoc syntax, and GIT.
+
+* Atom IDE
++
+This IDE (Integrated Development Environment) is cross-platform, lightweight, and has a multitude of plugins available that expand its already impressive support for various programming languages, file formats, etc.
+
+URL:: https://ide.atom.io/
+
+[NOTE]
+====
+While this IDE supports working with git and GitHub, it can be a tad counterintuitive. It's primary use case is more likely to be that of editing documents, but not necessarily to work directly with a git repository or GitHub.
+
+====
+
+* MS Visual Studio Code
++
+Open source client from Microsoft, with built-in git integration functionality. Read the license terms to see if this is a good fit for your organization however. While it's free and open source, it does send information back to Microsoft.
+
+URL:: https://code.visualstudio.com/
+
+=== Other GIT Tools
+This section outlines other tools that may be useful. 
+
+* RepoZ
++
+RepoZ is a utility software that automates some aspects of the git client -> server interactions on behalf of the user, as well as adding shell features that improve interactions with them.
+
+URL:: https://github.com/awaescher/RepoZ
