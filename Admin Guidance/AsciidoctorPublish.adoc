@@ -45,6 +45,11 @@ Once you have placed the Asciidoctor file into the <input> folder, to generate o
 
 Running the script without any parameters will show a help message.
 
+[IMPORTANT]
+====
+If you are embedding any images (as opposed to generating them like through ditaa), make sure you copy the images folder along with the Asciidoctor file to the input folder.
+====
+
 The following <output type> parameters are accepted (not case sensitive).
 
 .itc-gentool Output Type Parameters
