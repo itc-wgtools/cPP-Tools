@@ -1,0 +1,15 @@
+extends: default
+admonition:
+  icon:
+    boilerplate:
+      name: fas-lock
+      stroke_color: 3F903E
+      size: 24
+    review:
+      name: fas-clipboard
+      stroke_color: FDB109
+      size: 24
+    guidance:
+      name: fas-book
+      stroke_color: 0909FD
+      size: 24
