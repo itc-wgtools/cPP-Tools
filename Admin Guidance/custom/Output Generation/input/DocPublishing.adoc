@@ -5,6 +5,7 @@
 :icons: font
 :revnumber: 0.1
 :revdate: 2019-08-01
+:experimental:
 
 == Introduction
 Hopefully, at some regular interval, the iTC will actually produce versions of the documents for publication. This can be drafts for internal versions (generally for consumption only by the iTC), public review versions or published documents for use. 
@@ -60,5 +61,6 @@ To mark the current content of Master as a release, you need to publish a Releas
 At this point the current state of the Master branch and the files you uploaded will be packaged as a release.
 
 == Posting the Documents for External Access
-The published documents (the output from the Asciidoctor tools) and any related files should now be published somewhere. This can be to the CCUF website or to a site hosted on GitHub (see link:GitHubio.html[Publishing the iTC GitHub Website] for more information about creating a GitHub page).
+The published documents (the output from the Asciidoctor tools) and any related files should now be published somewhere. This can be to the CCUF website or to a site hosted on GitHub (see link:GitHubio.html[Publishing the iTC GitHub Website]
+
 

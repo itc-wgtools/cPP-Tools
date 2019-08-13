@@ -28,7 +28,9 @@ Ideally the person who is responsible for GitHub should be someone familiar with
 == Resources
 * link:GitHubClients.html[GitHub Clients Overview]
 * link:GitHubTraining.html[GitHub Training References]
-* link:AsciidoctorPublish.html[Asciidoctor Publishing Output]
+* link:GitHubio.html[Publishing the iTC GitHub Website]
+* link:AsciidoctorPublish.html[Asciidoctor Generating Output]
+* link:DocPublishing.html[Publishing iTC Documents]
 
 :sectnums:
 == Introduction
@@ -234,3 +236,6 @@ The following components need to be installed:
 ====
 This needs to be completed!!!!!!!
 ====
+
+* install notice-block
+* install script tools (published as gem is plan)

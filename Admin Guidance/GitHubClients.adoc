@@ -43,8 +43,11 @@ While this IDE supports working with git and GitHub, it can be a tad counterintu
 * MS Visual Studio Code
 +
 Open source client from Microsoft, with built-in git integration functionality. Read the license terms to see if this is a good fit for your organization however. While it's free and open source, it does send information back to Microsoft.
++
+To enhance using Visual Studio, you can also add the AsciiDoc extension from the marketplace (this uses Asciidoctor) to have a live preview.
 
 URL:: https://code.visualstudio.com/
+URL:: https://marketplace.visualstudio.com/items?itemName=joaompinto.asciidoctor-vscode
 
 === Other GIT Tools
 This section outlines other tools that may be useful. 
