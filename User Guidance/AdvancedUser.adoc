@@ -25,6 +25,8 @@ The expectation for any user reading this guide is that they are already familia
 * https://help.github.com/en/desktop[GitHub Desktop Documentation]
 * https://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Asciidoctor Editors with Live Preview]
 * https://www.asciidocfx.com/[AsciiDocFX]
+* [[ditaa]]http://ditaa.sourceforge.net/[ditaa]
+* [[JavE]]http://www.jave.de/[JavE (Ascii diagrams)]
 
 :sectnums:
 
@@ -134,3 +136,14 @@ A few notes about AsciiDocFX to be aware of:
 * Special admonitions will not be display properly (they will be shown in a box, but the marker for the icon will be ignored). They will still be shown in the final output if the Asciidoctor toolchain is used for building the docs
 * It is possible to paste binary characters into this editor but they will not show up in the display (it will be a blank space on the screen). I did this several times and it caused the file to be registered as binary in GitHhub instead of text. I had to use a standard text editor (like Notepad) to find and remove the characters
 
+=== Ascii Diagrams
+While there will be times when a complex graphic just needs to be created in a graphics program, for flow charts and requirement hierarchies, it is possible to use <<ditaa>> to create diagrams in text (Ascii art) and have them rendered into graphics in the final publication.
+
+Ditaa is the recommended method for doing this, in large part because the setup is simple within Asciidoctor and also because it is simple to understand. Because you are using text to draw the diagram, it also means you can see exactly what you are doing within the text of the Asciidoctor document instead of needing to look up the graphic image. Using ditaa, when the HTML or PDF output is generated, the text is translated into a graphic image. 
+
+The biggest problem with any graphic is creating it, and Ascii diagrams can be particularly annoying since you are trying to line up the lines and text using spaces in within the document. To speed up this process, it is recommended to use <<JavE>> to help create the diagrams. Using JavE you can create diagrams in a more familiar way (like drawing boxes and lines with a mouse) and then copy the resulting output into your Asciidoctor document.
+
+[NOTE]
+====
+After reviewing the ditaa site about diagrams, you may need to create a user defined box style to get the right corners. The standard + will create square corners, while you will need to use / or \ for rounded corners.
+====
