@@ -33,6 +33,12 @@ This guide is specifically targeted to using GitHub through a web browser. There
 
 At the beginning of many of the sections there are links to GitHub Help pages. This guide is intended to provide the framing to the GitHub Help around how it is likely to be used as part of the iTC. All these links are specifically marked as *GitHub Help* with the title of the page.
 
+== Resources
+
+* [[syntax]]https://github.com/itc-wgtools/cPP-Tools/blob/develop/User%20Guidance/Syntax-Guide.adoc[Asciidoctor for iTC Syntax Reference]
+* https://itc-wgtools.github.io/user-guide/AdvancedUser.html[Advanced User Guide]
+
+
 :sectnums:
 == Introduction
 This guide will show how to use GitHub for making comments and editing the documents of an iTC. There are many reasons to do this, but among the most important are these:
@@ -48,7 +54,7 @@ While there are many benefits, using GitHub does require some changes to how we 
 
 The primary change for working in GitHub is the change in document format, from a WYSIWYG editor to working in plain text. The great advantage of plain text though is that it allows you to easily focus on the content, and this content can be easily indexed by GitHub to track multiple editors working at the same time. Changes as small as one character are readily tracked in GitHub and can be easily seen.
 
-Of course we don't want plain text Protection Profiles, so we need to have some sort of syntax that allows us to specify things like headers, tables, bullets and such as we expect in our documents. While there are many formats that can be used for this, this guide points to the https://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoctor processor] to generate the styles we expect. The CCUF Team Tools WG has provided a template document titled __**Asciidoctor for iTC Syntax Reference**__ for more information about the syntax that is used to create the styles that are most likely to be used in the iTC documents.
+Of course we don't want plain text Protection Profiles, so we need to have some sort of syntax that allows us to specify things like headers, tables, bullets and such as we expect in our documents. While there are many formats that can be used for this, this guide points to the https://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoctor processor] to generate the styles we expect. The CCUF Team Tools WG has provided a template document titled <<syntax,Asciidoctor for iTC Syntax Reference>> for more information about the syntax that is used to create the styles that are most likely to be used in the iTC documents.
 
 Another change is in how to comment on the documents. While today in a Word document you are most likely to just use the comment feature and highlight the place you are commenting on. Within GitHub this is still possible, but the feature is called an Issue (as opposed to a comment). The great thing about Issues though is that they do not need to be removed from the document when it is published, so the history of the comment and any discussion (and even a resolution) are maintained.
 
@@ -56,13 +62,13 @@ Another change is in how to comment on the documents. While today in a Word docu
 As mentioned, there are some changes to how you would normally work in a Word document to how you will need to work in GitHub, and one of the biggest change is in the terminology, so here is a short description of the two main changes.
 
 Comment -> Issue::
-In a Word document you add Comments to the document. In GitHub you will instead create Issues. An Issue can be created that is tied to a specific point in a document or it can be a topic to discuss (i.e. not tied to a specific document or item within a document).
+In a Word document you add Comments to the document. In GitHub you will instead create Issues. An Issue can be created that is tied to a specific point in a document (a permalink) or it can be a topic to discuss (i.e. not tied to a specific document or item within a document).
 
 Change/Edit -> Pull request (PR)::
 In a Word document when Track Changes is enabled, you are able to see the suggested edit and the replaced text. The equivalent in GitHub is to create a Pull request. This is how GitHub tracks changes made to documents and allows further discussions on the changes.
 
 Version -> Branch (sort of )::
-In GitHub active work is done on a branch. Generally you will work in a "develop" branch which is basically the working copy of the document until these are committed to the "Master" branch. At some point the "Master" is published and this will create say v1.0 of you document (or document set). 
+In GitHub active work is done on a branch. Generally you will work in a "develop" branch which is basically the working copy of the document until these are committed to the "Master" branch. At some point the "Master" is published and this will create say v1.0 of your document (or document set). 
 
 Repository::
 In GitHub a repository is the entirety of all files, Issues, Pull Requests, even the Wiki associated with a project. It is possible that the iTC may create several repositories under the iTC to separate work into different areas. Each repository has its own files, Issues and Pull Requests (though it is possible to link between them).
@@ -80,7 +86,7 @@ Once you have created your account, you should provide the username to the iTC G
 Once you have created your account, sign in to interact with GitHub.
 
 === Overview of GitHub Sections
-There are four primary areas within GitHub you will interact with.
+There are four primary areas within GitHub you will interact with (circled below).
 
 [#img-GH-sections]
 .GitHub Sections
@@ -104,7 +110,12 @@ Since we are using Asciidoctor as the file format most of the files you see shou
 Clicking on a file will open the file and display it (GitHub mostly parses the Asciidoctor files, so while not exactly the final output, it will be pretty close).
 
 ===== Changing the Branch
-As noted above, branches are used to show different versions (such as the target publishing branch, and any others that are being worked on in the meantime). There will always be two primary branches as noted, and generally work will be done in the develop branch. Additional branches will be created during the editing process. To switch between branches, click the Branch button and select the branch you want to work on.
+As noted above, branches are used to show different versions (such as the target publishing branch, and any others that are being worked on in the meantime). There will always be two primary branches as noted, and generally work will be done in the Working branch. Additional branches will be created during the editing process. To switch between branches, click the Branch button and select the branch you want to work on.
+
+[IMPORTANT]
+====
+The illustrations in these examples use a "develop" branch as the example of where active work will be performed. The recommended name for this branch is "Working" but the iTC Admin may choose any name (there should not be both a develop and Working branch, so it should be fairly obvious by the name). Contact your iTC Admin if you are not sure what branch you should be working in.
+====
 
 [#img-GH-branch]
 .GitHub Change Branch
@@ -112,7 +123,7 @@ image::UG-000007.png[,,]
 
 Changing the branch will show you the current state of the files stored within that branch. So for example if the develop branch has added a new image that isn't present in the existing Master (i.e. the current release), switching to the Master branch would not show that image while the develop branch will.
 
-The administrator will set the default branch you should work on (usually develop), so you probably will not need to change branches often.
+The administrator will set the default branch you should work on (usually Working), so you probably will not need to change branches often.
 
 When you change the branch you are working on, the files shown in the <<Code overview,Code view>> will change to the current branch. This could cause files to disappear or appear depending on the current status of each branch (for example if a file is being worked on in the develop branch that has not yet been committed to Master, then switching the branch will cause that file to appear/disappear in the list of files).
 
@@ -159,7 +170,7 @@ It may show different information (such as reviews have occurred and be green), 
 
 Merging is the process of accepting the proposed edit and making it part of the main working document (i.e. making it part of the branch).
 
-Working with Pull requests will be described in the section <<Using Pull requests>>.
+Working with Pull requests will be described in the section <<Using Pull Requests>>.
 
 ==== Wiki Overview
 The wiki is what you would expect, a wiki. You can create and edit pages here. This is useful for tracking things like meeting agenda/minutes and other useful information for everyone (like overviews of progress, direction, etc).
@@ -176,7 +187,7 @@ As with any wiki, page content can be created to cover any topics that are neede
 === Using Markdown/Asciidoctor
 When using GitHub, all the comments and documentation edits you make are in plain text. As noted in <<Changes for GitHub>> the documentation is all intended to be written in using the Asciidoctor syntax. But comments (or the wiki) in GitHub uses its own implementation of Markdown. These are similar but not quite the same.
 
-For more information specifically about how to use the Asciidoctor syntax, review the document __**Asciidoctor for iTC Syntax Reference**__ provided by the CCUF Team Tools WG. This document specifically provides examples of the syntax that is expected to be needed in the iTC documentation.
+For more information specifically about how to use the Asciidoctor syntax, review the document <<syntax,Asciidoctor for iTC Syntax Reference>> provided by the CCUF Team Tools WG. This document specifically provides examples of the syntax that is expected to be needed in the iTC documentation.
 
 When editing comments or wiki entries though, the GitHub markdown needs to be used. The easiest way to use this is by using the highlighted icons at the top of the editor.
 
@@ -250,7 +261,7 @@ If you start to create an Issue and then move off to something else (another pag
 ====
 
 ==== Additional Fields
-When creating (or reviewing) and Issue (or Pull request), there are several other fields that can be assigned. These fields can help assign specific people to review the Issue (they will get a notification about being assigned) as well as providing fields that can be used to filter the Issue.
+When creating (or reviewing) an Issue (or Pull request), there are several other fields that can be assigned. These fields can help assign specific people to review the Issue (they will get a notification about being assigned) as well as providing fields that can be used to filter the Issue.
 
 Each of these fields can be configuring using the gear icon.
 
