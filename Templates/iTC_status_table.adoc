@@ -1,10 +1,14 @@
-= _Coffee Maker_ iTC (CMiTC) Status _2019-06-14_
+= _Coffee Maker_ iTC (CM-iTC) Status <DATE>
 :showtitle:
 :table-caption: Table
-:revnumber: 0.1
-:revdate: 2019-06-13
+:revnumber: 0.2
+:revdate: 2019-08-23
 
-:sectnums!:
+:iTC-longname: Coffee Maker
+:iTC-shortname: CM-iTC
+:iTC-email: cm-itc-mailing-list@gmail.com
+:iTC-website: https://coffeemaker.github.io/
+:iTC-GitHub: https://github.com/coffeemaker/repository/
 
 == General
 [cols="1,1,1"]
@@ -29,12 +33,14 @@
 |_Date_
 
 |*Contact the iTC:*
-2.+|contact this iTC at _iTC@gmail.com_
+2.+|contact this iTC at {iTC-email}
 
 |*Collaboration Site(s):*
-2.+|https://ccusersforum.onlyoffice.com[CCUF OnlyOffice]
+2.+|{iTC-website}[GitHub Repository]
 
-https://github.com/biometricITC/cPP-biometrics[GitHub]
+{iTC-website}[{iTC-shortname} Website]
+
+https://ccusersforum.onlyoffice.com[CCUF OnlyOffice]
 
 https://www.commoncriteriaportal.org[Other]
 
@@ -78,7 +84,7 @@ https://www.niap-ccevs.org/Documents_and_Guidance/view_td.cfm?td_id=239[CMIT001 
 
 https://www.niap-ccevs.org/Documents_and_Guidance/view_td.cfm?td_id=239[CMIT002 FPT_STM Reliable Time Source correction]
 
-|https://www.commoncriteriaportal.org/files/ppfiles/test_doc_02.pdf[*_Supporting Document for evaluating Coffee Makers_*]
+|{itc-website}/published/SD-CM-v1.html[*Supporting Document for evaluating {iTC-longname}*]
 |_1.0_
 |_Published_  
 

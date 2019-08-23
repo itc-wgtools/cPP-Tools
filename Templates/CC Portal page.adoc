@@ -1,26 +1,31 @@
-= _your_ international Technical Community (iTC)
+= Coffee Maker international Technical Community (iTC)
 :showtitle:
-:revnumber: 0.1
-:revdate: 2019-06-13
+:revnumber: 0.2
+:revdate: 2019-08-23
 
-:iTC-longname: Your
-:iTC-shortname: YOUR-iTC
+:iTC-longname: Coffee Maker
+:iTC-shortname: CM-iTC
+:iTC-email: cm-itc-mailing-list@gmail.com
+:iTC-website: https://coffeemaker.github.io/
+:iTC-GitHub: https://github.com/coffeemaker/repository/
 
 :sectnums!:
 == Acknowledgements
-The {iTC-longame} international Technical Community (iTC) also known as {iTC-shortname} is comprised of representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
+The {iTC-longname} international Technical Community (iTC) also known as {iTC-shortname} is comprised of representatives from Industry, Government agencies, Common Criteria Test Laboratories, and members of academia.
 
 == Introduction
 
-The iTC-longame international Technical Community (iTC) was approved and established by the CCRA Committee in _October 2018_ after review and approval of the Essential Security Requirements (ESR) document for _your technology type_. The initial Essential Security Requirements (ESR) was produced by the _name of committee before the iTC was established_. 
+The {iTC-longname} international Technical Community (iTC) was approved and established by the CCRA Committee in _October 2018_ after review and approval of the Essential Security Requirements (ESR) document for _your technology type_. The initial Essential Security Requirements (ESR) was produced by the _name of Working Group before the iTC was established_. 
 
 The iTC is sponsored by _X_ national CCRA signatory schemes: _list of schemes_.
 
 https://www.commoncriteriaportal.org/<SOME_LINK_TO_THE_ESR_PDF>[Essential Security Requirements].
 
-The iTC is open to stakeholders with an interest in the security functionality of _technology type_. To join the iTC, please message: _XXX.itc@gmail.com_.
+The iTC is open to stakeholders with an interest in the security functionality of _technology type_. To join the iTC, please message: {iTC-email}.
 
-The homepage for the work of the {iTC-longname} iTC is here: <URL to the iTC Homepage>
+The homepage for the {iTC-shortname} is here: {iTC-website}
+
+The work repository for the {iTC-shortname} is here: {iTC-GitHub}
 
 == Position Statements
 
@@ -50,7 +55,7 @@ The iTC has published:
  *  a security functional package that addresses _something_
  
 The iTC also issues interpretations addressing issues in the application of these documents.
-https://www.yoursite.com/interpretations_link/[Interpretations].
+{iTC-website}/interpretations/[Interpretations].
 
 The iTC is currently developing:
 
