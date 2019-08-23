@@ -19,12 +19,13 @@ This document intends to communicate to iTC users information regarding the sele
 The expectation for any user reading this guide is that they are already familiar with GitHub or have at least read the iTC User Guidance for GitHub and understand the process for creating Pull Requests within the web interface.
 
 == Resources
-* link:/admin-guide/GitHubClients.html[GitHub Clients Overview]
+* [[clients]]link:/admin-guide/GitHubClients.html[GitHub Clients Overview]
 * link:/admin-guide/GitHubTraining.html[GitHub Training References]
+* [[userguide]]link:/user-guide/UserGuide.html[iTC User Guidance for GitHub]
 * https://desktop.github.com/[GitHub Desktop]
 * https://help.github.com/en/desktop[GitHub Desktop Documentation]
-* https://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Asciidoctor Editors with Live Preview]
-* https://www.asciidocfx.com/[AsciiDocFX]
+* [[editors]]https://asciidoctor.org/docs/editing-asciidoc-with-live-preview/[Asciidoctor Editors with Live Preview]
+* [[adfx]]https://www.asciidocfx.com/[AsciiDocFX]
 * [[ditaa]]http://ditaa.sourceforge.net/[ditaa]
 * [[JavE]]http://www.jave.de/[JavE (Ascii diagrams)]
 
@@ -38,10 +39,10 @@ Generally, GitHub clients focus on the process of creating Pull Requests within 
 It is important to understand that a GitHub client is not an editor. Some clients may be able to link to an editor (so you can click on a file while inside the client and have it open up), but the client itself is specifically for managing the upload/download of code (in this case the iTC documentation).
 ====
 
-What the GitHub client will do is to allow you to download the files of the repository where you are working (such as the cPP repository), and then work on the files from your local computer (as opposed to using the browser). For this you can use any editor you like (see <<Asciidoctor Editors>> for some suggestions). Once you have completed your edits and saved them, you can then upload them back to GitHub where they can be reviewed and eventually included in the final version.
+What the GitHub client will do is to allow you to download the files of the repository where you are working (such as the cPP repository), and then work on the files from your local computer (as opposed to using the browser). For this you can use any editor you like (see <<editors,Asciidoctor Editors>> for some suggestions). Once you have completed your edits and saved them, you can then upload them back to GitHub where they can be reviewed and eventually included in the final version.
 
 == GitHub Clients
-When working offline, you will need to have some sort of GitHub client to interact with the repository. There are many options, and a lot of them are free (some are more free than others), covering both GUI and CLI-based clients. The page <<GitHub Clients Overview>> provides links to several different clients that can be used for managing your access with GitHub. None is really better than another, it all comes down to preference.
+When working offline, you will need to have some sort of GitHub client to interact with the repository. There are many options, and a lot of them are free (some are more free than others), covering both GUI and CLI-based clients. The page <<clients,GitHub Clients Overview>> provides links to several different clients that can be used for managing your access with GitHub. None is really better than another, it all comes down to preference.
 
 Once you are familiar with how GitHub works, with Pull Requests and Merges, using any client is more about figuring out how that client presents those functions than it is how to do what GitHub needs.
 
@@ -54,7 +55,7 @@ The configuration of the GitHub Desktop client can be found https://help.github.
 === Adding (Cloning) Repositories to the Client
 Within each GitHub organization you will have repositories where you do the work. While a repository in the web interface shows Issues, Pull Requests, the wiki and other options, in the client you are looking at the Code and Pull Requests sections only (it is possible some clients may provide more functionality, but not in the client we are looking at now).
 
-Accessing a repository will make it available to download to your computer. When you installed the client it would have asked you to specify a GitHub folder, and this will be where the files are downloaded (be default).
+Accessing a repository will make it available to download to your computer. When you installed the client it would have asked you to specify a GitHub folder, and this will be where the files are downloaded (by default).
 
 The process of adding a repository is called cloning. The directions for cloning a repository can be found https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository-from-github-desktop[here]. When you select GitHub.com you will see all the repositories you have access to (such as different iTCs, or different repositories within your iTC). Select the repository you want to access and where you want the files to download to (this will be your working directory).
 
@@ -84,7 +85,7 @@ It is possible to create new branches from something other than Working, and tha
 To create your new branch, follow the steps https://help.github.com/en/desktop/contributing-to-projects/creating-a-branch-for-your-work[here].
 
 ==== Switching Between Branches
-While you are working on your branch changes, you may need to see work being done in another branch (i.e. a Pull Request) that has already been uploaded. The steps for switching can be found https://help.github.com/en/desktop/contributing-to-projects/switching-between-brancheshttps://help.github.com/en/desktop/contributing-to-projects/switching-between-branches[here].
+While you are working on your branch changes, you may need to see work being done in another branch (i.e. a Pull Request) that has already been uploaded. The steps for switching can be found https://help.github.com/en/desktop/contributing-to-projects/switching-between-branches[here].
 
 One of the main things to note when switching between branches is what happens to your changes. When you switch branches, you will be asked what you want to do with any changes you have already made. They can be brought to the new branch or to leave them in the existing branch. You should leave your changes in the existing branch, and GitHub Desktop will handle saving them and then showing you the new branch. When you switch back to your previous branch, the changes will be restored, or you will have the option to restore your stashed changes. This allows you to move around in the branches without losing your work.
 
@@ -101,13 +102,13 @@ When you are ready to upload your changes to GitHub, you will be saving a commit
 
 For more information about reviewing and committing changes to GitHub, go to https://help.github.com/en/desktop/contributing-to-projects/committing-and-reviewing-changes-to-your-project[here].
 
-Opening the GitHub Desktop (which should be on the branch you had created already) will show you a list of the changed files on the left side. In the right pane the changes of each file will be displayed (so you can take a quick overview of any edits). Files will be marked with symbols for new, modified or deleted files (greed, yellow and red). 
+Opening the GitHub Desktop (which should be on the branch you had created already) will show you a list of the changed files on the left side. In the right pane the changes of each file will be displayed (so you can take a quick overview of any edits). Files will be marked with symbols for new, modified or deleted files (green, yellow and red, respectively). 
 
-If for some reason you don't want to include the changes to one of the files in the Pull Request, you can uncheck it before making the commit. If you decide you don't want the changes at all, you can Discard them (this can be right with a right-clicki). Note that a Discard will actually delete all the changes, so be careful about using this option.
+If for some reason you don't want to include the changes to one of the files in the Pull Request, you can uncheck it before making the commit. If you decide you don't want the changes at all, you can Discard them (this can be right with a right-click). Note that a Discard will actually delete all the changes, so be careful about using this option.
 
 To commit your changes to GitHub, fill out a title and description in the lower-left corner. If this is a new Pull Request this is the content of the initial comment for the discussion, while if it is an update to an existing Pull Request it will be shown as part of the commit within that discussion.
 
-You can use the @ and # references for people and issues as you can in the web interface. Once you have completed this and selected the file changes to include, click the Commit button.
+You can use the @ (to reference other iTC members) and # (to reference Issues or Pull Requests) references as you can in the web interface (more information can be found in section 3 of the <<userguide,iTC User Guidance for GitHub>>. Once you have completed this and selected the file changes to include, click the Commit button.
 
 Once the commit has been created it needs to be pushed to GitHub. In the upper right hand corder (next to the branch menu) you will see "Push origin". Click this button to upload the changes to GitHub.
 
@@ -117,12 +118,12 @@ One important taks is making sure that you local branches are up to date. Most o
 When you have selected the branch you want to review, the button to the right of the branch menu will say Fetch origin. Clicking this button will tell the client to contact the server and make sure it has the latest copy of the specified branch. More information about this can be found https://help.github.com/en/desktop/contributing-to-projects/syncing-your-branch#update-your-local-branch[here].
 
 == Local Editing with Asciidoctor
-Once you have the files for the repository downloaded locally, you need to something to edit them with. Now given that Asciidoctor is simple text, technically something as simple as Notepad is sufficient, but the reality is that if you are taking the time to download the files and work offline, you probably want something with more functionality. Using Notepad will only let you see the text and syntax you have added, not give you a WYSIWYG (Live Preview) version.
+Once you have the files for the repository downloaded locally, you need to find (or have?) something to edit them with. Now given that Asciidoctor is simple text, technically something as simple as Notepad is sufficient, but the reality is that if you are taking the time to download the files and work offline, you probably want something with more functionality. Using Notepad will only let you see the text and syntax you have added, not give you a WYSIWYG (Live Preview) version.
 
-The <<Asciidoctor Editors with Live Preview>> page has a lot of options for a Live Preview environment for Asciidoctor files. Realize that none of these are quite like using Word where you are directly editing the rich output, but are in some form a dual display with the raw Asciidoctor text in one frame and the rich output in another.
+The <<editors,Asciidoctor Editors with Live Preview>> page has a lot of options for a Live Preview environment for Asciidoctor files. Realize that none of these are quite like using Word where you are directly editing the rich output, but are in some form a dual display with the raw Asciidoctor text in one frame and the rich output in another.
 
 === Recommended Editor (from Brian Wood)
-At this point, the editor I would most recommend, is <<AsciiDocFX>>. While a little slow (it is cross platform Java, so it can take a little time to start up), I generally have not had any problems with it running and doing what it is supposed to. It is also the easiest to setup as it has everything you need bundled into it whereas several of the others require installing an editor and then loading plugins to support the preview.
+At this point, the editor I would most recommend, is <<adfx,AsciiDocFX>>. While a little slow (it is cross platform Java, so it can take a little time to start up), I generally have not had any problems with it running and doing what it is supposed to. It is also the easiest to setup as it has everything you need bundled into it whereas several of the others require installing an editor and then loading plugins to support the preview.
 
 AsciiDocFX provides a two-pane display with the raw Asciidoctor text on the left and a Live Preview on the right. You can open multiple files in tabs and there is a folder/file list on the left so you can find files to open (if you haven't associated the files in Windows Explorer). There are also some help icons (things like bold text, headers, tables, etc.) that can be used to help out in formatting.
 
@@ -133,7 +134,7 @@ Atom and Brackets both seem to be pretty good editors, but I don't find their pr
 A few notes about AsciiDocFX to be aware of:
 
 * The output tools that are built in are fine, but do not have the full features of the Asciidoctor toolchain, so "final" documents should not be produced from here. This especially includes things like the special admonition notes that have been added, they will not be displayed properly here (or in any of the Live Previews)
-* Special admonitions will not be display properly (they will be shown in a box, but the marker for the icon will be ignored). They will still be shown in the final output if the Asciidoctor toolchain is used for building the docs
+* Special admonitions will not be displayed properly (they will be shown in a box, but the marker for the icon will be ignored). They will still be shown in the final output if the Asciidoctor toolchain is used for building the docs
 * It is possible to paste binary characters into this editor but they will not show up in the display (it will be a blank space on the screen). I did this several times and it caused the file to be registered as binary in GitHhub instead of text. I had to use a standard text editor (like Notepad) to find and remove the characters
 
 === Ascii Diagrams
