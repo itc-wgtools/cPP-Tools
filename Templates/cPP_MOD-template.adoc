@@ -1,4 +1,4 @@
-= collaborative PP-Module for _Some Product_
+= collaborative PP-Module for _Coffee Maker_
 :showtitle:
 :toc: macro
 :toclevels: 7
@@ -6,11 +6,15 @@
 :sectnumlevels: 7
 :imagesdir: images
 :icons: font
-:revnumber: 0.1
-:revdate: 2019-05-08
+:revnumber: 0.2
+:revdate: 2019-08-23
 
 :iTC-longname: Coffee Maker
 :iTC-shortname: CM-iTC
+:iTC-email: cm-itc-mailing-list@gmail.com
+:iTC-website: https://coffeemaker.github.io/
+:iTC-GitHub: https://github.com/coffeemaker/repository/
+:base-pp: Service Center Protection Profile
 
 :sectnums!:
 
@@ -39,7 +43,7 @@ _Government Agency Names_
 |Description
 
 |0.1
-|_TBD_
+|<DATE>
 |Initial Release for iTC Review
 
 |
@@ -52,6 +56,11 @@ _Government Agency Names_
 toc::[]
 
 == Preface
+
+[REVIEW]
+====
+The technology type needs to be specified here, but the rest if boilerplate.
+====
 
 === Objectives of Document
 This document presents the Common Criteria (CC) collaborative Protection Profile Module (PP-Module) to express the security functional requirements (SFRs) and security assurance requirements (SARs) for _some technology type_. The Evaluation activities that specify the actions the evaluator performs to determine if a product satisfies the SFRs captured within this PP-Module, are described in <<SD>>.
@@ -82,13 +91,24 @@ For more see the http://www.commoncriteriaportal.org/[Common Criteria Portal].
 - PP-Module Date: {revdate}
 
 === TOE Overview
-NOTE: This may be short, but is likely to be 1-2 pages
+[GUIDANCE]
+====
+This may be short, but is likely to be 1-2 pages. This should provide a good description of what the products being evaluated should do. For example, in a biometric, this could talk about things like enrolling your biometric, verifying it, and then checking that it can't be faked. For a mobile device, this could talk about the scope of the eval, and high level expectations like protecting DIT/DAR.
+====
 
 === TOE Design
-NOTE: This may not be necessary depending on the technology type. It may already be clear what the design is, or it is covered in the Overview. For example in the NDcPP there is an entire section dedicated to use case/design selections to deal with distributed TOEs.
+[GUIDANCE]
+====
+This may not be necessary depending on the technology type. It may already be clear what the design is, or it is covered in the Overview. For example in the Network cPP there is an entire section dedicated to use case/design selections to deal with distributed TOEs.
+====
 
 === TOE Use Case
 If you are defining use cases (such as specific use scenarios that may have unique requirement selections), put that here.
+
+[GUIDANCE]
+====
+It is possible that you don't have individual use cases and a single description may suffice. If you have multiple separate use cases though, they should be described here separately.
+====
 
 ==== USE CASE 1: first use case
 
@@ -104,11 +124,24 @@ As defined by the references <<CC1>>, <<CC2>> and <<CC3>>, this PP-Module:
 * is Part 2 extended,
 * does not claim conformance to any other security functional requirement packages.
 
-NOTE: The following paragraph may not be applicable for all PP-Modules and should be added or edited as appropriate.
+[REVIEW]
+====
+The following paragraph may not be applicable for all cPPs and should be added or edited as appropriate.
+====
 
-_In order to be conformant to this PP-Module, a ST shall demonstrate Exact Conformance. Exact Conformance, as a subset of Strict Conformance as defined by the CC, is defined as the ST containing all of the SFRs in <<Security Functional Requirements>> (these are the mandatory SFRs) of this PP-Module, and potentially SFRs from <<Consistency Rationale>> (these are selection-based SFRs) and <<Selection-Based Requirements>> (these are optional SFRs) of this PP-Module. While iteration is allowed, no additional requirements (from the CC parts 2 or 3, or definitions of extended components not already included in this PP-Module) are allowed to be included in the ST. Further, no SFRs in <<Security Functional Requirements>> of this PP-Module are allowed to be omitted._
+In order to be conformant to this PP-Module, a ST shall demonstrate Exact Conformance. Exact Conformance, as a subset of Strict Conformance as defined by the CC, is defined as the ST containing all of the SFRs in <<Security Functional Requirements>> (these are the mandatory SFRs) of this PP-Module, and potentially SFRs from <<Consistency Rationale>> (these are selection-based SFRs) and <<Selection-Based Requirements>> (these are optional SFRs) of this PP-Module. While iteration is allowed, no additional requirements (from the CC parts 2 or 3, or definitions of extended components not already included in this PP-Module) are allowed to be included in the ST. Further, no SFRs in <<Security Functional Requirements>> of this PP-Module are allowed to be omitted.
+
+[GUIDANCE]
+====
+This section may not be applicable, especially early in the development of a cPP but may come back later. The site location here is a recommendation and all sections would be added to this page.
+====
 
 == Security Problem Definition
+
+[REVIEW]
+====
+The sections here are boilerplate, but the content needs to be filled in.
+====
 
 The security problem is described in terms of the threats that the TOE is expected to address, assumptions about its operational environment, and any organizational security policies that the TOE is expected to enforce.
 
@@ -125,7 +158,10 @@ The security problem is described in terms of the threats that the TOE is expect
 
 
 == Security Objectives 
-
+[REVIEW]
+====
+The sections here are boilerplate, but the content needs to be filled in.
+====
 
 === Security Objectives for the TOE
 
@@ -154,6 +190,11 @@ The following table describes how the assumptions, threats, and organizational s
 == Security Functional Requirements
 
 === Conventions
+[BOILERPLATE]
+====
+This section is boilerplate and should be left along. Attention should be paid though as this is supposed to be followed in the SFRs.
+====
+
 The individual security functional requirements are specified in the sections below.
 The following conventions are used for the completion of operations:
 
@@ -169,7 +210,10 @@ The following conventions are used for the completion of operations:
 
 Extended SFRs are identified by having a label “EXT” at the end of the SFR name.
 
-NOTE: The following sections have been included from CC Part 2 just as reference.
+[GUIDANCE]
+====
+The following sections have been included from CC Part 2 just as reference. Each section will have to be filled out. If the class isn't needed it can be removed.
+====
 
 === Security Audit (FAU)
 
@@ -206,16 +250,33 @@ NOTE: The following sections have been included from CC Part 2 just as reference
 
 
 == Security Assurance Requirements
-This PP-Module does not define any additional assurance requirements above and beyond what is defined in the _Base-PP_ that it extends. Application of the SARs to the TOE boundary described by both the claimed base and this PP-Module is sufficient to demonstrate that the claimed SFRs have been implemented correctly by the TOE.
+[BOILERPLATE]
+====
+This section is boilerplate
+====
 
+This PP-Module does not define any additional assurance requirements above and beyond what is defined in the {base-pp} that it extends. Application of the SARs to the TOE boundary described by both the claimed base and this PP-Module is sufficient to demonstrate that the claimed SFRs have been implemented correctly by the TOE.
+
+[appendix]
 == Optional Requirements
+[BOILERPLATE]
+====
+This should remain if there are any optional requirements
+====
 
 ST authors are free to choose none, some or all SFRs defined in this chapter. Just the fact that a product supports a certain functionality does not mandate to add any SFR defined in this chapter.
 
-NOTE: This section should contain any SFRs considered "optional" by the iTC. If there are none, then that should be stated (that there are no optional requirements in the PP-Module).
+[REVIEW]
+====
+This section should contain any SFRs considered "optional" by the iTC. If there are none, then that should be stated (that there are no optional requirements in the cPP). The section should not be removed, but it should be explicitly stated there are no optional requirements.
+====
 
-
+[appendix]
 == Selection-Based Requirements
+[BOILERPLATE]
+====
+If there are selection-based requirements, the following paragraphs should be left
+====
 
 As indicated in the introduction to this PP-Module, the baseline requirements (those that shall be performed by the TOE) are contained in <<Security Functional Requirements>>. Additionally, there are two other types of requirements specified in <<Consistency Rationale>> and <<Selection-Based Requirements>>.
 
@@ -223,13 +284,26 @@ The first type (in this chapter) comprises requirements based on selections in o
 
 The second type (in this chapter) comprises requirements that can be included in the ST, but are not mandatory for a TOE to claim conformance to this PP-Module.
 
+[REVIEW]
+====
+It is likely (though not guaranteed) there will be selection-based requirements. If there are, then they should be placed here. If there are none, then that should be explicitly stated in this section.
+====
 
+[appendix]
 == Extended Component Definitions
 This appendix contains the definitions for the extended requirements that are used in the PP-Module, including those used in <<Consistency Rationale>> and <<Selection-Based Requirements>> . 
 
 (Note: formatting conventions for selections and assignments in this chapter are those in <<CC2>>.)
 
-NOTE: If Extended SFRs are created they must be defined here. An example is copied here from the Biometrics Security PP-Module (because it is short).
+[GUIDANCE]
+====
+If Extended SFRs are created they must be defined here. An example is copied here from the Biometrics Security PP-Module (because it is short).
+====
+
+[REVIEW]
+====
+The entire FIA_MBE_EXT section here is a complete example of an Extended Component Definition. Note the ditaa diagram showing the component levelling. This is a required feature of the ECD and needs to be included for all components.
+====
 
 === Identification and Authentication (FIA)
 
@@ -253,7 +327,7 @@ This component defines the requirements for the TSF to be able to enrol a user, 
     |                                          |  |  +---+
     +------------------------------------------+  |
                                                   |  +---+
-                                                  +--| 3 |
+                                                  +->| 3 |
                                                      +---+
        
 ....
@@ -264,7 +338,7 @@ FIA_MBE_EXT.2 Quality of biometric templates for mobile biometric enrolment requ
 
 FIA_MBE_EXT.3 Presentation attack detection for mobile biometric enrolment requires the TSF to prevent presentation attacks during the mobile biometric enrolment.
 
-==== Management: FIA_MBE_EXT.1
+===== Management: FIA_MBE_EXT.1
 
 There are no management activities foreseen.
 
@@ -296,7 +370,7 @@ Dependencies: No dependencies
 
 *FIA_MBE_EXT.1.1* The TSF shall provide a mechanism to enrol an authenticated user.
 
-*Application Note {counter:remark_count}*:: User shall be authenticated by the mobile device using the Password Authentication Factor before beginning biometric enrolment.
+*Application Note {counter:appnote_count}*:: User shall be authenticated by the mobile device using the Password Authentication Factor before beginning biometric enrolment.
 
 ===== FIA_MBE_EXT.2 Quality of biometric templates for mobile biometric enrolment
 Hierarchical to: No other components
@@ -304,7 +378,7 @@ Dependencies: 	FIA_MBE_EXT.1 Mobile biometric enrolment
 
 *FIA_MBE_EXT.2.1* The TSF shall create templates of sufficient quality.
 
-*Application Note {counter:remark_count}*:: ST author may refine “sufficient quality” to specify quality standards if the TOE follows such standard.
+*Application Note {counter:appnote_count}*:: ST author may refine “sufficient quality” to specify quality standards if the TOE follows such standard.
 
 ===== FIA_MBE_EXT.3 Presentation attack detection for mobile biometric enrolment
 
@@ -313,9 +387,13 @@ Dependencies: FIA_MBE_EXT.1 Mobile biometric enrolment
 
 *FIA_MBE_EXT.3.1* The TSF shall prevent use of artificial presentation attack instruments from being successfully enrolled.
 
+[appendix]
 == Entropy Documentation and Assessment
 
-NOTE: This section may not always be applicable when talking about PP-Modules (which may rely on entropy from a Base-PP). This particular section is copied from the NDcPP.
+[REVIEW]
+====
+This section may not always be applicable when talking about PP-Modules (which may rely on entropy from a base PP). This particular section is copied from the NDcPP. If you need an entropy review, it would be simplest to probably leave this intact.
+====
 
 This appendix describes the required supplementary information for each entropy source used by the TOE.
 
@@ -352,8 +430,12 @@ The entropy rate may be affected by conditions outside the control of the entrop
 === Health Testing
 More specifically, all entropy source health tests and their rationale will be documented. This will include a description of the health tests, the rate and conditions under which each health test is performed (e.g., at start up, continuously, or on-demand), the expected results for each health test, TOE behaviour upon entropy source failure, and rationale indicating why each test is believed to be appropriate for detecting one or more failures in the entropy source.
 
-
+[appendix]
 == Consistency Rationale
+[REVIEW]
+====
+These tables need to be completed to show mapping and justification that the threats and assumptions map to the requirements.
+====
 
 .Consistency Rationale for threats and OSPs
 |===
@@ -400,7 +482,13 @@ The objectives for the biometric system and its operational environment are cons
 ==== Consistency of Requirements
 
 
+[appendix]
 == SFR List
+[GUIDANCE]
+====
+This section is to provide a full list of all SFRs and their inclusion status (mandatory, optional or selection-based) within the cPP.
+====
+
 This table is provided as a reference of all SFRs included in this PP-Module.
 
 The Type column has the following definitions:
@@ -463,6 +551,10 @@ Selection:: The requirement inclusion is determined by selections in other requi
 
 [appendix]
 == Glossary
+[REVIEW]
+====
+This should be completed to define all the terms needed to fully understand the content of the cPP.
+====
 For the purpose of this cPP, the following terms and definitions given in _some specific references_ apply. If the same terms and definitions are given in those references, terms and definitions that fit the context of this cPP take precedence.
 
 [glossary]

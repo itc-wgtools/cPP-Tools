@@ -10,7 +10,7 @@
 
 :iTC-longname: Coffee Maker
 :iTC-shortname: CM-iTC
-:iTC-email: cm.itc@gmail.com
+:iTC-email: cm-itc-mailing-list@gmail.com
 :iTC-website: https://coffeemaker.github.io/
 :iTC-GitHub: https://github.com/coffeemaker/repository/
 

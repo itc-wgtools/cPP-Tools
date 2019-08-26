@@ -1,4 +1,4 @@
-= Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative Protection Profile for _Some Product_ 
+= Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative Protection Profile for Coffee Maker
 :showtitle:
 :toc: macro
 :toclevels: 7
@@ -6,14 +6,24 @@
 :table-caption: Table
 :imagesdir: images
 :icons: font
-:revnumber: 0.1
-:revdate: 2019-05-08
+:revnumber: 0.2
+:revdate: 2019-08-23
 :xrefstyle: full
 
 :iTC-longname: Coffee Maker
 :iTC-shortname: CM-iTC
+:iTC-email: cm-itc-mailing-list@gmail.com
+:iTC-website: https://coffeemaker.github.io/
+:iTC-GitHub: https://github.com/coffeemaker/repository/
+:pp-name: collaborative Protection Profile for Coffee Maker
+:pp-version: Version 1.0
+:pp-date: January 1, 2020
 
 == Foreword
+[BOILERPLATE]
+====
+This section is boilerplate and should not need to be edited.
+====
 
 This is a Supporting Document, intended to complement the Common Criteria (CC) version 3 and the associated Common Evaluation Methodology for Information Technology Security Evaluation.
 
@@ -36,7 +46,7 @@ _List iTC and Common Criteria Portal page_
 |Version |Date |Description
 
 |0.1
-|TBD
+|<DATE>
 |Initial release for internal review
 
 |
@@ -48,11 +58,11 @@ _List iTC and Common Criteria Portal page_
 
 === General Purpose
 
-See section <<Technology Area and Scope of Supporting Document>>.
+See <<Technology Area and Scope of Supporting Document>>.
 
 === Field of special use
 
-This Supporting Document applies to the evaluation of TOEs claiming conformance with the _name of the cPP_.
+This Supporting Document applies to the evaluation of TOEs claiming conformance with the {pp-name}.
 
 toc::[]
 
@@ -64,11 +74,25 @@ toc::[]
 
 1	This Supporting Document (SD) is mandatory for evaluations of products that claim conformance to any of the following cPP(s):
 
-* _the cPPs relevant to this SD, include date/version info_
+[REVIEW]
+====
+Verify version and date information for the PP
+====
 
-NOTE: You need to provide a high level description of the product type being evaluated with this cPP/SD. 
+* {pp-name}, {pp-version}, {pp-date}
 
-Although EAs are defined mainly for the evaluator to follow, the definitions in this SD aim to provide a common understanding for developers, evaluators and users as to what aspects of the TOE are tested in an evaluation against _the cPP_, and to what depth the testing is carried out. This common understanding in turn contributes to the goal of ensuring that evaluations against _the cPP_ achieve comparable, transparent and repeatable results. In general, the definition of EAs will also help developers to prepare for evaluation by identifying specific requirements for their TOE. The specific requirements in EAs may in some cases clarify the meaning of SFRs, and may identify particular requirements for the content of Security Targets (STs) (especially the TOE Summary Specification (TSS)), AGD guidance, and possibly required supplementary information (e.g. _any examples, such as for entropy analysis or cryptographic key architecture_).
+[GUIDANCE]
+====
+You need to provide a high level description of the product type being evaluated with this cPP/SD. 
+====
+
+
+[BOILERPLATE]
+====
+This next paragraph is boilerplate.
+====
+
+Although EAs are defined mainly for the evaluator to follow, the definitions in this SD aim to provide a common understanding for developers, evaluators and users as to what aspects of the TOE are tested in an evaluation against {pp-name}, and to what depth the testing is carried out. This common understanding in turn contributes to the goal of ensuring that evaluations against {pp-name} achieve comparable, transparent and repeatable results. In general, the definition of EAs will also help developers to prepare for evaluation by identifying specific requirements for their TOE. The specific requirements in EAs may in some cases clarify the meaning of SFRs, and may identify particular requirements for the content of Security Targets (STs) (especially the TOE Summary Specification (TSS)), AGD guidance, and possibly required supplementary information (e.g. _any examples, such as for entropy analysis or cryptographic key architecture_).
 
 === Structure of the Document
 
@@ -83,6 +107,11 @@ Similarly, at the more granular level of Assurance Components, if the Evaluation
 == Evaluation Activities for SFRs
 
 === Structure of EAs
+
+[BOILERPLATE]
+====
+Generally this section should be considered boilerplate.
+====
 
 All EAs for SFRs defined in this Section include the following items to keep consistency among EAs.
 
@@ -119,6 +148,10 @@ The evaluator uses these criteria to determine whether the EA has demonstrated t
 Specific reporting requirements that support transparency and reproducibility of the Pass/Fail judgement are defined here.
 
 === Justification for EAs for SFRs
+[BOILERPLATE]
+====
+Generally this section should be considered boilerplate
+====
 
 EAs in this SD provide specific or more detailed guidance to evaluate the _type of_ system, however, it is the CEM work units based on which the evaluator shall perform evaluations.
 
@@ -130,9 +163,12 @@ Assessment Strategy for AGD_OPE/ADV_FSP requires the evaluator to examine that t
 
 Assessment Strategy for ATE_IND requires the evaluator to conduct testing that the iTC has determined that those testing of the TOE in the context of the associated SFR is necessary. While the evaluator is expected to develop tests, there may be instances where it is more practical for the developer to construct tests, or where the developer may have existing tests. Therefore, it is acceptable for the evaluator to witness developer-generated tests in lieu of executing the tests. In this case, the evaluator must ensure the developer’s tests are executing both in the manner declared by the developer and as mandated by the EA. The CEM work units that derive those EAs are: ATE_IND.1-3, ATE_IND.1-4, ATE_IND.1-5, ATE_IND.1-6, and ATE_IND.1-7.
 
-NOTE: The following sections have been included from CC Part 2 just as reference.
+[GUIDANCE]
+====
+The following sections have been included from CC Part 2 just as reference. Each section will have to be filled out. If the class isn't needed it can be removed.
 
-NOTE: An example of headings is provided under FAU.
+An example of headings is provided under FAU.
+====
 
 === Security Audit (FAU)
 
@@ -194,8 +230,11 @@ NOTE: An example of headings is provided under FAU.
 === Trusted Channels (FTP)
 
 
-== Evaluation Activities for Selection-Based Requirements 
-
+== Evaluation Activities for Optional Requirements 
+[GUIDANCE]
+====
+This is the same as the above section, but is specifically for the Optional requirements
+====
 
 === Security Audit (FAU)
 
@@ -230,7 +269,11 @@ NOTE: An example of headings is provided under FAU.
 === Trusted Channels (FTP)
 
 
-== Evaluation Activities for Optional Requirements 
+== Evaluation Activities for Selection-Based Requirements 
+[GUIDANCE]
+====
+This is the same as the above section, but is specifically for the Selection-based requirements
+====
 
 === Security Audit (FAU)
 
@@ -265,6 +308,10 @@ NOTE: An example of headings is provided under FAU.
 === Trusted Channels (FTP)
 
 == Evaluation Activities for SARs
+[BOILERPLATE]
+====
+Generally this entire section (except ATE_IND and AVA_VAN) is boilerplate and taken directly from CC. 
+====
 
 The sections below specify EAs for the Security Assurance Requirements (SARs) included in the related cPPs. The EAs in <<Evaluation Activities for SFRs>>, <<Evaluation Activities for Selection-Based Requirements>>, and <<Evaluation Activities for Optional Requirements>> are an interpretation of the more general CEM assurance requirements as they apply to the specific technology area of the TOE.
 
@@ -428,27 +475,40 @@ The evaluator performs the CEM work units associated with the ATE_IND.1
 SAR. Specific testing requirements and EAs are captured for each SFR in
 <<Evaluation Activities for SFRs>>, <<Evaluation Activities for Selection-Based Requirements>> and <<Evaluation Activities for Optional Requirements>>.
 
-NOTE: Equivalency arguments may be made here (pointing to documentation about how to handle multiple versions of the TOE and what needs to be tested).
+[REVIEW]
+====
+Equivalency arguments may be made here (pointing to documentation about how to handle multiple versions of the TOE and what needs to be tested).
+
+An example of this can be found in <<Equivalency Considerations>>.
+====
 
 === Class AVA: Vulnerability Assessment
 
-NOTE: The italics section below is guidance about AVA_VAN requirements
+[GUIDANCE]
+====
+The iTC plays a key role in determining the scope of the vulnerability analysis with respect to what is publicly reported. The iTC must perform several activities to complete sections of this Supporting Document in order to ensure the flaws investigated by the evaluation team are meaningful in the context of the cPP and cover the areas of concern by the iTC for this technology.
 
-_The iTC plays a key role in determining the scope of the vulnerability analysis with respect to what is publicly reported.  The iTC must perform several activities to complete sections of this Supporting Document in order to ensure the flaws investigated by the evaluation team are meaningful in the context of the cPP and cover the areas of concern by the iTC for this technology._
+There are four activities (and associated outputs) that need to be performed by the iTC:
 
-_There are four activities (and associated outputs) that need to be performed by the iTC:_
+. Identification of public sources of vulnerability information and actions to be taken on that information (this will be used for Type 1 flaw hypotheses as defined in Appendix A);
+. Identification of specific vulnerabilities particular to the technology (perhaps from previous evaluations, or from flaw reports to vendors that are part of the iTC) (this will be used for Type 2 flaw hypotheses as defined in Appendix A);
+. Identification of additional documentation to be used in the vulnerability analysis activity (this will be used for Type 3 flaw hypotheses as defined in Appendix A); and
+. Identification of any tools—and actions to be performed with those tools—to support flaw identification (this will be used for Type 4 flaw hypotheses as defined in Appendix A).
 
-. _identification of public sources of vulnerability information and actions to be taken on that information (this will be used for Type 1 flaw hypotheses as defined in Appendix A);_
-. _identification of specific vulnerabilities particular to the technology (perhaps from previous evaluations, or from flaw reports to vendors that are part of the iTC) (this will be used for Type 2 flaw hypotheses as defined in Appendix A);_
-. _identification of additional documentation to be used in the vulnerability analysis activity (this will be used for Type 3 flaw hypotheses as defined in Appendix A); and_
-. _identification of any tools—and actions to be performed with those tools—to support flaw identification (this will be used for Type 4 flaw hypotheses as defined in Appendix A).  _
-_Each of these activities is discussed in more detail below, with pointers to where the output of each activity should go in this Supporting Document._
+Each of these activities is discussed in more detail below, with pointers to where the output of each activity should go in this Supporting Document.
+
+====
 
 ==== Vulnerability Survey (AVA_VAN.1)
+[BOILERPLATE]
+====
+This section is actually taken from CC and is likely to be left alone. Most of the details will be make in the Appendix that are specific to the evaluation.
+====
+
 
 While vulnerability analysis is inherently a subjective activity, a minimum level of analysis can be defined and some measure of objectivity and repeatability (or at least comparability) can be imposed on the vulnerability analysis process. In order to achieve such objectivity and repeatability it is important that the evaluator follows a set of well-defined activities, and documents their findings so others can follow their arguments and come to the same conclusions as the evaluator. While this does not guarantee that different evaluation facilities will identify exactly the same type of vulnerabilities or come to exactly the same conclusions, the approach defines the minimum level of analysis and the scope of that analysis, and provides Certification Bodies a measure of assurance that the minimum level of analysis is being performed by the evaluation facilities.
 
-In order to meet these goals some refinement of the AVA_VAN.1 CEM work units is needed. The following table indicates, for each work unit in AVA_VAN.1, whether the CEM work unit is to be performed as written, or if it has been clarified by an Evaluation Activity. If clarification has been provided, a reference to this clarification is provided in the table.  
+In order to meet these goals some refinement of the AVA_VAN.1 CEM work units is needed. The following table indicates, for each work unit in AVA_VAN.1, whether the CEM work unit is to be performed as written, or if it has been clarified by an Evaluation Activity. If clarification has been provided, a reference to this clarification is provided in the table. 
 
 .Mapping of AVA_VAN.1 CEM Work Units to Evaluation Activities
 [cols="1,.^2",options="header",]
@@ -494,7 +554,7 @@ expected results;
 |The CEM work unit is captured in Appendix A, Section A.3; there are no substantive differences.
 
 |AVA_VAN.1-7 The evaluator shall conduct penetration testing.
-|The evaluator shall perform the CEM activity as specified.  See Appendix A, Section A.3, paragraph 110 for guidance related to attack potential for confirmed flaws.
+|The evaluator shall perform the CEM activity as specified. See Appendix A, Section A.3, paragraph 110 for guidance related to attack potential for confirmed flaws.
 
 |AVA_VAN.1-8 The evaluator shall record the actual results of the penetration tests.
 |The evaluator shall perform the CEM activity as specified.
@@ -503,7 +563,7 @@ expected results;
 |Replace the CEM work unit with the reporting called for in Appendix A, Section A.3.
 
 |AVA_VAN.1-10 The evaluator shall examine the results of all penetration testing to determine that the TOE, in its operational environment, is resistant to an attacker possessing a Basic attack potential.
-|This work unit is not applicable for Type 1 and Type 2 flaws (as defined in Appendix A, Section A.1), as inclusion in this Supporting Document by the iTC makes any confirmed vulnerabilities stemming from these flaws subject to an attacker possessing a Basic attack potential.  This work unit is replaced for Type 3 and Type 4 flaws by the activities defined in Appendix A, Section A.2, paragraph 110.
+|This work unit is not applicable for Type 1 and Type 2 flaws (as defined in Appendix A, Section A.1), as inclusion in this Supporting Document by the iTC makes any confirmed vulnerabilities stemming from these flaws subject to an attacker possessing a Basic attack potential. This work unit is replaced for Type 3 and Type 4 flaws by the activities defined in Appendix A, Section A.2, paragraph 110.
 
 a|AVA_VAN.1-11 The evaluator shall report in the ETR all exploitable vulnerabilities and residual vulnerabilities, detailing for each:
 
@@ -521,76 +581,112 @@ TOE, level of opportunity and the equipment required to perform the identified v
 Because of the level of detail required for the evaluation activities, the bulk of the instructions are contained in Appendix A, while an “outline” of the assurance activity is provided below.
 
 ===== Evaluation Activity (Documentation)
-_If the iTC determines that no additional documentation beyond that specified below is required, it is acceptable to remove this Evaluation Activity in the Supporting Document._
+[GUIDANCE]
+====
+If the iTC determines that no additional documentation beyond that specified below is required, it is acceptable to remove this Evaluation Activity in the Supporting Document.
 
-_If the iTC determines that additional documentation is appropriate, they will insert a description of that documentation in this paragraph.  The iTC must specify the required documentation in as much detail as possible to eliminate issues associated with the evaluators evaluating the suitability of the documentation rather than using the documentation to evaluate the product.  Therefore, documentation statements such as “Supply a high-level and low-level design” are discouraged.  An example of a better statement is:_
+If the iTC determines that additional documentation is appropriate, they will insert a description of that documentation in this paragraph. The iTC must specify the required documentation in as much detail as possible to eliminate issues associated with the evaluators evaluating the suitability of the documentation rather than using the documentation to evaluate the product. Therefore, documentation statements such as “Supply a high-level and low-level design” are discouraged. An example of a better statement is:
 
-_“The developer shall provide documentation identifying the list of software and hardware components that compose the TOE. Hardware components apply to all systems claimed in the ST, and should identify at a minimum the processors used by the TOE. Software components include any libraries used by the TOE, such as cryptographic libraries. This additional documentation is merely a list of the name and version number of the components, and will be used by the evaluators in formulating hypotheses during their analysis.”_
+“The developer shall provide documentation identifying the list of software and hardware components that compose the TOE. Hardware components apply to all systems claimed in the ST, and should identify at a minimum the processors used by the TOE. Software components include any libraries used by the TOE, such as cryptographic libraries. This additional documentation is merely a list of the name and version number of the components, and will be used by the evaluators in formulating hypotheses during their analysis.”
 
-_The evaluator shall examine the documentation outlined below provided by the vendor to confirm that it contains all required information.  This documentation is in addition to the documentation already required to be supplied in response to the EAs listed previously._
+The evaluator shall examine the documentation outlined below provided by the vendor to confirm that it contains all required information. This documentation is in addition to the documentation already required to be supplied in response to the EAs listed previously.
+====
 
 In addition to the activities specified by the CEM in accordance with Table 2 above, the evaluator shall perform the following activities.
 
 ===== Evaluation Activity
-_The evaluator formulates hypotheses in accordance with process defined in Appendix A.1. The evaluator documents the flaw hypotheses generated for the TOE in the report in accordance with the guidelines in Appendix A.3.  The evaluator shall perform vulnerability analysis in accordance with Appendix A.2. The results of the analysis shall be documented in the report according to Appendix A.3._
+[GUIDANCE]
+====
+The evaluator formulates hypotheses in accordance with process defined in Appendix A.1. The evaluator documents the flaw hypotheses generated for the TOE in the report in accordance with the guidelines in Appendix A.3. The evaluator shall perform vulnerability analysis in accordance with Appendix A.2. The results of the analysis shall be documented in the report according to Appendix A.3.
+====
 
 == Required Supplementary Information
 This Supporting Document refers in various places to the possibility that ‘required supplementary information’ may need to be supplied as part of the deliverables for an evaluation. This term is intended to describe information that is not necessarily included in the Security Target or operational guidance, and that may not necessarily be public. Examples of such information could be entropy analysis, or description of a cryptographic key management architecture used in (or in support of) the TOE. The requirement for any such supplementary information will be identified in the relevant cPP. 
 
-_Add the EAs for Required Supplementary Information, such as a Key Management Description, as defined in the cPP._
+[GUIDANCE]
+====
+Add the EAs for Required Supplementary Information, such as a Key Management Description, as defined in the cPP.
+====
 
 == References
+[REVIEW]
+====
+Update the references below. If there is anything needed beyond the cPP then it should be added here.
+====
+
 
 * [#CC1]#[CC1]#	Common Criteria for Information Technology Security Evaluation, Part 1: Introduction and General Model, CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
 * [#CC2]#[CC2]# Common Criteria for Information Technology Security Evaluation, Part 2: Security Functional Components, CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
 * [#CC3]#[CC3]#	Common Criteria for Information Technology Security Evaluation, Part 3: Security Assurance Components, CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
 * [#CEM]#[CEM]#	Common Methodology for Information Technology Security Evaluation, Evaluation Methodology, CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
 * [#addenda]#[addenda]# CC and CEM addenda, Exact Conformance, Selection-Based SFRs, Optional SFRs, Version 0.5, May 2017
+* [#cPP]#[cPP]# {pp-name}, {pp-version}, {pp-date}
 
 [appendix]
 == Vulnerability Analysis
 
 === Sources of Vulnerability Information
-CEM Work Unit AVA_VAN.1-3 has been supplemented in this Supporting Document to provide a better-defined set of flaws to investigate and procedures to follow based on this particular technology.  Terminology used is based on the flaw hypothesis methodology, where the evaluation team hypothesizes flaws and then either proves or disproves those flaws (a flaw is equivalent to a “potential vulnerability” as used in the CEM). Flaws are categorized into four “types” depending on how they are formulated:
+CEM Work Unit AVA_VAN.1-3 has been supplemented in this Supporting Document to provide a better-defined set of flaws to investigate and procedures to follow based on this particular technology. Terminology used is based on the flaw hypothesis methodology, where the evaluation team hypothesizes flaws and then either proves or disproves those flaws (a flaw is equivalent to a “potential vulnerability” as used in the CEM). Flaws are categorized into four “types” depending on how they are formulated:
 
 . A list of flaw hypotheses applicable to the technology described by the cPP derived from public sources as documented in <<Type1Hypotheses>>—this fixed set has been agreed to by the iTC. Additionally, this will be supplemented with entries for a set of public sources (as indicated below) that are directly applicable to the TOE or its identified components (as defined by the process in <<Type1Hypotheses>> below); this is to ensure that the evaluators include in their assessment applicable entries that have been discovered since the cPP was published;
 . A list of flaw hypotheses contained in this document that are derived from lessons learned specific to that technology and other iTC input (that might be derived from other open sources and vulnerability databases, for example) as documented in <<Type2Hypotheses>>; 
 . A list of flaw hypotheses derived from information available to the evaluators; this includes  the baseline evidence provided by the vendor described in this Supporting Document (documentation associated with EAs, documentation described in <<Evaluation Activity (Documentation)>>, <the iTC can remove the reference to <<Evaluation Activity (Documentation)>> if no additional documentation is defined> documentation described in <<Required Supplementary Information>>), as well as other information (public and/or based on evaluator experience) as documented in <<Type3Hypotheses>>; and
 . A list of flaw hypotheses that are generated through the use of iTC-defined tools (e.g., nmap, protocol testers) and their application is specified in <<Type4Hypotheses>>.
 
-_It should be noted that it is not mandatory for the Supporting Document to contain all types of flaw hypotheses listed above; that determination is left to the iTC.  Should the iTC determine there are no applicable flaws for a given type, they should adjust the text of the Supporting Document accordingly to remove spurious sections and references._
+[GUIDANCE]
+====
+It should be noted that it is not mandatory for the Supporting Document to contain all types of flaw hypotheses listed above; that determination is left to the iTC. Should the iTC determine there are no applicable flaws for a given type, they should adjust the text of the Supporting Document accordingly to remove spurious sections and references.
+====
 
 [#Type1Hypotheses]
 ==== Type 1 Hypotheses — Public-Vulnerability-based
-_The iTC must determine what public vulnerability databases are to be used as the basis for Type 1 hypotheses, and what entries in these databases apply.  A sample list of resources is contained in Appendix D, but the iTC is not bound by that list._
+[GUIDANCE]
+====
+The iTC must determine what public vulnerability databases are to be used as the basis for Type 1 hypotheses, and what entries in these databases apply. A sample list of resources is contained in Appendix D, but the iTC is not bound by that list.
 
-_In performing this activity, the iTC first agrees upon the sources to be used.  The list of sources should be searched by the iTC with an agreed-upon set of terms such that the iTC feels a representative set of vulnerabilities with respect to the technology type is returned._
+In performing this activity, the iTC first agrees upon the sources to be used. The list of sources should be searched by the iTC with an agreed-upon set of terms such that the iTC feels a representative set of vulnerabilities with respect to the technology type is returned.
 
-_Having identified the sources, for each source the iTC defines criteria for selecting entries in the list.  The lists and criteria should be identified in this section of the Supporting Document so that evaluators can use the same sources and criteria at evaluation time to select entries that were made after the cPP was published.  For each entry that meets the criteria, the iTC determines whether or not to include it in the list of flaw hypotheses defined in this Supporting Document.  This will likely necessitate the creation of some criteria by which to judge an entry that is agreed to by the iTC.  For instance, CVEs that would generate flaw hypotheses related to buffer overflows would probably be rejected as a generic flaw hypothesis.  The output of this activity is a list of specific entries from the selected sources that will be used as flaw hypotheses._
+Having identified the sources, for each source the iTC defines criteria for selecting entries in the list. The lists and criteria should be identified in this section of the Supporting Document so that evaluators can use the same sources and criteria at evaluation time to select entries that were made after the cPP was published. For each entry that meets the criteria, the iTC determines whether or not to include it in the list of flaw hypotheses defined in this Supporting Document. This will likely necessitate the creation of some criteria by which to judge an entry that is agreed to by the iTC. For instance, CVEs that would generate flaw hypotheses related to buffer overflows would probably be rejected as a generic flaw hypothesis. The output of this activity is a list of specific entries from the selected sources that will be used as flaw hypotheses.
+====
 
 The following list of public sources of vulnerability information was selected by the iTC:
 
-_list of sources; can be an appendix (for example, see Appendix D) or it can be an in-line bulleted list.  The references should be specific enough so there is no ambiguity identifying a specific location/database._
+[REVIEW]
+====
+list of sources; can be an appendix (for example, see Appendix D) or it can be an in-line bulleted list. The references should be specific enough so there is no ambiguity identifying a specific location/database.
+====
 
 The list of sources above was searched with the following search terms:
 
-_list of search terms used by the iTC; if search terms/criteria are specific to specific sources, the association between the terms used and the source should be made here as well._
+[REVIEW]
+====
+list of search terms used by the iTC; if search terms/criteria are specific to specific sources, the association between the terms used and the source should be made here as well.
+====
 
-In order to supplement this list, the evaluators shall also perform a search on the sources listed above to determine a list of potential flaw hypotheses that are more recent that the publication date of the cPP, and those that are specific to the TOE and its components as specified by the additional documentation mentioned above. Any duplicates – either in a specific entry, or in the flaw hypothesis that is generated from an entry from the same or a different source – can be noted and removed from consideration by the evaluation team.  
+In order to supplement this list, the evaluators shall also perform a search on the sources listed above to determine a list of potential flaw hypotheses that are more recent that the publication date of the cPP, and those that are specific to the TOE and its components as specified by the additional documentation mentioned above. Any duplicates – either in a specific entry, or in the flaw hypothesis that is generated from an entry from the same or a different source – can be noted and removed from consideration by the evaluation team. 
 
 As part of type 1 flaw hypothesis generation for the specific components of the TOE, the evaluator shall also search the component manufacturer’s websites to determine if flaw hypotheses can be generated on this basis (for instance, if security patches have been released for the version of the component being evaluated, the subject of those patches may form the basis for a flaw hypothesis).
 
-_The iTC should insert any additional instructions to the evaluators for performing searches of public sources of vulnerability information applicable to the technology that is not covered above._
+[GUIDANCE]
+====
+The iTC should insert any additional instructions to the evaluators for performing searches of public sources of vulnerability information applicable to the technology that is not covered above.
+====
 
 [#Type2Hypotheses]
 ==== Type 2 Hypotheses — iTC-sourced
-_The iTC must consider if there are any technology-specific vulnerabilities or types of vulnerabilities that the evaluators should consider that are not contained in the previous section. This could be based on previous evaluations against the cPP, experience of the iTC members, or other factors. These vulnerabilities should be limited to those exploitable with a Basic Attack Potential—as characterized by the time, technical expertise, knowledge of the TOE, equipment, and access needed for exploitation. Section B.4.2.2. of the CEM provides detailed guidance on how these factors should be considered in determining attack potential relative to vulnerabilities._
+[GUIDANCE]
+====
+The iTC must consider if there are any technology-specific vulnerabilities or types of vulnerabilities that the evaluators should consider that are not contained in the previous section. This could be based on previous evaluations against the cPP, experience of the iTC members, or other factors. These vulnerabilities should be limited to those exploitable with a Basic Attack Potential—as characterized by the time, technical expertise, knowledge of the TOE, equipment, and access needed for exploitation. Section B.4.2.2. of the CEM provides detailed guidance on how these factors should be considered in determining attack potential relative to vulnerabilities.
 
-_This set of vulnerabilities (Type 2) is listed below and would then need to be considered by the evaluation team.  It is likely that there will be few or no entries identified for this type until more experience is gained with the cPP._
+This set of vulnerabilities (Type 2) is listed below and would then need to be considered by the evaluation team. It is likely that there will be few or no entries identified for this type until more experience is gained with the cPP.
+====
 
-The following list of flaw hypothesis generated by the iTC for this technology must be considered by the evaluation team as flaw hypotheses in performing the vulnerability assessment.  
+The following list of flaw hypothesis generated by the iTC for this technology must be considered by the evaluation team as flaw hypotheses in performing the vulnerability assessment. 
 
-_List of flaw hypotheses generated by the iTC as indicated above._
+[REVIEW]
+====
+List of flaw hypotheses generated by the iTC as indicated above.
+====
 
 If the evaluators discover a Type 3 or Type 4 flaw that they believe should be considered as a Type 2 flaw in future versions of this cPP, they should work with their Certification Body to determine the appropriate means of submitting the flaw for consideration by the iTC.
 
@@ -600,13 +696,19 @@ Type 3 flaws are formulated by the evaluator based on information presented by t
 
 If the evaluators discover a Type 3 flaw that they believe should be considered as a Type 2 flaw in future versions of this cPP, they should work with their Certification Body to determine the appropriate means of submitting the flaw for consideration by the iTC.
 
-_It may be the case that no activities of this type are appropriate for this technology; in that case, this section can be removed and references in other areas of this Supporting Document adjusted accordingly._
+[GUIDANCE]
+====
+It may be the case that no activities of this type are appropriate for this technology; in that case, this section can be removed and references in other areas of this Supporting Document adjusted accordingly.
+====
 
 [#Type4Hypotheses]
 ==== Type 4 Hypotheses — Tool-Generated
-_The iTC identifies any tools to be used or testing to be performed by the evaluators resulting in the creation of flaw hypotheses.  The iTC can choose to merely outline the testing that needs to be formed, or they can identify specific tools and testing to be done with those tools. In this definition, the iTC also indicates test results that indicate that a flaw hypothesis should be created (the goal of this section is not to perform or re-do functional testing; it is to test in a way that might produce anomalies that are to be candidate flaw hypotheses).  The iTC documents and specifies tools; the procedures, settings, and testing to be performed; and criteria for creating flaw hypotheses from these results in this section._
+[GUIDANCE]
+====
+The iTC identifies any tools to be used or testing to be performed by the evaluators resulting in the creation of flaw hypotheses. The iTC can choose to merely outline the testing that needs to be formed, or they can identify specific tools and testing to be done with those tools. In this definition, the iTC also indicates test results that indicate that a flaw hypothesis should be created (the goal of this section is not to perform or re-do functional testing; it is to test in a way that might produce anomalies that are to be candidate flaw hypotheses). The iTC documents and specifies tools; the procedures, settings, and testing to be performed; and criteria for creating flaw hypotheses from these results in this section.
 
-_It may be the case that no activities of these type are appropriate for this technology; in that case, this section can be removed and references in other areas of this Supporting Document adjusted accordingly._
+It may be the case that no activities of these type are appropriate for this technology; in that case, this section can be removed and references in other areas of this Supporting Document adjusted accordingly.
+====
 
 If the evaluators discover a Type 4 flaw that they believe should be considered as a Type 2 flaw in future versions of this cPP, they should work with their Certification Body to determine the appropriate means of submitting the flaw for consideration by the iTC.
 
@@ -625,9 +727,9 @@ For each hypothesis, the evaluator will note whether the flaw hypothesis has bee
 
 If the evaluator finds a flaw, the evaluator must report these flaws to the developer. All reported flaws must be addressed as follows:
 
-If the developer confirms that the flaw exists and that it is exploitable at Basic Attack Potential, then a change is made by the developer, and the resulting resolution is agreed by the evaluator and noted as part of the evaluation report.  
+If the developer confirms that the flaw exists and that it is exploitable at Basic Attack Potential, then a change is made by the developer, and the resulting resolution is agreed by the evaluator and noted as part of the evaluation report. 
 
-If the developer, the evaluator, and the CB agree that the flaw is exploitable only above Basic Attack Potential and does not require resolution for any other reason, then no change is made and the flaw is noted as a residual vulnerability in the CB-internal report (ETR).  
+If the developer, the evaluator, and the CB agree that the flaw is exploitable only above Basic Attack Potential and does not require resolution for any other reason, then no change is made and the flaw is noted as a residual vulnerability in the CB-internal report (ETR). 
 
 If the developer and evaluator agree that the flaw is exploitable only above Basic Attack Potential, but it is deemed critical to fix because of technology-specific or cPP-specific aspects such as typical use cases or operational environments, then a change is made by the developer, and the resulting resolution is agreed by the evaluator and noted as part of the evaluation report.
 
@@ -635,9 +737,9 @@ Disagreements between evaluator and vendor regarding questions of the existence 
 
 Any testing performed by the evaluator shall be documented in the test report as outlined in <<Reporting>> below. 
 
-As indicated in <<Reporting>>, Reporting, the public statement with respect to vulnerability analysis that is performed on TOEs conformant to the cPP is constrained to coverage of flaws associated with Types 1 and 2 (defined in <<Sources of Vulnerability Information>>) flaw hypotheses only.  The fact that the iTC generates these candidate hypotheses indicates these must be addressed.
+As indicated in <<Reporting>>, Reporting, the public statement with respect to vulnerability analysis that is performed on TOEs conformant to the cPP is constrained to coverage of flaws associated with Types 1 and 2 (defined in <<Sources of Vulnerability Information>>) flaw hypotheses only. The fact that the iTC generates these candidate hypotheses indicates these must be addressed.
 
-For flaws of Types 3 and 4, each CB is responsible for determining what constitutes Basic Attack Potential for the purposes of determining whether a flaw is exploitable in the TOE’s environment.  The determination criteria shall be documented in the CB-internal report as specified in <<Reporting>>. As this is a per-CB activity, no public claims are made with respect to the resistance of a particular TOE against flaws of Types 3 and 4; rather, the claim is that the activities outlined in this appendix were carried out, and the evaluation team and CB agreed that any residual vulnerabilities are not exploitable by an attacker with Basic Attack Potential.
+For flaws of Types 3 and 4, each CB is responsible for determining what constitutes Basic Attack Potential for the purposes of determining whether a flaw is exploitable in the TOE’s environment. The determination criteria shall be documented in the CB-internal report as specified in <<Reporting>>. As this is a per-CB activity, no public claims are made with respect to the resistance of a particular TOE against flaws of Types 3 and 4; rather, the claim is that the activities outlined in this appendix were carried out, and the evaluation team and CB agreed that any residual vulnerabilities are not exploitable by an attacker with Basic Attack Potential.
 
 === Reporting
 The evaluators shall produce two reports on the testing effort; one that is public-facing (that is, included in the non-proprietary evaluation report, which is a subset of the Evaluation Technical Report (ETR)), and the complete ETR that is delivered to the overseeing CB.
@@ -648,7 +750,10 @@ The public-facing report contains:
 
 * A statement that the evaluators have examined the Type 1 flaw hypotheses specified in this Supporting Document in <<Type1Hypotheses>> (i.e. the flaws listed in the previous bullet) and the Type 2 flaw hypotheses specified in this Supporting Document by the iTC in <<Type2Hypotheses>>.
 
-_<The above two bullets encompass all flaw hypotheses of Type 1 and Type 2.>_
+[GUIDANCE]
+====
+The above two bullets encompass all flaw hypotheses of Type 1 and Type 2.
+====
 
 * A statement that the evaluation team developed Types 3 and 4 flaw hypotheses in accordance with Sections <<Type3Hypotheses>>, <<Type4Hypotheses>>, and <<Process for Evaluator Vulnerability Analysis>>, and that no residual vulnerabilities exist that are exploitable by attackers with Basic Attack Potential as defined by the CB in accordance with the guidance in the CEM. It should be noted that this is just a statement about the “fact of” Types 3 and 4 flaw hypotheses being developed, and that no specifics about the number of flaws, the flaws themselves, or the analysis pertaining to those flaws will be included in the public-facing report. 
 
@@ -677,6 +782,11 @@ The internal CB report contains, in addition to the information in the public-fa
 
 [appendix]
 == Equivalency Considerations
+[GUIDANCE]
+====
+If the cPP does not require definitions of equivalency, then this section can be removed. Otherwise this section should be updated based on the iTC considerations for how a vendor can define equivalent products and how a lab should treat the definitions.
+====
+
 === Introduction
 This appendix provides a foundation for evaluators to determine whether a vendor’s request for equivalency of products is allowed. 
 
@@ -687,7 +797,7 @@ For the purpose of this evaluation, equivalency can be broken into two categorie
 
 Determination of equivalency for each of the above specified categories can result in several different testing outcomes. 
 
-If a set of TOE are determined to be equivalent, testing may be performed on a single variation of the TOE. However, if th=e TOE variations have security-relevant functional differences, each of the TOE models that exhibits either functional or structural differences must be separately tested. Generally speaking, only the difference between each variation of TOE must be separately tested. Other equivalent functionality may be tested on a representative model and not across multiple platforms.
+If a set of TOE are determined to be equivalent, testing may be performed on a single variation of the TOE. However, if the TOE variations have security-relevant functional differences, each of the TOE models that exhibits either functional or structural differences must be separately tested. Generally speaking, only the difference between each variation of TOE must be separately tested. Other equivalent functionality may be tested on a representative model and not across multiple platforms.
 
 If it is determined that a TOE operates the same regardless of the environment, testing may be performed on a single instance for all equivalent configurations. However, if the TOE is determined to provide environment-specific functionality, testing must take place in each environment for which a difference in functionality exists. Similar to the above scenario, only the functionality affected by environment differences must be retested.
 
@@ -707,7 +817,10 @@ In addition to determining what to test, the evaluation results and resulting va
 
 [appendix]
 == Public Vulnerability Sources
-NOTE: This appendix may be included (if referenced from Appendix A above) or excluded from the final Supporting Document at the discretion of the iTC. The iTC should also consider supplementing it (if retained) as necessary to reflect the appropriate technology-specific aspects.
+[REVIEW]
+====
+This appendix may be included (if referenced from Appendix A above) or excluded from the final Supporting Document at the discretion of the iTC. The iTC should also consider supplementing it (if retained) as necessary to reflect the appropriate technology-specific aspects.
+====
 
 The following sources of public vulnerabilities are sources for the iTC to consider in both formulating the specific list of flaws to be investigated by the evaluators, as well as to reference in directing the evaluators to perform key-word searches during the evaluation of a specific TOE.
 
@@ -730,6 +843,9 @@ The following sources of public vulnerabilities are sources for the iTC to consi
 
 [appendix]
 == Glossary
+====
+This should be completed to define all the terms needed to fully understand the content of the SD.
+====
 
 For definitions of standard CC terminology see [CC1]. 
 
