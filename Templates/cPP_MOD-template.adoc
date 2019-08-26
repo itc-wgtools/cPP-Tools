@@ -456,7 +456,7 @@ These tables need to be completed to show mapping and justification that the thr
 
 |===
 
-==== Consistency of Objectives
+=== Consistency of Objectives
 
 The objectives for the biometric system and its operational environment are consistent with the <<MDFPP>> based on the following rationale:
 
@@ -479,7 +479,7 @@ The objectives for the biometric system and its operational environment are cons
 
 |===
 
-==== Consistency of Requirements
+=== Consistency of Requirements
 
 
 [appendix]
