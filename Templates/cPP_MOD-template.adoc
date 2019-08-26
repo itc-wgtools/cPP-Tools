@@ -74,11 +74,17 @@ The target audiences of this PP-Module are developers, CC consumers, system inte
 Although the PP-Module and SD may contain minor editorial errors, the PP-Module is recognized as living document and the iTC is dedicated to ongoing updates and revisions. Please report any issues to the {iTC-shortname}. 
 
 === Related Documents
+[REVIEW]
+====
+Edit the Supporting Document in the list.
+====
+
 [bibliography]
-* [#CC1]#[CC1]#	Common Criteria for Information Technology Security Evaluation, Part 1: Introduction and General Model, CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
+* [#CC1]#[CC1]# Common Criteria for Information Technology Security Evaluation, Part 1: Introduction and General Model, CCMB-2017-04-001, Version 3.1 Revision 5, April 2017.
 * [#CC2]#[CC2]# Common Criteria for Information Technology Security Evaluation, Part 2: Security Functional Components, CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
-* [#CC3]#[CC3]#	Common Criteria for Information Technology Security Evaluation, Part 3: Security Assurance Components, CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
-* [#CEM]#[CEM]#	Common Methodology for Information Technology Security Evaluation, Evaluation Methodology, CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
+* [#CC3]#[CC3]# Common Criteria for Information Technology Security Evaluation, Part 3: Security Assurance Components, CCMB-2017-04-003, Version 3.1 Revision 5, April 2017.
+* [#CEM]#[CEM]# Common Methodology for Information Technology Security Evaluation, Evaluation Methodology, CCMB-2017-04-004, Version 3.1 Revision 5, April 2017.
+* [#SD]#[SD]# Supporting Document
 
 For more see the http://www.commoncriteriaportal.org/[Common Criteria Portal].
 
@@ -212,7 +218,7 @@ Extended SFRs are identified by having a label “EXT” at the end of the SFR n
 
 [GUIDANCE]
 ====
-The following sections have been included from CC Part 2 just as reference. Each section will have to be filled out. If the class isn't needed it can be removed.
+The following sections have been included from CC Part 2 just as reference. Include only those classes in 5.2 - 5.12 for which the TOE will need to comply with one or more SFRs from that class. Any sections that do not have applicable SFRs can be removed.
 ====
 
 === Security Audit (FAU)
@@ -303,6 +309,8 @@ If Extended SFRs are created they must be defined here. An example is copied her
 [REVIEW]
 ====
 The entire FIA_MBE_EXT section here is a complete example of an Extended Component Definition. Note the ditaa diagram showing the component levelling. This is a required feature of the ECD and needs to be included for all components.
+
+If extended components are being defined, all sections within the example must be filled out for each requirement.
 ====
 
 === Identification and Authentication (FIA)
@@ -429,6 +437,46 @@ The entropy rate may be affected by conditions outside the control of the entrop
 
 === Health Testing
 More specifically, all entropy source health tests and their rationale will be documented. This will include a description of the health tests, the rate and conditions under which each health test is performed (e.g., at start up, continuously, or on-demand), the expected results for each health test, TOE behaviour upon entropy source failure, and rationale indicating why each test is believed to be appropriate for detecting one or more failures in the entropy source.
+
+[appendix]
+== Key Management Document
+[GUIDANCE]
+====
+This section can be included to cover information that should not be publically released but which needs to be included in the documentation that is evaluated. In some cases this has been handled by public and proprietary versions of the ST (specifically the TSS), but this information can also be covered in a separate document.
+
+This is not always necessary and depends on the product type. The name of the document can be edited to be appropriate for the iTC, but the purpose is to cover information that would normally be marked as proprietary by a vendor.
+
+The following section has been copied from the current File Encryption PP-Module by NIAP.
+====
+
+The documentation of the product’s encryption key management should be detailed enough that, after reading, the evaluator will thoroughly understand the product’s key management and how it meets the requirements to ensure the keys are adequately protected. This documentation should include an essay and diagram(s). This documentation is not required to be part of the TSS - it can be submitted as a separate document and marked as developer proprietary. 
+
+=== Key Management Description
+
+The description will provide the following information for all keys in the key chain: 
+
+* The purpose of the key
+* If the key is stored in non-volatile memory
+* How and when the key is protected
+* How and when the key is derived
+* The strength of the key
+* When or if the key would be no longer needed, along with a justification
+* How and when the key may be shared
+
+The description will also describe the following topics: 
+
+* A description of all authorization factors that are supported by the product and how each factor is handled, including any conditioning and combining performed.
+* If validation is implemented, the process for validation shall be described, noting what value is used for validation and the process used to perform the validation. It shall describe how this process ensures no keys in the key chain are weakened or exposed by this process.
+* The authorization process that leads to the decryption of the FEK(s). This section shall detail the key chain used by the product. It shall describe which keys are used in the protection of the FEK(s) and how they meet the encryption or derivation requirements including the direct chain from the initial authorization to the FEK(s). It shall also include any values that add into that key chain or interact with the key chain and the protections that ensure those values do not weaken or expose the overall strength of the key chain.
+* The diagram and essay will clearly illustrate the key hierarchy to ensure that at no point the chain could be broken without a cryptographic exhaust or all of the initial authorization values and the effective strength of the FEK(s) is maintained throughout the key chain.
+* A description of the data encryption engine, its components, and details about its implementation (e.g. initialization of the product, drivers, libraries (if applicable), logical interfaces for encryption/decryption, and how resources to be encrypted are identified. The description should also include the data flow from the device’s host interface to the device’s persistent media storing the data, information on those conditions in which the data bypasses the data encryption engine. The description should be detailed enough to verify all platforms ensure that when the user enables encryption, the product encrypts all selected resources.
+* The process for destroying keys when they are no longer needed by describing the storage location of all keys and the protection of all keys stored in non-volatile memory.
+
+
+=== Key Management Diagram:
+
+* The diagram will include all keys from the initial authorization factor(s) to the FEK(s) and any keys or values that contribute into the chain. It must list the cryptographic strength of each key and indicate how each key along the chain is protected with either options from key chaining requirement. The diagram should indicate the input used to derive or decrypt each key in the chain.
+* A functional (block) diagram showing the main components (such as memories and processors) the initial steps needed for the activities the TOE performs to ensure it encrypts the targeted resources when a user or administrator first provisions the product.
 
 [appendix]
 == Consistency Rationale
