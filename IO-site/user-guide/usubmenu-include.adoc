@@ -1,11 +1,11 @@
 // submenu-include.adoc
 
 // Define macros for each HTML file referenced in the menu
-:home: index.html[User Guide Home]
-:web: userguide.html[User Guide for GitHub]
-:offline: AdvancedUser.html[Advanced User Guide]
-:clients: /admin-guide/GitHubClients.html[GitHub Clients]
-:training: /admin-guide/GitHubTraining.html[GitHub Training]
+:home: ./index.html[User Guide Home]
+:web: ./userguide.html[User Guide for GitHub]
+:offline: ./AdvancedUser.html[Advanced User Guide]
+:clients: ../admin-guide/GitHubClients.html[GitHub Clients]
+:training: ../admin-guide/GitHubTraining.html[GitHub Training]
 
 
 // Create the menu as an Asciidoctor table
