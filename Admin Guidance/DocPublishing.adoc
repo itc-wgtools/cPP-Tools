@@ -6,6 +6,8 @@
 :revnumber: 0.1
 :revdate: 2019-08-01
 
+include::submenu-include.adoc[]
+
 == Introduction
 Hopefully, at some regular interval, the iTC will actually produce versions of the documents for publication. This can be drafts for internal versions (generally for consumption only by the iTC), public review versions or published documents for use. 
 

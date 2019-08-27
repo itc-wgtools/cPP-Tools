@@ -9,6 +9,7 @@
 :revnumber: 0.1
 :revdate: 2019-08-01
 
+include::menu-include.adoc[]
 
 :sectnums!:
 

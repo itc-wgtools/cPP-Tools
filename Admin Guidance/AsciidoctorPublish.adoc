@@ -6,6 +6,8 @@
 :revnumber: 0.1
 :revdate: 2019-08-01
 
+include::submenu-include.adoc[]
+
 == Introduction
 At this point there are two types of output that are supported from Asciidoctor: HTML and PDF. The same source file can be used to generate both types of output files, just using different commands from the tools that have been installed.
 

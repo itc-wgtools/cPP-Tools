@@ -6,6 +6,8 @@
 :revnumber: 0.1
 :revdate: 2019-08-01
 
+include::submenu-include.adoc[]
+
 == Introduction
 While many users may be satisfied with using GitHub in their web browser (which is likely sufficient for the majority of iTC members), some will need the ability to work offline. For that you will need some sort of git client that works with GitHub.
 

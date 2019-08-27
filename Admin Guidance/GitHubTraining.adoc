@@ -5,6 +5,8 @@
 :revnumber: 0.1
 :revdate: 2019-08-01
 
+include::submenu-include.adoc[]
+
 == Introduction
 Git can be a little counterintuitive at first, but once familiarized it can be easy to navigate around and understand what's happening. Several resources can be used to better learn how to work with it:
 

@@ -6,6 +6,8 @@
 :revnumber: 0.1
 :revdate: 2019-08-01
 
+include::submenu-include.adoc[]
+
 == Introduction
 While the iTC can rely on the Common Criteria Portal and the CCUF OnlyOffice site to publish their documentation, many times it may be better to create a standalone website for the iTC that can provide better context for the information being published as well as be updated when the iTC needs it to be updated (as opposed to the CC Portal which can take a little time).
 
