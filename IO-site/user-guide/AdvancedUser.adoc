@@ -1,4 +1,4 @@
-= iTC Advanced User Guide for GitHub
+= iTC Advanced User Guide for GitHub Offline
 :showtitle:
 :toc:
 :toclevels: 7
@@ -8,6 +8,8 @@
 :icons: font
 :revnumber: 0.1
 :revdate: 2019-08-14
+
+include::usubmenu-include.adoc[]
 
 :sectnums!:
 

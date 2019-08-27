@@ -1,0 +1,27 @@
+= iTC User Guidance
+:showtitle:
+:toc:
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-01
+
+include::menu-include.adoc[]
+
+== Introduction
+One of the most important features of the tools and guides created by the iTC is a set of user guides for all us non-developers who have to learn to use GitHub to work. To assist with this we have created two separate guides, targeted to what your expectations are and the level of work you expect to do:
+
+* [[basic]]link:userguide.html[iTC User Guidance for the GitHub Website]
+* [[adv]]link:AdvancedUser.html[iTC Advanced User Guide for GitHub Offline]
+
+The difference between these two documents is really about the level of editing work that you will be doing. The documents are hierarchical (nice CC term, right?).
+
+=== Guide Overview
+The <<basic,iTC User Guidance for the GitHub Website>> is the document that everyone should read. If someone is already familiar with GitHub, this can probably be quickly reviewed as it is really an overview for someone who is new to using GitHub for anything. The guide goes through the main concepts for using the GitHub website for commenting and then editing documents.
+
+The <<adv,iTC Advanced User Guide for GitHub Offline>> guide is focused on users who will be doing "heavy" editing or creation of documents offline instead of through the GitHub website. The expectation here is that you will want to have more capabilities than are available directly in the website (i.e. WYSIWYG editing, offline work, etc), and the focus is on how to manage this process.
+
+== Editing Tools
+One important concept to realize with this set of tools is that the editing of the iTC documents is not done in traditional word processors (such as Microsoft Word). The creation and editing is all done in text using the https://asciidoctor.org[Asciidoctor] syntax. Using text documents maximizes the value of GitHub (such as multi-user editing) while still having a fairly readable format that can be output into HTML and PDF formats.
+
+Asciidoctor has a large set of available syntax that can be used to create the styles that would be expected in a final document. To help understand this syntax, a "style guide" can be downloaded from the Tools WG repository https://github.com/itc-wgtools/cPP-Tools/blob/develop/User%20Guidance/Syntax-Guide.adoc[here]. This file should be downloaded and read ideally, since it is designed to be read as a series of examples (so the raw text is actually more useful than the output format).

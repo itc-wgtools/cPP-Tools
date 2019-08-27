@@ -1,0 +1,14 @@
+// menu-include.adoc
+
+// Define macros for each HTML file referenced in the menu
+:home: index.html[Home]
+:admin: /admin-guide/index.html[Admin Guide]
+:user: /user-guide/index.html[User Guide]
+:drafts: /drafts/index.html[Drafts]
+:examples: /examples/examples.html[Examples]
+
+// Create the menu as an Asciidoctor table
+[.main-menu]
+|===
+|link:{home}|link:{admin}|link:{user}|link:{drafts}|link:{examples}
+|===

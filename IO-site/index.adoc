@@ -1,0 +1,48 @@
+= CCUF Team Tools Working Group
+:showtitle:
+:imagesdir: images
+:revnumber: 0.5
+:revdate: 2019-08-27
+
+include::menu-include.adoc[]
+
+== Introduction
+The CCUF established the Team Tools Working Group to work on a set of tools for iTCs. The overall goal is to produce a set of guidance documents on how to use the tools for an iTC and templates for the documents the iTC will need (both to product, such as a cPP and for the processes of managing the iTC itself). The output from this group is intended to be freely available to all iTCs, and will hopefully be maintained over the long term.
+
+The work is being done in GitHub at https://github.com/itc-wgtools/cPP-Tools.
+
+To join the Team Tools WG, please send a message to: ccuf-team-tools-wg@googlegroups.com
+
+To see the calendar for calls/meetings, go to: http://localendar.com/public/itctools
+
+== Tools and Guidance
+Any set of tools on its own isn't very useful, so in conjunction with the tools in GitHub is a set of documentation provided on this site to help explain how to use the tools and some of the general back end work that needs to be done to support the iTC.
+
+The guidance is broken into three areas:
+
+* link:/admin-guide/index.html[Administrator Guidance]
+* link:/user-guide/index.html[User Guidance]
+* link:/examples/examples.html[Examples for the cPPs and SD]
+
+Documents that are available for public review can be seen at the link:/drafts/drafts.html[Drafts] page. This will include information about submitting comments to the WG.
+
+== Current Status
+The WG is working towards the completion of the documentation in time for the https://www.iccc2019.com/[ICCC 2019]. As a volunteer effort, it is possible not everything will be completed in time for the conference, but the documents and templates will be prioritized such that the available material should cover the highest needs.
+
+The chart below shows the expected timeline for producing the documents. We are currently in Public Review Phase 1 while working on the Phase 2 Drafts.
+
+[ditaa, "Current_Status.png"]
+....
+                                  
+    +----------+    +----------+   +----------+   +----------+   +----------+
+    |          |    | cYEL     |   | cGRE     |   |          |   |          |
+    | Phase 1  |    |  Public  |   | Phase 2  |   |  Public  |   | Public   |
+    | Drafts   |--> |  Review  |-->| Drafts   |-->|  Review  |-->| Release  |
+    |          |    |  Phase 1 |   |          |   |  Phase 2 |   |          |
+    |          |    | (June 25)|   |          |   |  (Aug30) |   | ICCC2019 |
+    +----------+    +----------+   +----------+   +----------+   +----------+
+
+....
+
+== Eating Your Own Dog Food
+This WG has been attempting to use what we are providing for the wider community. This has helped (and probably hurt initially as we all learned), but hopefully the efforts of the WG will benefit the wider community as we go forward.

@@ -1,0 +1,60 @@
+= CCUF Team Tools Draft Documents
+:showtitle:
+:imagesdir: images
+:revnumber: 0.5
+:revdate: 2019-08-22
+
+include::menu-include.adoc[]
+
+== Review Process
+The WG is looking for feedback on the documents being produced here. While there are general timelines we are trying to stick to, we are not establishing specific work and review periods, but are working on a more "rolling" schedule to the target dates. We will welcome comments on any documents or templates posted here at any time as part of our process.
+
+There are two ways to contribute comments and suggestions to the WG. The first is through GitHub, the second by spreadsheet. It should be noted however that comments that are received via the spreadsheet will be added to the GitHub platform to allow for a comprehensive discussion. Also, feedback for comments is only provided via the answers in the GitHub comments. 
+
+Each comment should have a suggested resolution be proposed if a change is needed to the document.
+
+=== GitHub Review Process
+To use GitHub to submit comments, you must have a GitHub account (and it is assumed you know how to use GitHub). Each comment should be submitted as an individual https://github.com/itc-wgtools/cPP-Tools/issues[Issue] with the Label "Public Review" assigned. Pull Requests created for any issues will be linked to these Issues for traceability. The documents can be found via the GitHub link.
+
+=== Comment Matrix Spreadsheet Review Process
+In the <<SupDocTable>> table there is a link to the Comment Matrix spreadsheet. There are instructions for using the Matrix on the second worksheet. Please create a separate copy of the spreadsheet for each document. The spreadsheets can be mailed to the email address specified at the top of the page.
+
+== Supporting Review Documents
+
+The following are the documents can be used to submit comments (comments can also be submitted directly to the GitHub repository at the link above):
+
+.Supporting Documents
+[[SupDocTable]]
+[cols="4,1",options="header"]
+|===
+|Title ^|Link
+
+.^|Comment Matrix
+^|image:excel-icon-16670.png[link=./comments/Tools-WG-Comments-Matrix.xlsx,40,]
+
+|===
+
+== Documents Available for Review
+
+The following are the documents are currently available for review:
+
+.Review Documents
+[[RevDocTable]]
+[cols="4,1,2",options="header"]
+|===
+|Title ^|Version ^|Links
+
+.^|iTC User Guidance for GitHub
+^.^|0.1
+^.^|image:Crystal_Clear_mimetype_pdf.png[link=./docs/iTC_UG_GitHub_v0.1DRAFT.pdf,40,]  image:iconfinder_HTML_Logo_65687.png[link=./docs/iTC_UG_GitHub_v0.1DRAFT.html,40,] image:Octocat.jpg[link=https://github.com/itc-wgtools/cPP-Tools/blob/develop/User%20Guidance/userguide.adoc,50,]
+
+.^|iTC User Guidance for GitHub
+^.^|0.2
+^.^|image:Crystal_Clear_mimetype_pdf.png[link=./docs/iTC_UG_GitHub_v0.2DRAFT.pdf,40,]  image:iconfinder_HTML_Logo_65687.png[link=./docs/iTC_UG_GitHub_v0.2DRAFT.html,40,] image:Octocat.jpg[link=https://github.com/itc-wgtools/cPP-Tools/blob/develop/User%20Guidance/userguide.adoc,50,]
+
+.^|iTC Administrator Guidance for Tools
+^.^|0.1
+^.^|  image:iconfinder_HTML_Logo_65687.png[link=/admin-guide/index.html,40,]
+
+|===
+

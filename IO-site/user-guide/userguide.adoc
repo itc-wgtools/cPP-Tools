@@ -1,4 +1,4 @@
-= iTC User Guidance for GitHub
+= iTC User Guidance for the GitHub Website
 :showtitle:
 :toc:
 :toclevels: 5
@@ -9,8 +9,9 @@
 :revnumber: 0.3
 :revdate: 2019-08-21
 
+include::usubmenu-include.adoc[]
+
 :!sectnums:
-[abstract]
 == Acknowledgements
 This document was created by the CCUF Team Tools Working Group for the benefit of everyone involved with Common Criteria.
 

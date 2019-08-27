@@ -1,0 +1,52 @@
+= Examples for Building cPPs and SDs
+:showtitle:
+:toc: 
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-26
+:linkattrs:
+
+include::menu-include.adoc[]
+
+== Introduction
+This page is a link to various example pages to help build cPPs and SDs. At the moment there are examples for Security Functional Requirements and their associated Evaluation Activities. Eventually there will be more (SPD, Security Objectives, etc.) as there is time to build out these sections. 
+
+The examples here are taken from existing cPPs which will be referenced.
+
+== Developing Security Functional Requirements
+When developing the requirements for the cPP, it is important to realize there are "standard" requirements and "extended" requirements. 
+
+Standard requirements are those taken directly from the Common Criteria documentation (possibly with very minor refinement). These can be found in Part 2.
+
+* [#CC2]#[CC2]# Common Criteria for Information Technology Security Evaluation, Part 2: Security Functional Components, CCMB-2017-04-002, Version 3.1 Revision 5, April 2017.
+
+Extended requirements though are ones that may be based on the standard requirements, but which are wholly new (and are denoted by the "_EXT" placed at the end of the requirement in the cPP).
+
+Creating a new requirement means not just creating the requirement but also creating the Evaluation Activities for the requirement as well. The EAs are "how do you prove/test" the claims made about the requirement, and sometimes can be more work than creating the requirement itself (especially if you think you are done when you have the SFR, the EA can be tough). 
+
+When working on creating new extended requirements, the first recommendation would be to review <<CC2>> and other cPPs that may have some similar requirements. For example, the Network Device cPP has a lot of information for how distributed systems should interact, so if you are working on a distributed system, it would be useful to check the ND cPP and maybe copy the requirements for your use (instead of recreating them). Of course a copied requirement can be further modified, regardless of its origin, and starting from something is always easier than creating from scratch.
+
+=== Extended Requirement Examples for Component Levelling
+When creating a new requirement, it is also necessary to create the Component Levelling. This is basically the documentation that would exist if the new requirement was actually part of <<CC2>>, and according to the CC requirements, must be created. 
+
+The examples here are provided as the component levelling section of the cPP. While this has a lot more than just the requirement, all this will be needed, and so is a more complete example.
+
+=== SFR Component Leveled Examples
+.SFR Examples
+[%header,cols="1,2,1"]
+|===
+|SFR
+|Source
+|Link
+
+
+.^|FIA_MBE_EXT
+|collaborative PP-Module for Mobile biometric enrolment and verification - for unlocking the device -
+.^|link:FIA_MBE_EXT-example.html[FIA_MBE_EXT,window=\"_blank\"]
+
+.^|FAU_GEN_EXT
+|collaborative Protection Profile for Network Devices
+.^|link:FAU_GEN_EXT-example.html[FAU_GEN_EXT,window=\"_blank\"]
+
+|===
