@@ -1,0 +1,66 @@
+= Publishing iTC Documents
+:showtitle:
+:toc:
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-01
+:experimental:
+
+== Introduction
+Hopefully, at some regular interval, the iTC will actually produce versions of the documents for publication. This can be drafts for internal versions (generally for consumption only by the iTC), public review versions or published documents for use. 
+
+There are several steps that should be followed to create a published version.
+
+== References
+* https://help.github.com/en/articles/creating-releases[GitHub Releases] 
+* https://idratherbewriting.com/learnapidoc/pubapis_github_desktop_client.html#merge-the-development-branch-into-master[Merge to master]
+
+:sectnums:
+
+== Merge the Working Branch to Master
+Once you have the working Branch to the point where you think it is ready to publish, it should be merged into the Master branch. This will update the Master (which would be blank the first time you do this, but later would have the "current" published version) to be the same as the current Working branch.
+
+To do this, follow these steps:
+
+. Create a new Pull Request (this can be done from the Code tab)
+. For the base branch, select Master
+. For the compare branch, select Working
+. Assuming there are no problems (it should show "Able to merge" next to the menu items)
+.. Review the comments/commits shown for inclusion (make sure it looks right)
+. Enter in a comment (something like the version this will be and any other comments)
+. Click Create Pull Request
+.. Members should be assigned to review the changes (though ideally you are moving to this point because everyone already agreed to what is in the Pull Request)
+
+At this point you will have a new Pull Request to merge these changes into the Master. If you have configured your branches correctly you will now need several approvals before the merge is approved. The number is set by the administrator (as specified in the Branch Protection table during the setup).
+
+Once the Pull Request has been approved by the number of members necessary, the Pull Request can be merged.
+
+== Create Published Documents
+The documents that are being published need to be downloaded and be run through the link:AsciidoctorPublish.html[Asciidoctor Generating Output] process to create the documents to be published. 
+
+[NOTE]
+====
+Depending on the purpose of the publication it may not be necessary to create both HTML and PDF output for every document.
+====
+
+== Create a Release in GitHub
+To mark the current content of Master as a release, you need to publish a Release within GitHub. With the creation of the Release you will also upload the "final" documents (HTML, PDFs, anything that is created outside the code in the Master) as part of the Release.
+
+. On the Code tab click releases (this will have a number next to it showing the number of releases created, and will be 0 the first time)
+. Click Create a new release
+. In the Tag version field enter a version for the document
+.. Note the suggestions on the right side if you are unsure
+. Make sure the Target says Master since you are publishing the Master branch
+. Provide a title for the release
+. Place a description of the release (especially useful if this is a draft version where the reasons for publishing may not be as clear as on a final release, also good for change lists)
+. Add the output documents to the Release
+. If this is not a "final" release (i.e. 1.0, 2.0), then check This is a pre-release
+. Click Publish release
+
+At this point the current state of the Master branch and the files you uploaded will be packaged as a release.
+
+== Posting the Documents for External Access
+The published documents (the output from the Asciidoctor tools) and any related files should now be published somewhere. This can be to the CCUF website or to a site hosted on GitHub (see link:GitHubio.html[Publishing the iTC GitHub Website]
+
+

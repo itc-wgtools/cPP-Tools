@@ -1,0 +1,35 @@
+= Publishing the iTC GitHub Website
+:showtitle:
+:toc:
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-01
+
+include::submenu-include.adoc[]
+
+== Introduction
+While the iTC can rely on the Common Criteria Portal and the CCUF OnlyOffice site to publish their documentation, many times it may be better to create a standalone website for the iTC that can provide better context for the information being published as well as be updated when the iTC needs it to be updated (as opposed to the CC Portal which can take a little time).
+
+== References
+* https://pages.github.com/[GitHub Pages]
+* https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5[Publishing to github.io]
+
+== Site Content Source
+The sites that can be published on github.io are limited to static HTML pages. This makes sense, it is a free service, but is also fine for the purposes of the iTC.
+
+Since the pages are just HTML, the iTC can decide the best way to create the content pages. Obviously the iTC can create the pages directly in HTML (if there are people in the iTC who can do that). Another option is to use Asciidoctor to create the content and then generate the HTML files using the same methods as those for creating the cPP.
+
+Because the site can be created in many ways, the specifics of creating this content will not be described here, only a quick overview of the GitHub reference page.
+
+== Key Points to Creating the github.io Site
+The instructions in the <<GitHub Pages>> link in the references is the best, simple description for creating the iTC site.
+
+There are a few key points to remember though when creating the site:
+
+* The respository you create MUST be the same name as the Organization name
+** For example if you create TestiTC as the Organization name, the repository for the site must be TestiTC. This will give testitc.github.io as the URL.
+* For simplicity you should use index.html as the main page
+* The Master branch for the repository is used to generate the site
+* The site can take up to 5 minutes to update after you have published content, so don't worry if you refresh and it isn't immediately changed
+
