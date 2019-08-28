@@ -31,7 +31,7 @@ The WG is working towards the completion of the documentation in time for the ht
 
 The chart below shows the expected timeline for producing the documents. We are currently in Public Review Phase 1 while working on the Phase 2 Drafts.
 
-[ditaa, "Current_Status.png"]
+[ditaa, "Current_Status"]
 ....
                                   
     +----------+    +----------+   +----------+   +----------+   +----------+
