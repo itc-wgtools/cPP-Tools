@@ -12,8 +12,8 @@ include::submenu-include.adoc[]
 While the iTC can rely on the Common Criteria Portal and the CCUF OnlyOffice site to publish their documentation, many times it may be better to create a standalone website for the iTC that can provide better context for the information being published as well as be updated when the iTC needs it to be updated (as opposed to the CC Portal which can take a little time).
 
 == References
-* https://pages.github.com/[GitHub Pages]
-* https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5[Publishing to github.io]
+* https://pages.github.com/[GitHub Pages,window=\"_blank\"]
+* https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5[Publishing to github.io,window=\"_blank\"]
 
 == Site Content Source
 The sites that can be published on github.io are limited to static HTML pages. This makes sense, it is a free service, but is also fine for the purposes of the iTC.
