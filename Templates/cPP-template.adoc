@@ -58,7 +58,7 @@ toc::[]
 
 [REVIEW]
 ====
-The technology type needs to be specified here, but the rest if boilerplate.
+The technology type needs to be specified here, but the rest is boilerplate.
 ====
 
 === Objectives of Document
@@ -215,7 +215,7 @@ The following table describes how the assumptions, threats, and organizational s
 === Conventions
 [BOILERPLATE]
 ====
-This section is boilerplate and should be left along. Attention should be paid though as this is supposed to be followed in the SFRs.
+This section is boilerplate and should be left alone. Attention should be paid though as this is supposed to be followed in the SFRs.
 ====
 
 The individual security functional requirements are specified in the sections below.
@@ -284,7 +284,7 @@ This section lists the set of SARs from CC part 3 that are required in evaluatio
 
 The general model for evaluation of TOEs against STs written to conform to this cPP is as follows: 
 
-After the ST has been approved for evaluation, the ITSEF will obtain the TOE, supporting environmental IT (if required), and the administrative/user guides for the TOE. The ITSEF is expected to perform actions mandated by the Common Evaluation Methodology (CEM) for the ASE and ALC SARs. The ITSEF also performs the Evaluation Activities contained within the SD, which are intended to be an interpretation of the other CEM assurance requirements as they apply to the specific technology instantiated in the TOE. The Evaluation Activities that are captured in the SD also provide clarification as to what the developer needs to provide to demonstrate the TOE is compliant with the cPP. 
+After the ST has been approved for evaluation, the ITSEF (IT Security Evaluation Facility) will obtain the TOE, supporting environmental IT (if required), and the administrative/user guides for the TOE. The ITSEF is expected to perform actions mandated by the Common Evaluation Methodology (CEM) for the ASE and ALC SARs. The ITSEF also performs the Evaluation Activities contained within the SD, which are intended to be an interpretation of the other CEM assurance requirements as they apply to the specific technology instantiated in the TOE. The Evaluation Activities that are captured in the SD also provide clarification as to what the developer needs to provide to demonstrate the TOE is compliant with the cPP. 
 
 [REVIEW]
 ====
@@ -406,6 +406,24 @@ For the first generation of this cPP, the iTC is expected to survey open sources
 <<SD>> provides a guide to the evaluator in performing a vulnerability analysis.
 
 [appendix]
+== Selection-Based Requirements
+[BOILERPLATE]
+====
+If there are selection-based requirements, the following paragraphs should be left
+====
+
+As indicated in the introduction to this cPP, the baseline requirements (those that shall be performed by the TOE) are contained in <<Security Functional Requirements>>. Additionally, there are two other types of requirements specified in <<Consistency Rationale>>.
+
+The first type (in this Appendix) comprises requirements based on selections in other SFRs from the cPP: if certain selections are made, then additional requirements in this chapter will need to be included in the body of the ST.
+
+The second type (in the next Appendix) comprises requirements that can be included in the ST, but are not mandatory for a TOE to claim conformance to this cPP.
+
+[REVIEW]
+====
+It is likely (though not guaranteed) there will be selection-based requirements. If there are, then they should be placed here. If there are none, then that should be explicitly stated in this section.
+====
+
+[appendix]
 == Optional Requirements
 [BOILERPLATE]
 ====
@@ -417,24 +435,6 @@ ST authors are free to choose none, some or all SFRs defined in this chapter. Ju
 [REVIEW]
 ====
 This section should contain any SFRs considered "optional" by the iTC. If there are none, then that should be stated (that there are no optional requirements in the cPP). The section should not be removed, but it should be explicitly stated there are no optional requirements.
-====
-
-[appendix]
-== Selection-Based Requirements
-[BOILERPLATE]
-====
-If there are selection-based requirements, the following paragraphs should be left
-====
-
-As indicated in the introduction to this cPP, the baseline requirements (those that shall be performed by the TOE) are contained in <<Security Functional Requirements>>. Additionally, there are two other types of requirements specified in <<Consistency Rationale>> and <<Selection-Based Requirements>>.
-
-The first type (in this chapter) comprises requirements based on selections in other SFRs from the cPP: if certain selections are made, then additional requirements in this chapter will need to be included in the body of the ST.
-
-The second type (in this chapter) comprises requirements that can be included in the ST, but are not mandatory for a TOE to claim conformance to this cPP.
-
-[REVIEW]
-====
-It is likely (though not guaranteed) there will be selection-based requirements. If there are, then they should be placed here. If there are none, then that should be explicitly stated in this section.
 ====
 
 [appendix]
@@ -763,7 +763,7 @@ A key used to encrypt data at rest.
 |AES
 |Advanced Encryption Standard
 
-|
-|
+|ITSEF
+|IT Security Evaluation Facility
 
 |===
