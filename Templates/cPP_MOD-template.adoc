@@ -59,7 +59,7 @@ toc::[]
 
 [REVIEW]
 ====
-The technology type needs to be specified here, but the rest if boilerplate.
+The technology type needs to be specified here, but the rest is boilerplate.
 ====
 
 === Objectives of Document
@@ -203,7 +203,7 @@ The following table describes how the assumptions, threats, and organizational s
 === Conventions
 [BOILERPLATE]
 ====
-This section is boilerplate and should be left along. Attention should be paid though as this is supposed to be followed in the SFRs.
+This section is boilerplate and should be left alone. Attention should be paid though as this is supposed to be followed in the SFRs.
 ====
 
 The individual security functional requirements are specified in the sections below.
@@ -269,6 +269,24 @@ This section is boilerplate
 This PP-Module does not define any additional assurance requirements above and beyond what is defined in the {base-pp} that it extends. Application of the SARs to the TOE boundary described by both the claimed base and this PP-Module is sufficient to demonstrate that the claimed SFRs have been implemented correctly by the TOE.
 
 [appendix]
+== Selection-Based Requirements
+[BOILERPLATE]
+====
+If there are selection-based requirements, the following paragraphs should be left
+====
+
+As indicated in the introduction to this PP-Module, the baseline requirements (those that shall be performed by the TOE) are contained in <<Security Functional Requirements>>. Additionally, there are two other types of requirements specified in <<Consistency Rationale>>.
+
+The first type (in this Appendix) comprises requirements based on selections in other SFRs from the PP-Module: if certain selections are made, then additional requirements in this chapter will need to be included in the body of the ST.
+
+The second type (in the next Appendix) comprises requirements that can be included in the ST, but are not mandatory for a TOE to claim conformance to this PP-Module.
+
+[REVIEW]
+====
+It is likely (though not guaranteed) there will be selection-based requirements. If there are, then they should be placed here. If there are none, then that should be explicitly stated in this section.
+====
+
+[appendix]
 == Optional Requirements
 [BOILERPLATE]
 ====
@@ -280,24 +298,6 @@ ST authors are free to choose none, some or all SFRs defined in this chapter. Ju
 [REVIEW]
 ====
 This section should contain any SFRs considered "optional" by the iTC. If there are none, then that should be stated (that there are no optional requirements in the cPP). The section should not be removed, but it should be explicitly stated there are no optional requirements.
-====
-
-[appendix]
-== Selection-Based Requirements
-[BOILERPLATE]
-====
-If there are selection-based requirements, the following paragraphs should be left
-====
-
-As indicated in the introduction to this PP-Module, the baseline requirements (those that shall be performed by the TOE) are contained in <<Security Functional Requirements>>. Additionally, there are two other types of requirements specified in <<Consistency Rationale>> and <<Selection-Based Requirements>>.
-
-The first type (in this chapter) comprises requirements based on selections in other SFRs from the PP-Module: if certain selections are made, then additional requirements in this chapter will need to be included in the body of the ST.
-
-The second type (in this chapter) comprises requirements that can be included in the ST, but are not mandatory for a TOE to claim conformance to this PP-Module.
-
-[REVIEW]
-====
-It is likely (though not guaranteed) there will be selection-based requirements. If there are, then they should be placed here. If there are none, then that should be explicitly stated in this section.
 ====
 
 [appendix]
