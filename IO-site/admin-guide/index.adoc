@@ -32,6 +32,8 @@ Ideally the person who is responsible for GitHub should be someone familiar with
 * link:GitHubio.html[Publishing the iTC GitHub Website]
 * link:AsciidoctorPublish.html[Asciidoctor Generating Output]
 * link:DocPublishing.html[Publishing iTC Documents]
+* link:iTC-Workflow.html[iTC Workflow]
+* https://github.com/itc-wgtools/repo-labels[repo-labels repository]
 
 :sectnums:
 == Introduction
@@ -55,16 +57,63 @@ By using GitHub as the central repository, many of the problems with collaborati
 The steps here assume that the person who will manage the GitHub repository already has a GitHub account (a free account is sufficient).
 ====
 
-To setup the iTC organization and repository, do the following:
+==== Organization Setup
+To setup the iTC organization, do the following:
 
 . Login to https://github.com with your account
 . Choose what the iTC group's Organization and Repositories should be named
 . Click the down arrow in the upper right corner of the page next to the user icon
 . Click "New Organization", and enter the agreed on Organization name
 .. Select the "My personal account" option for the owner of the new Organization
-. Click "Your repositories", and then click New in the upper right quadrant of the screen
-. Choose the Organization as the owner (it will default to your account) and enter the Respository name, add a description if necessary, and finally click Create repository. The rest can be left as default
+
+==== Repository Setup
+Once you have created the organization, you need to create some repositories. The number needed may depend on where you are in the process. Three template repositories have been created to help create the structure and populate the initial templates you need.
+
+.Template Repositories
+[cols=".^1,.^2,2",options="header"]
+|===
+|Name
+|Description
+|URL
+
+|New-iTC-Admin-template
+|This contains templates for the iTC such as the ESR, ToR and other governing documents.
+|https://github.com/itc-wgtools/New-iTC-Admin-template[,window=\"_blank\"]
+
+|New-iTC-Template
+|This contains templates for the cPP, SD and PP-Configuration (and PP-Module if needed)
+|https://github.com/itc-wgtools/New-iTC-Template[,window=\"_blank\"]
+
+|New-iTC-website-template
+|This contains a template for the github.io website that can be setup for the iTC
+|https://github.com/itc-wgtools/New-iTC-website-template[,window=\"_blank\"]
+
+|===
+
+All three templates should be used when setting up the iTC, though it is possible that some may be used at different times (see link:./iTC-workflow.html[iTC Workflow]).
+
+Each template uses the same steps to do the initial setup of your new repository.
+
+To create the new repository, follow these steps:
+
+. Go to the URL for the type of repository you are going to create
+. Click the green "Use this template" button
+. Choose the Organization as the owner (it will default to your account) and enter the Respository name, add a description if necessary, and finally click Create repository from template. The rest can be left as default
 . The next screen after creation is useful for getting up and running. Read the Quick setup steps, commands used, etc.
+
+===== New-iTC-Template repo-labels script
+[IMPORTANT]
+====
+This section is only needed when creating a repository for the cPP and related documents. While it can be used for any of the repositories, the labels created are only needed in the cPP repository.
+====
+
+When the creating the cPP repository from the New-iTC-Template repository, it is important to run the script contained in the https://github.com/itc-wgtools/repo-labels[repo-labels] repository. The purpose of this script is to edit the labels available for Issues and Pull Requests to a standard set (and be relied upon for other tools added over time).
+
+While the repository will work fine without this script, some of the features of the template repository and some planned maintenance tools will not work correctly without this script.
+
+Instructions for running the script are at the repository.
+
+The repository assumes the user has installed Ruby (such as by following <<Installing Ruby>>). 
 
 === Organization Settings
 ==== Organization Owners
