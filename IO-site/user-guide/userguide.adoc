@@ -256,6 +256,34 @@ image:UG-000024.png[,,]
 
 button to create the Issue.
 
+==== New Issue Templates
+
+Depending on the how your administrator may have configured the repository, instead of being taken directly to the Issue screen or you may be prompted for the type of issue you are creating.
+
+If the repository has been configured with Issue templates, clicking the New Issue button will bring this screen:
+
+image:UG-000069.PNG[,,]
+
+Clicking on any of the Get started buttons will open a new Issue with some information filled in and a series of questions to help guide the person creating the issue.
+
+[NOTE]
+====
+The link at the bottom of the Issue templates for Open a regular issue will take you to the new Issue page without any pre-populated information.
+====
+
+
+image:UG-000070.PNG[,,]
+
+This is an example clicking the cPP change request. The specific questions and text here may vary, but the prompts will help guide in providing the information needed.
+
+For your title you should add it after any field information already there (in this case the [cPP CHANGE]), so the title should be something like _[cpp CHANGE] this is my title_.
+
+Once you have entered your Issue, click the 
+
+image:UG-000024.png[,,] 
+
+button to create the Issue.
+
 [NOTE]
 ====
 If you start to create an Issue and then move off to something else (another page) and then come back to create a new Issue, the previously entered content will still be shown in the window. This is a feature of the website.
