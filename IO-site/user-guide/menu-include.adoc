@@ -4,11 +4,12 @@
 :home: ../index.html[Home]
 :admin: ../admin-guide/index.html[Admin Guide]
 :user: ../user-guide/index.html[User Guide]
+:itcwork: ../admin-guide/iTC-Workflow.html[iTC Workflow]
 :drafts: ../drafts/index.html[Drafts]
 :examples: ../examples/examples.html[Examples]
 
 // Create the menu as an Asciidoctor table
 [.main-menu]
 |===
-|link:{home}|link:{admin}|link:{user}|link:{drafts}|link:{examples}
+|link:{home}|link:{admin}|link:{user}|link:{itcwork}|link:{drafts}|link:{examples}
 |===

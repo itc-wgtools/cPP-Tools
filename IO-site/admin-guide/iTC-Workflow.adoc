@@ -1,0 +1,80 @@
+= iTC Workflow Overview
+:showtitle:
+:toc:
+:toclevels: 7
+:sectnums:
+:sectnumlevels: 7
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-08-01
+
+include::menu-include.adoc[]
+
+:sectnums!:
+
+== Acknowledgements
+This is a quick overview of some of the Working Group and iTC management processes related to the tools that are provided here.
+
+This document intends to communicate to the WG/iTC admins some of the tools that can be used and when they may be most beneficial. This is not intended to be a replacement for iTC guidance from the CCDB, but some assistance as to how/when to use the tools provided here.
+
+== Audience
+The intended audience for this overview are those people who will manage the technical processes of the WG/iTC. This may be the chair or other representative.
+
+[IMPORTANT]
+====
+This page is not intended to replace the link:index.html[Admin Guide], but only to provide some pointers about using the repositories.
+====
+
+== Resources
+* link:index.html[iTC Administrator Tools Overview]
+* https://www.commoncriteriaportal.org/files/communities/Establishing%20iTCs%20and%20cPP%20development%20-%20v0-7.pdf[Establishing iTCs and cPP development, window=\"_blank\"]
+
+:sectnums:
+== Introduction
+Generally an iTC should end up with at least three repositories for their work. Note that the name here is meant as a descriptive name, and does not need to be the actual name of the repository that is created.
+
+.Repositories
+[cols=".^1,.^2",options="header"]
+|===
+|Name
+|Description
+
+|iTC Admin
+|This repository would contain the governing documents for the WG/iTC. For example there is an ESR template that could be used in the template repository. 
+
+|iTC website
+|This repository would be used for the github.io website that can be setup for the WG/iTC. This would provide a place for the group to announce the status and progress of the group.
+
+|iTC Docs
+|This repository would contain the cPP, SD and PP-Configuration (and PP-Module if needed). This would be the main working folder for the output of the iTC (as opposed to the administration of the iTC).
+
+|===
+
+== Repositories and the Workflow
+The three repositories are useful at different times in the creation and ongoing support of an iTC, and can be used as such. There is no requirement that all the repositories be created at once, GitHub allows the creation of repositories at any time within the organization, enabling it to change over time.
+
+With that in mind, here are some recommendations about when it may be useful to create the various repositories based on the current "Establishing iTCs and cPP development" document.
+
+.Workflow Points for Creating Repositories
+[cols=".^1,.^1,2",options="header"]
+|===
+|Process Flow Period
+|Repository to Create (Template link)
+|Description
+
+|CCDB creates WG (block 4)
+|https://github.com/itc-wgtools/New-iTC-Admin-template[iTC Admin Repository,window=\"_blank\"]
+|At this point the WG has been created and work on the initial documents must start. Templates for these documents are available in this template repository.
+
+|Any time between CCDB creates WG and iTC creates draft SPD (blocks 4 to 14)
+|https://github.com/itc-wgtools/New-iTC-website-Template[iTC website,window=\"_blank\"]
+|The creation of the website can happen at any point, even later than the beginning of the SPD work, but it would seem a good idea to provide more information about what is going on (and the ability to control the format of the information) than is available on the CC Portal.
+
+|iTC creates draft SPD (block 14)
+|https://github.com/itc-wgtools/New-iTC-Template[iTC Docs,window=\"_blank\"]
+|The start of work on the SPD is really the first place where the cPP work starts, so at this point the cPP repository should be created.
+
+|===
+
+A key assumption here is that the people in the WG will also be part of the eventual iTC, so there would be a smooth transition from one phase to the next, and the repositories would provide a history of everything from the initial ESR work onwards.
