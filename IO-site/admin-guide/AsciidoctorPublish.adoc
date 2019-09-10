@@ -1,4 +1,4 @@
-= Asciidoctor Generating Output
+= Asciidoctor Generating Output with itc_gentools
 :showtitle:
 :toc:
 :imagesdir: images
@@ -11,34 +11,32 @@ include::submenu-include.adoc[]
 == Introduction
 At this point there are two types of output that are supported from Asciidoctor: HTML and PDF. The same source file can be used to generate both types of output files, just using different commands from the tools that have been installed.
 
-For simplicity, use the tools installed as part of the setup. The iTC-Tools package should cover the majority of output generation for HTML and PDF files automatically.
+For simplicity, use the tools installed as part of the setup. The itc_gentools package should cover the majority of output generation for HTML and PDF files automatically.
 
-== The itc-gentool Script
+The itc-gentools script provides a simple method for creating the HTML and PDF files automatically using the Asciidoctor tools that were installed during the setup.
+
+== The itc_gentools Ruby Gem Package
+The itc_gentools package can be found https://github.com/itc-wgtools/itc_gentools[here]. The latest version can be seen listed in the README.
+
+=== Installation of itc_gentools
+To install the package, you will need to download the GEM file for the latest version. On the home page of the tool, click the link for the latest version. On this page you will see a file called
+
+  itc_gentools-X.Y.Z.gem
+
+where X.Y.Z is the version number. Download this file so you can access it via the Ruby command prompt.
+
+[IMPORTANT]
+====
+The installation process assumed you have already installed Ruby on the computer as specified in the setup instructions. If you have not, then do that now.
+====
+
+To install the Gem, run the command
+
+  gem install itc_gentools-X.Y.Z.gem
+
+(remember to enter the proper version number).
+
 The itc-gentool.rb script provides a simple method for creating the HTML and PDF files automatically using the Asciidoctor tools that were installed during the setup.
-
-=== Tool Folder
-The tool is run from the command line and is built in Ruby to easily match with the Asciidoctor components.
-
-When the tool is installed, it will have the following folder structure.
-
- Output Generation
-  |
-  +--input
-  |   +----sample.adoc
-  |
-  +--output
-  |
-  +--themes
-  |   +----admonition-theme.yml
-  |
-  +----itc-gentool.rb
-  +----LICENSE.txt
-
-The <input> and <output> folders are for the documents to be published. The itc-gentool script expects the Asciidoctor file to be placed into the input folder and it will place the result files into the output folder. The sample.adoc file in the <input> folder can be used to test the script.
-
-The <themes> folder has the theme necessary to properly produce PDF output using the current configuration. 
-
-The script has been placed under the MIT license (very unrestrictive in use).
 
 === Generating Output
 Once you have placed the Asciidoctor file into the <input> folder, to generate output, run the following command:
@@ -74,12 +72,14 @@ The following <output type> parameters are accepted (not case sensitive).
 The script checks for the existence of an output file by the same name before publishing the file (Asciidoctor will automatically overwrite the file by default). If the output file already exists, the script will abort. This especially important when using "both" as the output type since it means you will not have files generated from different versions of the same source file.
 
 == Direct Use of Asciidoctor tools
-For simplicity and consistency, it is recommended to use the itc-gentool script, but there could be times when more flexibility is necessary. The following sections specify the command line parameters that are being used in the script.
+For simplicity and consistency, it is recommended to use the itc_gentool script, but there could be times when more flexibility is necessary. The following sections specify the command line parameters that are being used in the script.
 
 [IMPORTANT]
 ====
-The provided script is based on the expectations for use at the time it was created. If you determine there are other features that are needed or changes you have made, please provide this feedback to the iTC-Tools WG so they can be shared with the wider community.
+The provided script is based on the expectations for use at the time it was created. If you determine there are other features that are needed or changes you have made, please provide this feedback to the iTC Tools WG so they can be shared with the wider community.
 ====
+
+The <itc_gentools HOME> is the installed location of the package.
 
 === HTML Command Line Parameters
 If you have a need to run the Asciidoctor HTML generation directly instead of through the provided scripts, the following parameters must be added for consistent output (in addition to the input filename).
@@ -88,7 +88,7 @@ Note that it is possible to skip some of these if you do not need the feature of
 
 The following is the current HTML command line being used in the script.
 
-  asciidoctor -r notice-block.rb -r asciidoctor-diagram -a data-uri -a toc=left -D output ./input/sample.adoc
+  asciidoctor -r <itc_gentools HOME>/notice-block.rb -r asciidoctor-diagram -a data-uri -a toc=left -D <output folder> sample.adoc
 
 The parameters are specified in the table below.
 
@@ -101,7 +101,7 @@ The parameters are specified in the table below.
 |-r asciidoctor-diagram
 |Enables ditaa graphics generation output
 
-|-r notice-block.rb
+|-r <itc_gentools HOME>/notice-block.rb
 |Calls the iTC admonition block for custom icons. This
 
 This enables the graphics in the templates for iTC guidance, and should be used to help spot sections that may not have yet been removed.
@@ -121,7 +121,7 @@ Note that it is possible to skip some of these if you do not need the feature of
 
 The following is the current PDF command line being used in the script.
 
-  asciidoctor-pdf -r notice-block.rb -r asciidoctor-diagram -a pdf-theme=./themes/admonition-theme.yml -D output ./input/sample.adoc
+  asciidoctor-pdf -r <itc_gentools HOME>/notice-block.rb -r asciidoctor-diagram -a pdf-theme=<itc_gentools HOME>/themes/admonition-theme.yml -D <output folder> sample.adoc
 
 .PDF Asciidoctor Parameters
 [cols="1,2",options="header"]
@@ -132,12 +132,12 @@ The following is the current PDF command line being used in the script.
 |-r asciidoctor-diagram
 |Enables ditaa graphics generation output
 
-|-r notice-block.rb
+|-r <itc_gentools HOME>/notice-block.rb
 |Calls the iTC admonition block for custom icons. This
 
 This enables the graphics in the templates for iTC guidance, and should be used to help spot sections that may not have yet been removed.
 
-|-a pdf-theme=./themes/admonition-theme.yml
+|-a pdf-theme=<itc_gentools HOME>/themes/admonition-theme.yml
 |This goes along with the notice-block and must be used together to properly render the icons.
 
 |===
