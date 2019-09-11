@@ -1,0 +1,167 @@
+= iTC Administrator Tools Guidance
+:showtitle:
+:toc:
+:icons: font
+:imagesdir: images
+:revnumber: 0.2
+:revdate: 2019-06-21
+
+== Acknowledgements
+This is designed for an admin to setup the listed tools and to manage the cPP process.
+
+This document intends to communicate to PP admins how to setup tools and some basic automation to manage the cPP process. The scope covers both client side tools necessary for workflow, operating systems, and backup strategies. Finally, focus is heavily on FOSS (Free Open Source Software) because cost should not be a barrier to participation in the development of a cPP.
+
+:sectnums:
+== Technologies used
+In this section we'll outline what technologies are recommended or currently in use by other iTC groups for the efficient and flexible development of a PP.
+
+=== GitHub
+GitHub is used for several reasons:
+
+* Central repository of information that anyone can access.
+* Revision control system with access control, branching, and submission approval built-in.
+* Discussions on issues are easily facilitated in browser.
+* Wiki can be used to communicate meeting minutes, document development status, etc.
+
+==== Setup
+Do the following:
+
+. Navigate to https://github.com
+. Choose what the iTC group's space and repositories should be named.
+. Fill out the form on the right-hand side of the screen and click Sign up for GitHub.
+. Login to GitHub and click the down arrow in the upper right corner of the page next to the user icon.
+. Click "Your repositories", and then click New in the upper right quadrant of the screen.
+. Choose the Repository name, add a description if necessary, and finally click Create repository. The rest can be left as default.
+. The next screen after creation is useful for getting up and running. Read the Quick setup steps, commands used, etc.
+
+==== Learning
+Git can be a little counterintuitive at first, but once familiarized it can be easy to navigate around and understand what's happening. Several resources can be used to better learn how to work with it:
+
+GitHub Guides:: Github provides a comprehensive set of learning tools to get new users acclimated to working with git. URL: https://guides.github.com
+Learning Lab:: The learning lab is an interesting learning resource, because it uses a robot to interact with the user in a teacher/student scenario.
+
+*To Install the Learning Lab*
+
+* Go to https://lab.github.com
+* Sign into GitHub and scroll to the bottom of the page. The Getting Started guide will walk you through installation of the app, and registering for a course. 
+
+Once complete go to your profile on github, click the learning path added (it'll be a repository), and start learning!
+
+[NOTE]
+====
+The Learning lab is not a requirement per se. It is however a powerful way to learn how to work with git and GitHub in general so it's at least worth looking into.
+
+====
+
+=== Git Clients
+There are no hard and fast rules here; Find the client that works best for you whether it's a GUI or command line, for pay or not. To get you started however here's a short list of available clients. All examples are FOSS:
+
+* GitAhead
++
+This git GUI client is pretty elegant, and has decent features. It's also fairly user friendly.
+
+URL:: https://gitahead.github.io/gitahead.com/
+
+* GitHub Desktop
++
+This GUI client is cross-platform for only Mac and Windows, but has decent features.
+
+URL:: https://desktop.github.com/
+
+=== IDE's supporting GIT
+This section outlines a couple IDE's that support both Asciidoc syntax, and GIT.
+
+* Atom IDE
++
+This IDE (Integrated Development Environment) is cross-platform, lightweight, and has a multitude of plugins available that expand its already impressive support for various programming languages, file formats, etc.
+
+URL:: https://ide.atom.io/
+
+[NOTE]
+====
+While this IDE supports working with git and GitHub, it can be a tad counterintuitive. It's primary use case is more likely to be that of editing documents, but not necessarily to work directly with a git repository or GitHub.
+
+====
+
+* MS Visual Studio Code
++
+Open source client from Microsoft, with built-in git integration functionality. Read the license terms to see if this is a good fit for your organization however. While it's free and open source, it does send information back to Microsoft.
+
+URL:: https://code.visualstudio.com/
+
+=== Other GIT Tools
+This section outlines other tools that may be useful. 
+
+* RepoZ
++
+RepoZ is a utility software that automates some aspects of the git client -> server interactions on behalf of the user, as well as adding shell features that improve interactions with them.
+
+URL:: https://github.com/awaescher/RepoZ
+
+=== Asciidoctor
+This software is used to translate text files with ASCII markup syntax into other formats (PDF, HTML, XML, etc). *Asciidoc* on the other hand can be considered the standard, that defines the markup syntax used by *Asciidoctor*.
+
+== Backups
+It's imperative that backups are maintained in the event of disaster or other issues related to the central repository hosted on GitHub. While it's somewhat unlikely to experience catastrophic failure, it's never the less best practice.
+
+=== Command line Cloning
+The central repository can be manually cloned by running the following command on a Linux system:
+
+ git clone --mirror https://github.com/<accountName>/<repositoryName> ./repositoryName/
+
+The above command will take a raw backup of the repository, rather than a checked out copy. It's possible that GUI tools could perform the exact same command, however that is for the reader to discover on their own.
+
+=== GitHub Cloning
+Another way to perform a backup is by using the GitHub web interface to download a copy of the repository data:
+
+URL:: https://help.github.com/en/articles/requesting-an-archive-of-your-personal-accounts-data
+
+==== Steps
+In case the above URL is stale:
+
+. Login to GitHub, and click the down arrow next to your avatar icon in the upper right of the window.
+. Click Settings
+. In the left hand list, click the Account sub-section.
+. Click "New export" on the right quadrant of the interface.
+. Confirm password to authenticate.
+. Wait until you receive an email stating that the backup has been performed on your data, and use the link provided
+to download a copy of it.
+
+=== Scripted Automation
+While the above options are fine for one-off measures to ensure a recent backup of repository data, the procedures outlined do not download any of the other important information in the GitHub interface such as:
+
+* Issues and comments on Issues
+* Wiki content
+* Project boards, etc.
+
+Automatic download and archival of this GitHub content can be facilitated by using a script and cron on a Linux system to pull the data. Perform the following:
+
+. Use pip to install the software:
++
+ sudo su && pip install github-backup
+
+. Generate an access Token
+.. Login to GitHub
+.. Click the user avatar icon, and click Settings.
+.. Click Developer settings in the left hand list.
+.. Click Personal access tokens.
+.. Click Generate new token in the upper right quadrant.
+.. Define the permissions for the access token. It's recommended to avoid adding permissions to access GPG keys, or similar security tokens. It's unnecessary for the purpose of backups.
+.. Click Generate token at the bottom of the page. 
+.. Once generated then copy it to a safe place, because you'll never see the code again.
+. Create a crontab entry with your desired download schedule, and designate a location to store the data.
+. To backup one repository (and accompanying data):
++
+ github-backup USERNAME -P -t ACCESS_TOKEN -o BACKUP_DIR --all -O -R REPOSITORY
+
+[NOTE]
+====
+Replace the items in all caps with your respective information.
+
+====
+
+If multiple repositories are desired, or other syntactical adjustments are necessary, read the help pages for github-backup:
+
+ github-backup --help
+
+
