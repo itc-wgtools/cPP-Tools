@@ -18,11 +18,13 @@ To see the calendar for calls/meetings, go to: http://localendar.com/public/itct
 == Tools and Guidance
 Any set of tools on its own isn't very useful, so in conjunction with the tools in GitHub is a set of documentation provided on this site to help explain how to use the tools and some of the general back end work that needs to be done to support the iTC.
 
-The guidance is broken into three areas:
+The guidance is broken into several areas:
 
 * link:/admin-guide/index.html[Administrator Guidance]
 * link:/user-guide/index.html[User Guidance]
 * link:/examples/examples.html[Examples for the cPPs and SD]
+* https://github.com/itc-wgtools/cPP-Tools/wiki/Recommended-External-Tools[Recommended External Tools]
+* link:/files_list.html[Description of currently available templates]
 
 Documents that are available for public review can be seen at the link:/drafts/drafts.html[Drafts] page. This will include information about submitting comments to the WG.
 
