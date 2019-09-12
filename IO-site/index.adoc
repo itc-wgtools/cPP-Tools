@@ -1,8 +1,8 @@
 = CCUF Team Tools Working Group
 :showtitle:
 :imagesdir: images
-:revnumber: 0.5
-:revdate: 2019-08-27
+:revnumber: 0.6
+:revdate: 2019-09-13
 
 include::menu-include.adoc[]
 
@@ -11,7 +11,9 @@ The CCUF established the Team Tools Working Group to work on a set of tools for 
 
 The work is being done in GitHub at https://github.com/itc-wgtools/cPP-Tools.
 
-To join the Team Tools WG, please send a message to: ccuf-team-tools-wg@googlegroups.com
+The https://github.com/itc-wgtools/cPP-Tools/wiki[wiki] has a list of meeting notes as well as a lot of other related information that doesn't fit neatly into the templates or the web pages here.
+
+*PLEASE join the Team Tools WG!* Send a message to: ccuf-team-tools-wg@googlegroups.com
 
 To see the calendar for calls/meetings, go to: http://localendar.com/public/itctools
 
@@ -29,15 +31,13 @@ The guidance is broken into several areas:
 Documents that are available for public review can be seen at the link:/drafts/drafts.html[Drafts] page. This will include information about submitting comments to the WG.
 
 == Current Status
-The WG is working towards the completion of the documentation in time for the https://www.iccc2019.com/[ICCC 2019]. As a volunteer effort, it is possible not everything will be completed in time for the conference, but the documents and templates will be prioritized such that the available material should cover the highest needs.
-
-The chart below shows the expected timeline for producing the documents. We are currently in Public Review Phase 1 while working on the Phase 2 Drafts.
+The WG is working towards the completion of the documentation in time for the https://www.iccc2019.com/[ICCC 2019]. As a volunteer effort, we were able to complete the majority of the immediate link:/files_list.html[documents] an iTC would need. As we move past the ICCC more documents related to the administration of the iTC itself will be produced. 
 
 [ditaa, "Current_Status"]
 ....
                                   
     +----------+    +----------+   +----------+   +----------+   +----------+
-    |          |    | cYEL     |   | cGRE     |   |          |   |          |
+    |          |    |          |   |          |   |          |   | cGRE     |
     | Phase 1  |    |  Public  |   | Phase 2  |   |  Public  |   | Public   |
     | Drafts   |--> |  Review  |-->| Drafts   |-->|  Review  |-->| Release  |
     |          |    |  Phase 1 |   |          |   |  Phase 2 |   |          |
@@ -46,5 +46,8 @@ The chart below shows the expected timeline for producing the documents. We are 
 
 ....
 
-== Eating Your Own Dog Food
-This WG has been attempting to use what we are providing for the wider community. This has helped (and probably hurt initially as we all learned), but hopefully the efforts of the WG will benefit the wider community as we go forward.
+== Public Presentation of the Work
+At the CCUF meetings in April 2019, the initial public presentation of the Tools WG was presented. This presentation can be found here: https://youtu.be/6Gdb4qNn0tg (note that this is 1:22 long). This focused on the thought process behind the direction and the plans at that point.
+
+== Eating Our Own Dog Food
+This WG has been attempting to use what we are providing for the wider community. This has helped (and probably hurt initially as we all learned from the experience, but that was the point), but hopefully the efforts of the WG will benefit the wider community as we go forward.
