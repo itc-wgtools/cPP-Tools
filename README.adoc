@@ -1,0 +1,60 @@
+= Introduction to cPP-Tools Repository
+
+As the number of iTCs grows, it has fallen on each iTC to figure out how to manage the process of creating and managing the process of creating the cPP and Supporting Documents. Even the processes for updates and technical decisions is new.
+
+While there is no single "right way" to manage an iTC, the purpose of this WG and its repositories is to produce a set of guidance and templates that can be used to help iTCs perform these tasks using the knowledge and experience of those that have come before. 
+
+The home page for the group, which covers updates as well as the guidance documentation, is https://itc-wgtools.github.io. 
+
+As the initial repository, this is where most of the announcements and wiki updates are made. The main work done in this repository focuses on the cPP and related templates as well as the guidance documentation (which is published as on the website above).
+
+The https://github.com/itc-wgtools/iTC-docs[iTC-docs] repository is focused on the documentation for the iTC itself, things like the Essential Security Requirements and the Terms of Reference. These are to help the iTC get up and running with templates for all the documents they need already in a usable format.
+
+In addition to information posted here, the https://github.com/itc-wgtools/cPP-Tools/wiki[wiki] will be used for information (such as meeting notes) that doesn't fit directly into a repository.
+
+If you are interested in joining the Team Tools Working Group, please email "be.wood at samsung.com" with your GitHub ID.
+
+== Template Files in this Repository
+Within each repository are a number of files being worked on. The following table is the list of the primary files being edited in cPP-Tools. 
+
+[cols=".^1,.^3",options="header"]
+|===
+|Folder/File
+|Description
+
+|Templates/SPD-template.adoc
+|This is a template for completing the Security Problem Definition for the product type. This will be used as the scoping document for the cPP.
+
+This is the first template that will be used from this repository.
+
+|Templates/cPP-template.adoc
+|This is the template for a cPP. It has been created based on earlier templates as well as several cPPs current in use or in the process of being created.
+
+|Templates/cPP-MOD-template.adoc
+|This is a template for a PP-Module if the iTC needs to create on instead of a cPP (or in parallel). This is based on the cPP template but with some portions adjusted based on the differences between the two types of files.
+
+|Templates/SD-Template.adoc
+|This is the template for the Supporting Document. It has been created based on earlier templates as well as the supporting documents for several cPPs currently in use or in the process of being created.
+
+|Templates/PP-config-template.adoc
+|This is a template for creating a PP-Configuration with the cPP and another cPP/PP-Module/Package.
+
+|IO-site
+|The files under this folder are used to populate the https://itc-wgtools.github.io site (they are converted into HTML using the same process as the other template files).
+
+|IO-site/admin-guide
+|The files in this folder are focused on the administration of the tools and the iTC. Things like how to publish documents, setting up GitHub and the related tools are here.
+
+|IO-site/user-guide
+|The files in this folder are focused on the user guidance for the tools to be used here.
+
+|IO-site/examples
+|The files in this folder are for providing example text for things like SFRs in the creation of the cPP and SD. SPD examples and more will be added over time.
+
+|IO-site/drafts
+|The files here are used to publicize documents for public review by the iTC. This is not done constantly, but can be done for new or major changes to the content.
+
+|User Guidance/Syntax-Guide.adoc
+|This is a guide to the Asciidoctor syntax that is used throughout the templates. 
+
+|===
