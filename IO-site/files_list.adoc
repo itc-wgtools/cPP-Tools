@@ -1,0 +1,98 @@
+= iTC Templates
+= CCUF Team Tools Working Group
+:showtitle:
+:imagesdir: images
+:revnumber: 0.1
+:revdate: 2019-09-12
+
+include::menu-include.adoc[]
+
+== Templates Provided
+In each repository for the iTC, there are several templates and files, each with its own purpose. This focuses on the template files and will describe their purpose.
+
+Most of the templates are written in Asciidoctor syntax. You should take a look at the Templates_README.adoc file as it provides some direct information about general contents of the templates.
+
+=== iTC Documentation Templates
+These templates are more about the administration of the iTC and not the cPP being worked on. These focus on the core functionality of the iTC, things like voting, scheduling and the review/release process.
+
+The iTC administrator should have used the template repositories during the setup of the GitHub workspaces, so these should be located in something like along the lines of an iTC-Admin repository.
+
+The latest versions of these files can be found https://github.com/itc-wgtools/iTC-docs[here].
+
+To find the current
+
+.iTC Documentation Templates
+[cols=".^1,.^3",options="header"]
+|===
+|File
+|Description
+
+|README.adoc
+|This is a sample README file for the repository. It will be displayed automatically below the code window on the home page of the repository.
+
+|ESR-template.adoc
+|A template for the Essential Security Requirements document that would be created by the Working Group.
+
+|iTC-ToR.adoc
+|A template for the iTC Terms of Reference.
+
+|CC Portal Page.adoc
+|This is a template for the contents that would be placed on the https://www.commoncriteriaportal.org/communities/index.cfm[Common Criteria Communities] page for the iTC.
+
+|iTC-Invitation-Letter-template.adoc
+|This is a template for the official invitation letter to join the iTC. This is posted to the community page for the iTC on the Common Criteria Portal (it can also be posted on the iTC home page).
+
+|iTC_status_table.adoc
+|A template for providing a status update on the progress of the iTC. 
+
+|iTC_Work_Plan_template.adoc
+|This is a template for the table of the overall work plan for the creation of the cPP and related documents.
+
+|PP-Config.adoc
+|A template for documenting what other cPPs, PP-Modules or Packages can be used with the cPP(s) created by the iTC.
+
+|Review_Process.adoc
+|A template for how an iTC would publish drafts for public review and manage the process (phases, time periods, etc).
+
+|Public_Review_Draft_template.adoc
+|A template for announcing a document for public review.
+
+|Comments-Matrix-template.xlsx
+|An Excel spreadsheet template that can be used for accepting comments during public review.
+
+|Vote_email_template.txt
+|A template for an email to be sent out announcing a call for the iTC membership to vote on a topic.
+
+|===
+
+=== cPP Related Templates
+The templates here are specifically those for the creation of the cPP and its related documents.
+
+The iTC administrator should have used the template repositories during the setup of the GitHub workspaces, so these should be located in something like along the lines of an iTC-cPP repository.
+
+The latest versions of these files can be found https://github.com/itc-wgtools/cPP-Tools/tree/master/Templates[here].
+
+.cPP Related Templates
+[cols=".^1,.^3",options="header"]
+|===
+|File
+|Description
+
+|SPD-template.adoc
+|This is a template for completing the Security Problem Definition for the product type. This will be used as the scoping document for the cPP.
+
+This is the first template that will be used from this repository.
+
+|cPP-template.adoc
+|This is the template for a cPP. It has been created based on earlier templates as well as several cPPs current in use or in the process of being created.
+
+|cPP-MOD-template.adoc
+|This is a template for a PP-Module if the iTC needs to create on instead of a cPP (or in parallel). This is based on the cPP template but with some portions adjusted based on the differences between the two types of files.
+
+|SD-Template.adoc
+|This is the template for the Supporting Document. It has been created based on earlier templates as well as the supporting documents for several cPPs currently in use or in the process of being created.
+
+|PP-config-template.adoc
+|This is a template for creating a PP-Configuration with the cPP and another cPP/PP-Module/Package.
+
+|===
