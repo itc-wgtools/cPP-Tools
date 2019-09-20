@@ -39,7 +39,7 @@ Ideally the person who is responsible for GitHub should be someone familiar with
 == Introduction
 The administrators of the iTC will need to have some level of technical skills to manage the cPP creation process. This is true regardless of the tools in use, but is more explicitly laid out here because the tools here are not "sending Word documents around" but require the use of specific development tools to provide a foundation for the long term health of the cPP process.
 
-This site is laid out to focus on the administration of the two primary tools recommended for use: GitHib and Asciidoctor. There are other suggested tools to help the iTC fill out the workflow process, but these are the two primary tools that are used in this process.
+This site is laid out to focus on the administration of the two primary tools recommended for use: GitHub and Asciidoctor. There are other suggested tools to help the iTC fill out the workflow process, but these are the two primary tools that are used in this process.
 
 == GitHub
 https://github.com[GitHub] is a well known source code repository site that also provides free accounts and usage (perfect for our purposes). While it may seem strange to use a source code repository site for creating and managing the cPP creation process, there are several good reasons for doing this:
