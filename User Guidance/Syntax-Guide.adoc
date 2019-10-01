@@ -4,8 +4,8 @@
 :sectnums:
 :imagesdir: images
 :icons: font
-:revnumber: 0.2
-:revdate: 2019-06-20
+:revnumber: 0.3
+:revdate: 2019-10-01
 :xrefstyle: full
 
 == Overview
@@ -47,6 +47,23 @@ This will show the revision date of the doc
 These can be accessed elsewhere in the document by surrounding the text with {}.
 
 {revdate} should show the date listed at the top of the document when previewed
+
+==== Watermarks
+In some circumstances (such as when you are still in a draft state) you may want to add some sort of watermark to the document (at least for the PDF output). At this point watermarks are images placed on the pages of the PDF output. Care should be used about the colors chosen for the watermark as at the moment it isn't possible to make the image partially transparent. While it will be behind any text, the color(s) chosen should be somewhat washed out so as to not impact the readability of the document.
+
+There are two lines that can be added to the document header related to watermarks. 
+
+The first one is:
+
+:page-background-image: image:watermark.png
+
+This expects the image to be in the images folder (as defined by :imagesdir:). This will place the watermark on every page (including the title).
+
+If you want to prevent having the watermark on the title page, add this line to the header:
+
+:title-page-background-image: none
+
+When combined with the above line, this will place the watermark on all pages after the title page.
 
 === Table of Contents
 To create a table of contents, the following can be used:
