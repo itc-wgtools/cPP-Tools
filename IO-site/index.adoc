@@ -13,7 +13,7 @@ The work is being done in GitHub at https://github.com/itc-wgtools/cPP-Tools.
 
 The https://github.com/itc-wgtools/cPP-Tools/wiki[wiki] has a list of meeting notes as well as a lot of other related information that doesn't fit neatly into the templates or the web pages here.
 
-*PLEASE join the Team Tools WG!* Send a message to: ccuf-team-tools-wg@googlegroups.com
+*PLEASE join the Team Tools WG!* Send a message to: ccuf-team-tools-wg+subscribe@googlegroups.com
 
 To see the calendar for calls/meetings, go to: http://localendar.com/public/itctools
 
