@@ -282,51 +282,14 @@ This will install the components of the Asciidoctor toolchain.
 ==== Installing CCUF Custom Components
 The following components need to be installed:
 
-* Asciidoctor Tools Extension
 * iTC-Tools Output Generation package
 
-===== Asciidoctor Tools Extension
-This particular package consists of 3 files and one folder (lib is the folder where this should be placed). 
-
- lib
-  |
-  +--notice-block
-  |   +----sample.adoc
-  |   +----extension.rb
-  |
-  +--notice-block.rb
-
-To install the Tools Extension package, place the files into the lib folder for Asciidoctor.
-
-For example, on a Windows system with Ruby installed, the path where the files should be placed is:
-
-  Ruby26-x64 > lib > ruby > gems > 2.6.0 > gems > asciidoctor-2.0.10 > lib
-
-Obviously the version of Asciidoctor may be different (as may the version of Ruby), but the key thing here is to place the notice-block.rb file and the notice-block folder into the lib folder.
-
-Updating Asciidoctor will not impact these files so you should not have to worry about maintaining Asciidoctor to the latest versions.
-
 ===== iTC-Tools Output Generation
-Thsi particular package is a ZIP file that should be unzipped with folders maintained into a location you can easily get to from the command line. It does not need to be in the Asciidoctor folders, but you need to be able to access it from within the Ruby command prompt.
-
-When unzipped, the folder will consist of 4 files and 3 folders (the output folder is empty).
-
-  Output Generation
-  |
-  +--input
-  |   +----sample.adoc
-  |
-  +--output
-  |
-  +--themes
-  |   +----admonition-theme.yml
-  |
-  +----itc-gentool.rb
-  +----LICENSE.txt
+This particular package can be found https://github.com/itc-wgtools/itc_gentools[here]. The site has instructions to download the Gem file needed to install the package.
 
 ==== Test the Toolchain
-To quickly test the full toolchain, open a Ruby command prompt and access the Output Generation folder. Then run this command:
+To quickly test the full toolchain, pick a file and then run this command (fill in your own Asciidoctor file):
 
-  itc-gentool both sample.adoc
+  itc-gentools both <sample.adoc>
 
-If there are no errors or prompts that something went wrong, there should be a sample.html and a sample.pdf files in the output folder. If these open and show a few lines with icons, then the toolchain is installed properly.
+If there are no errors or prompts that something went wrong, there should be an HTML and a PDF files in the folder.
