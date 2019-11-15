@@ -7,7 +7,7 @@
 :imagesdir: images
 :icons: font
 :revnumber: 0.2
-:revdate: 2019-11-13
+:revdate: 2019-11-15
 
 include::menu-include.adoc[]
 
@@ -191,6 +191,59 @@ Once all the cards have been copied, the Projects should be complete.
 ====
 It is expected that you will make multiple copies of the Maintenance project to manage ongoing updates.
 ====
+
+==== Issue Templates
+Within the template repository for the cPP/SD are Issue Templates to help users with filling out the information needed when creating a new issue. While these may not be needed for everyone, they will likely be very helpful for users who do not participate often in the group and so may not be completely familiar with the information needed to respond to their concerns. In addition it is possible to assign labels to classify the issue as well as users to review.
+
+While the default information should be sufficient overall, to help make sure new issues are properly reviewed, it is useful to assign users to review the incoming issues. 
+
+.Issue Templates
+[[Workflow]]
+[cols="1,1,1,3",options="header"]
+|===
+|Name 
+|Should be Assigned
+|Project
+|Description
+
+.^|cPP change request
+.^|Editor Team
+.^|Maintenance
+|Issue specifically for the cPP (requirements, etc, but not the SD) 
+
+.^|PP-Configuration change request
+.^|Editor Team
+.^|Maintenance
+.^|Issue specifically for a PP-Configuration document
+
+.^|Request for interpretation
+.^|Interpretation Team
+.^|Interpretation
+|Issue specifically related to a request for a Technical Decision/Interpretation of the current published cPP/SD
+
+.^|SD change request
+.^|Editor Team
+|Issue specifically for the SD (evaluation activities, etc, but not the cPP requirements directly)
+
+|===
+
+The Issue Templates should be assigned to the members of the <<GitHub Teams,teams>>, but they must be assigned individually. The Teams cannot be used for assigning issues, only individual users.
+
+To assign the team members to the Issue Templates (do this for each template):
+
+. Open the Repository Settings
+. On the Options tab, under Features, click Set up templates
+. Click Preview and edit
+. Click the pencil icon next to the title
+. Click the Assignees gear symbol
+. Select the members of the Editors team (up to 10) to be assigned to the issue when created
+. Click Close Preview
+
+Once all the templates have been edited with the proper Assignees:
+
+. Click Propose changes
+. Select Commit directly to the Master branch (this should be the default branch)
+. Follow the steps to commit, approve and merge the changes (this may require an Administrator override at this point)
 
 === Repository Branches
 One of the most important aspects of working in GitHub is the use of Branches. This is how you manage the process of creating the documents. When created, a repository has a single branch, Master. This should be reserved for the current "published" content. Ongoing work though, should be done in different branches, which would then be merged into the Master on some periodic basis. 
