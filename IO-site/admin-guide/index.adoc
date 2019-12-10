@@ -223,6 +223,7 @@ While the default information should be sufficient overall, to help make sure ne
 
 .^|SD change request
 .^|Editor Team
+.^|Maintenance
 |Issue specifically for the SD (evaluation activities, etc, but not the cPP requirements directly)
 
 |===
@@ -455,9 +456,9 @@ This will install the components of the Asciidoctor toolchain.
 ==== Installing CCUF Custom Components
 The following components need to be installed:
 
-* iTC-Tools Output Generation package
+* itc_gentools Output Generation package
 
-===== iTC-Tools Output Generation
+===== itc_gentools Output Generation
 This particular package can be found https://github.com/itc-wgtools/itc_gentools[here]. The site has instructions to download the Gem file needed to install the package.
 
 ==== Test the Toolchain
