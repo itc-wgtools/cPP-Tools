@@ -448,7 +448,7 @@ This is not the only way to install Ruby, but is being used here as a reference.
 Once Ruby has been installed, start "Command prompt with Ruby". The execute the following commands:
 
  gem install asciidoctor
- gem install asciidoctor-pdf
+ gem install asciidoctor-pdf --pre
  gem install asciidoctor-diagram
 
 This will install the components of the Asciidoctor toolchain.
