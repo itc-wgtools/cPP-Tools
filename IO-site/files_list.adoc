@@ -1,5 +1,4 @@
 = iTC Templates
-= CCUF Team Tools Working Group
 :showtitle:
 :imagesdir: images
 :revnumber: 0.1
