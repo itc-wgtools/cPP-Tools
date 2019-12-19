@@ -182,18 +182,18 @@ Request originates from an unrelated organization but is similar/closely related
 .^|Urgency +2
 |Request is related to an active evaluation (should be moved to IT unless not critical)
 
-.^|Coupling +2
+.^|Coupling -2
 |Request is unreasonably broad in scope or contains more than one unrelated issue
 
-.^|Effort +2
+.^|Effort -2
 |Request is lacking a clear problem description and rationale
 
 Request is lacking a clear proposed solution
 
-.^|Risk +2
+.^|Risk -2
 |The solution to the request is likely to impact multiple inter-related requirements
 
-.^|Risk +1
+.^|Risk -1
 |The request is asking to set aside reporting requirement
 
 The request is asking to set aside or modify a testing or functional requirement
