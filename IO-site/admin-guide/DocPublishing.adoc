@@ -20,9 +20,11 @@ There are several steps that should be followed to create a published version.
 :sectnums:
 
 == Merge the Working Branch to Master
-Once you have the working Branch to the point where you think it is ready to publish, it should be merged into the Master branch. This will update the Master (which would be blank the first time you do this, but later would have the "current" published version) to be the same as the current Working branch.
+Once you have the working Branch to the point where you think it is ready to publish, it should be merged into the Master branch. If you are following a process similar to that described in the link:./Maint-Project-Flow.html[Doc Workflow] then the iTC should have approved the current Working branch and the Editor Team should then merge this into the Master branch.
 
-To do this, follow these steps:
+This will update the Master (which would be blank the first time you do this, but later would have the "current" published version) to be the same as the current Working branch.
+
+To do this, the Editor Team will follow these steps:
 
 . Create a new Pull Request (this can be done from the Code tab)
 . For the base branch, select Master
@@ -31,11 +33,10 @@ To do this, follow these steps:
 .. Review the comments/commits shown for inclusion (make sure it looks right)
 . Enter in a comment (something like the version this will be and any other comments)
 . Click Create Pull Request
-.. Members should be assigned to review the changes (though ideally you are moving to this point because everyone already agreed to what is in the Pull Request)
+.. Members of the Editor Team should be assigned to review the changes (though ideally you are moving to this point because everyone already agreed to what is in the Pull Request)
+. The Editor Team should review and approve the Pull Request
 
-At this point you will have a new Pull Request to merge these changes into the Master. If you have configured your branches correctly you will now need several approvals before the merge is approved. The number is set by the administrator (as specified in the Branch Protection table during the setup).
-
-Once the Pull Request has been approved by the number of members necessary, the Pull Request can be merged.
+Once the Pull Request has been approved by the number of members necessary, the Pull Request can be merged to Master.
 
 == Create Published Documents
 The documents that are being published need to be downloaded and be run through the link:AsciidoctorPublish.html[Asciidoctor Generating Output] process to create the documents to be published. 

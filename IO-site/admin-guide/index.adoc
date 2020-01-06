@@ -91,6 +91,7 @@ Within a GitHub organization, repositories are project spaces. Each repository h
 The number of repositories needed within the organization may depend on where you are in the process. Three template repositories have been created to help create the structure and populate the initial templates you need.
 
 .Template Repositories
+[[RepoTable]]
 [cols=".^1,.^2,2",options="header"]
 |===
 |Name
@@ -117,10 +118,21 @@ Each template uses the same steps to do the initial setup of your new repository
 
 To create the new repository, follow these steps:
 
-. Go to the URL for the type of repository you are going to create
+. Go to the URL for the type of repository you are going to create from the <<RepoTable>> table
 . Click the green "Use this template" button
-. Choose the Organization as the owner (it will default to your account) and enter the Respository name, add a description if necessary, and finally click Create repository from template. The rest can be left as default
+. Choose the Organization as the owner (it will default to your account) and enter the Repository name, add a description if necessary, and finally click Create repository from template. The rest can be left as default
 . The next screen after creation is useful for getting up and running. Read the Quick setup steps, commands used, etc.
+
+===== Alternate Repository Setup (Import)
+It is also possible to copy the contents of the template repository into a blank repository. If you already have a blank repository, it is possible to import the contents of the template repository to achieve the same result.
+
+To import the contents to an existing blank repository:
+
+. Open the repository page
+. At the bottom of the page, click the "Import code" button
+. Enter the URL for the type of repository you are going to create from the <<RepoTable>> table and click Begin Import
+
+This only works if you created a repository but have no content in it. Once there is content you will not be able to import the templates.
 
 ==== iTC Template Repository Configuration
 The iTC Template repository would be the primary work location for the cPP and SD for the iTC. As such there are a few additional steps that should be followed to provide some additional capabilities to the iTC in the management of the work of maintaining the documents over the long term. While these can be used on other repositories, they are laid out with a focus on the cPP/SD work.
