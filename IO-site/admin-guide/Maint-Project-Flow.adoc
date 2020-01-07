@@ -276,7 +276,7 @@ When a pull request is ready for review, the author requests review and approval
 This process means that it isn't necessary to take a formal vote on the proposed changes (i.e. an email ballot, for example), as the results are automatically tracked as part of the approval process.
 
 == Publishing to the Master Branch
-Once all the issues for a project have been completed, the next version of the cPP/SD chould be ready to be published. Members of the Editors team are the only ones who can merge the working branch into the master to create the official version. 
+Once all the issues for a project have been completed, the next version of the cPP/SD could be ready to be published. Members of the Editors team are the only ones who can merge the working branch into the master to create the official version. 
 
 Generally it would be recommended that the membership approve the current working branch in some sort of more formal vote (i.e. outside GitHub following the ToR or other defined voting procedure) for release. Once this is done and approved, the Editor team can create the pull request to merge the working branch into the master and create the published documents (i.e. PDF/HTML copies of the documents).
 
