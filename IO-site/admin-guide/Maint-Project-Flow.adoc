@@ -142,7 +142,7 @@ Some examples of what could be done here (this should not be considered exhausti
 
 * Accept the Issue and assign it to the Awaiting Priority queue
 * Close the Issue (such as marking it as Invalid or Not Fix)
-* Mark the issue as a duplicate (reference the duplicate issue) and close
+* Mark the Issue as a duplicate (reference the duplicate issue) and close
 * Move the Issue to a different project (for example a later planned update)
 * Place the Issue on the agenda for discussion on the next scheduled meeting
 
