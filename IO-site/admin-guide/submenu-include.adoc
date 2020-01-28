@@ -8,7 +8,7 @@
 :adoc: ./AsciidoctorPublish.html[Asciidoctor Publishing]
 :docpub: ./DocPublishing.html[Publishing iTC Docs]
 :maint: ./Maint-Project-Flow.html[Doc Workflow]
-:interp: ./Interp-Flow.html[IT Workflow]
+:interp: ./Interp-Flow.html[Interpretation]
 
 // Create the menu as an Asciidoctor table
 [.main-menu]

@@ -1,4 +1,4 @@
-= iTC Interpretation Team Workflow
+= iTC Interpretation Considerations
 :showtitle:
 :toc:
 :toclevels: 7
@@ -14,239 +14,72 @@ include::submenu-include.adoc[]
 :sectnums!:
 
 == Introduction
-This is an overview of a typical workflow for the Interpretation Team (IT) portion of the documentation lifecycle. As opposed to the maintenance workflow which is intended to produce a full revision of the documents, the IT process is designed to resolve immediate questions/issues that have been raised about the current public documentation.
+The IT process is a critical function for any iTC, and there are many nuances to how it will function that need to be considered. While the workflow in general would be similar to the maintenance workflow, there are some specific differences that should be considered when setting up the IT and in handling the work on incoming requests.
 
-The workflow described here utilizes GitHub Projects to help manage the prioritization of issues and the associated work on them. The setup for the Project is part of the link:index.html[iTC Administrator Tools Overview].
+== Purpose of the IT
+The IT is obviously a critical part of the iTC, and is mandatory for the CCDB to accept a cPP as being ready for use. The primary purposed of the IT though, is to provide a "rapid" response mechanism for issues that may arise with the published documents, as opposed to work on future iterations. 
 
-:sectnums:
-== Projects & Releases
-Projects in GitHub are generally tied to specific releases, and not for "ongoing" work. The Interpretation Team project template has been created following this expectation. A repository can have multiple projects, but it is expected there is only one IT project since it should be sufficient to cover all potential active documents.
+The IT is not necessarily the final decider on any particular request that is raised, but is supposed to function as a body that can deliberate fairly quickly to create a proposed resolution.
 
-The single IT project would then be used to track all open issues that have been submitted, regardless of the release the issue is tied to. Unlike the maintenance projects, the IT project would not be closed with the release of a new version of the cPP.
+== Considerations
+=== IT Membership
+IT members are expected to actively participate in the IT processes. One key point is that in general, anyone participating in the IT (as a member) must be a member of the iTC. 
 
-=== Interpretation Team
-For the purposes of the iTC, the Interpretation Team should be setup to specifically work on the interpretations. The IT does not have the rights to make changes to the master branch (see the <<Editors Team>>), though it is possible that members of the IT may also be members of the Editors Team. 
+==== IT Size
+The size of the IT is based on the overall size and membership of the iTC. Generally it is recommended that the IT be a small subset of the overall iTC since the purpose of the IT is to make more rapid decisions. The iTC will need to determine an optimal size, and it is definitely possible for this to change over time. One recommendation would be to specify a minimum number of members to function as well as a maximum. The point would be to ensure that the IT does not become so small that too few people have total control, nor does it become too large to be able to rapidly respond to requests.
 
-The IT is responsible for the Interpretation branch. Once the IT has determined the changes necessary for an interpretation, A pull request is made in the Interpretation branch for the Editors to approve into the master and publish the updated documents. 
+==== Organization Participation
+To ensure fair representation, the IT should be limited to one voting member from each organization within the iTC (this could be vendor, lab or scheme). This is not meant to say that the IT should comprise one person from each organization, only that no more than one person from an organization should be allowed to be a voting participant.
 
-In addition, the IT will create the public record of the change (i.e. the more formal output of the Issue/Pull Request) to be posted on the interpretation page for the iTC.
+The IT may want to have the flexibility to appoint alternate representation within an organization. For example if the person who is a member is going on vacation, then they could appoint someone in their place to attend meetings and participate. There are different ways to handle this. 
 
-=== Editors Team
-This is the same Editors Team for the maintenance workflow. 
+One is to require prior notice from the member to the leader or team that someone else will be participating. The downside to this can be in if someone is unable to send such a notice it could leave the IT short.
 
-From the standpoint of IT and updates, the Editor team is responsible for the master branch of the published version of the documents. Once the IT has agreed that an interpretation is ready for publication, it is up to the Editor team to move the draft into the master branch and to produce the final output (i.e. the HTML/PDF copies of the documents).
+A second method is to allow a participating organization, when they want to, to assign a primary and secondary/alternate member to participate. Partiicpation by either would be allowed.
 
-== IT Workflow
-The IT process for the cPP/SD would roughly go something like this:
+In the end, the main consideration regardless of the number of people participating from any organization (as subject to the above constraints) is that each organization will only have 1 vote. So an organization that provides 2 people to participate will still only have a single vote on any issue being worked on.
 
-. iTC has published a cPP/SD and it is being used for evaluations
-. Someone submits an IT Issue requesting an interpretation
-. The IT triages the issue and determines whether/how it should be handled
-. Assuming the issue will be answered with an interpretation, IT members work on the change
-. The proposed change must be approved by the IT
-. Approved changes are posted to the interpretations site and submitted to the current master branch
-. The Editor Team merges the interpretation branch into the master branch and publishes the new release
-. The Editor Team performs a rebase of the Maintenance branch from the new master branch
+==== Individual Participation
+An individual participating in the IT is expected to attend at least 50% of the meetings (whether face-to-face or conference/web calls). In addition, a member is expected to participate in at least 75% of the voting decisions for the IT. This can include GitHub approvals as well as offline or meeting-held votes. For the purposes of these expectations, alternates from the organization would count towards the total.
 
-=== IT Request Response Time
-While there is no guaranteed timeframe for responding to a request for interpretation, generally it should be "rapid." In most cases this seems to be within 2 days to acknowledge that the request has been received and then 2 weeks for a decision. A decision here means either a rejection or an interpretation that is posted as available for use. 
+If a member of the IT is unable to meet these requirements, the IT could remove them from the membership to be replaced by someone else. Most likely though, it would seem that someone who is unable to meet the participation requirements will choose to leave first.
 
-It is expected that there may need to be communications with the person making the request during this time, and unless some information is considered confidential, GitHub would be the suggested method since it will provide a full record for context in the future.
+==== Membership Term
+In general, the IT will probably not have any term length; someone can participate as long as they are willing. If an iTC has a lot of interest in IT participation, it may be useful to establish a rotating membership (such as a year period, as shorter is likely to not be beneficial to the overall IT). Any rotation should also not be the entirety of the IT at one time.
 
-=== Using the Interpretation Team Project
-Once an Interpretation Team project has been setup, the IT should be able to use it to manage the open requests. 
+==== Non-Voting Participation
+At times the IT may accept participation from representatives from outside the iTC. These members would be welcome to participate though they would not be allowed to vote on issues. The participation requirements would not be enforced for this class of participants.
 
-To track issues (and pull requests) in a project, they must be assigned to the project. When creating/editing an issue or pull request, the specific Project must be set in the metadata on the right hand side (along with Assignees/Reviewers, Labels and Milestones).
+==== IT Organization
+The IT should have at least 2 officers, and possibly 3 (depending on the group). At a minimum there should be a chairperson and a deputy chairperson. The third possible position would be a secretary whose primary responsibility would be to record the meeting minutes (instead of one of the chairs needing to do it).
 
-The following diagram shows the phases in the Interpretation workflow.
+=== Technical Resolutions
+The work of the IT is to generate resolutions to the incoming requests for interpretation. There are three general types of outcomes to any incoming request: rejection, a Technical Decision or a Technical Recommendation.
 
-[NOTE]
-====
-These are provided as a stock workflow that is expected to be able to work well. An iTC can make any adjustments the feel necessary for their own needs. It is requested that any adjustments or issues that are found with this process be sent back to the Team Tools WG to share the information with other iTCs.
-====
+The authority the iTC invests in the IT determines what the IT may decide without further approvals. In short, how big of a change can the IT make on their own.
 
-[#img-IT-Workflow] 
-.Component levelling 
-[ditaa,"IT-Workflow.png"]
-....
- +-------+    +----------+    +----------+    +----------+
- |       |    |          |    |          |    |          |
- | To do |--->| Awaiting |--->|   In     |--->| Complete |
- |       |    |  Review  |    | Progress |    |          |
- |       |    |          |    |          |    |          |
- +-------+    +----------+    +----------+    +----------+
+==== Technical Decisions
+Technical Decisions are by design things the IT specifically determines and issues directly. These are generally small changes, such a editorial (typos, grammatical errors) issues that do not change the meaning of the content, but need to be corrected. 
 
-....
+The boundary of Technical Decisions will always be a judgement call, since there is no easy way to establish a single standard as to what can or cannot be changed. The IT should have a good understanding of the implications of any proposed changes so as to know where that line is.
 
-The following table provides a high level overview of each phase of the workflow.
+In general, the simplest statement for what should constitute a Technical Decision is a change which does not change the meaning of the cPP/SD.
 
-.Workflow Description
-[[Workflow]]
-[cols="1,1,3",options="header"]
-|===
-|Phase/Label 
-|Involved Members 
-|Description
+==== Technical Recommendations
+A Technical Recommendation is a proposed change that is beyond the bounds of a Technical Decision. This level of change must be proposed to the wider iTC before being published. 
 
-.^|To Do/ Interpretation
-.^|Implementation Team (after issue is created)
-|This is the point where the Implementation Team will triage incoming requests that have been created. 
+List with the Technical Decision, the boundary can be tricky, but generally the determination of being a recommendation instead of a decision is based on the amount of impact of the change on the meaning of the requirement(s). 
 
-.^|Awaiting Review
-.^|Implementation Team
-|At this point an issue has been agreed to be worked on, and is now waiting to begin.
+When the IT proposes a resolution which is significant enough to be considered a Technical Recommendation, it should be provided to the iTC membership as a whole for approval. 
 
-.^|In Progress
-.^|Assigned members
-|This shows that the issue is being worked on (and should also generate a pull request associated with the issue that would appear here).
+=== Voting on Resolutions
+While many types of voting can be done simply within GitHub using the approval process, there are other additional votes that are likely to need to happen that cannot be done solely within GitHub.
 
-.^|Complete
-.^|(Editor Team to publish)
-|This is automatic when the issue is closed
-|===
+Generally it would be recommended that the vote on a Technical Recommendation be higher than what is normally needed when looking to approve updates to a new version. Since the update is to existing documents that have already been published, generally there should be a high bar for making the change. For example, the voting for the recommendation should likely require 66% or higher for approval.
 
-The movement through the phases is handled by the Labels assigned to the Issue. An Issue may have labels such as enhancement or bug, but nothing related to its status. Within the project this will place them in the To do phase. To move to the next phase, the IT would change the Labels, which will move the project to the next phase (or column in the display). 
+=== Publication
+The publication of the outcome of any interpretation request is likely to have several components to it. There may be multiple versions that the request will impact (i.e. more than just one older version of the document that must be updated) as well as different file formats (such as HTML and PDF).
 
-To readily move the issues through the workflow, removing the current label and placing the next label (for example removing the Awaiting Priority label and adding the Awaiting Review label) will move the issue automatically to the next phase of the project.
+The most important part of the publication will be posting the resulting interpretation to the iTC interpretation page. This should cover the interpretation, what it applies to, etc. 
 
-[NOTE]
-=====
-While the labels are common for the entire repository (i.e. they are also used with the maintenance projects), an Issue can only be assigned to one project at a time, so using common labels will not cause problems between maintenance and IT.
-=====
-
-==== To Do Phase
-.To Do Rules
-[cols="1,2",options="header"]
-|===
-|Label/Rule
-|Description
-
-.^|To Do/Interpretation
-|When a new request is created and added to this project it is added here.
-
-|===
-
-The To Do phase starts when a new request has been created and added to the project. Requests may be labeled differently depending on how the issue has been created or what the author thinks is the best choice among the available options. 
-
-If a new issue is created using an Issue Template, it will be labeled as an Interpretation. This is something that can be adjusted to meet the needs of the iTC.
-
-[IMPORTANT]
-====
-Requests created from the templates should have the IT assigned (assuming those steps were followed during the setup of the repository) so they will automatically receive notifications when they are created. For issues created without the template, unless the creator specifically assigns someone, there will be no notification, so it will be up to the Editors to check for new issues on a regular basis.
-
-It would be expected that the Editors would properly assign any issues that come in without the proper label if they are determined to be IT requests as opposed to "normal" comments.
-====
-
-The IT should be reviewing the new request and categorizing it for further review. This is basically a triage point where the IT should try to determine how to handle the request.
-
-Some examples of what could be done here (this should not be considered exhaustive):
-
-* Accept the Request and assign it to the Awaiting Review queue
-* Close the Request (such as marking it as Invalid or Not Fix)
-* Mark the Request as a duplicate (reference the duplicate Request) and close
-* Move the Request to a different project (for example into a normal maintenance request)
-* Place the Request on the agenda for discussion on the next scheduled meeting
-
-[NOTE]
-====
-Since the number of interpretation requests should generally be "small", it isn't expected that there should be a large queue of requests to work through (unlike the maintenance process). If the IT sees this as becoming a problem, adding an Awaiting Priority step as in the maintenance process may be a good idea to establish 
-====
-
-==== Awaiting Review Phase
-.Awaiting Review Rules
-[cols="1,2",options="header"]
-|===
-|Label/Rule
-|Description
-
-.^|Awaiting Review
-|Once a Request has been accepted, it will be assigned to members to work on.
-
-|===
-
-The Awaiting Review phase is more like a holding area until someone has time to start working on the request. Generally an request will stay in this state until the assigned member(s) are able to start working on it. A request should have come with something to start with (the proposed resolution), so this should be a good starting point to move forward.
-
-Once someone begins work on the issue (either in research or by starting a pull request), the label should be changed to the In Progress state.
-
-==== In Progress Phase
-.In Progress Rules
-[cols="1,2",options="header"]
-|===
-|Label/Rule
-|Description
-
-|In Progress
-|The issue (pull request) is being actively worked on.
-
-|===
-
-The In Progress phase is the active phase of any request as it symbolizes that at least one person is working towards closing the request. This is most likely through the creation of a pull request.
-
-When a pull request is created for the issue in question, it should have a direct reference to the original issue as well as being added to the project with the In Progress label. This will help keep track of the pull request and the issue at the same time in the overall project.
-
-[NOTE]
-====
-When a pull request is created, if the in the comment the text "closes #55" where 55 is the Issue number, then when the pull request is merged, it will automatically close the issue as well.
-
-See https://help.github.com/en/github/managing-your-work-on-github/closing-issues-using-keywords[this page] for more information about keywords that can be used to activate this feature.
-====
-
-==== Closed Phase
-.Closed Rules
-[cols="1,2",options="header"]
-|===
-|Label/Rule
-|Description
-
-|Closed
-|The issue (pull request) has been closed (generally would mean a pull request has been created and merged).
-
-|===
-
-The Closed column in the project allows overall tracking on the progress of the requests that have been made. Items will automatically be added here as issues and pull requests are closed/merged into the Interpretation branch.
-
-=== Approvals & Getting to Closed
-During the entire workflow, the goal is to capture the discussion around each issue within the issue itself. Comments into the issue provide context and remain with the issue in the repository history.
-
-When a pull request is ready for review, the author requests review and approval. This can be to specific members or to teams. Once enough reviews have occurred, the pull request can be merged into the working branch (which will close the pull request and issue).
-
-The actual changes that will be produced from an request must be approved before they can be merged into the Interpretation branch (and eventually into the master). This is handled automatically by the approval process built into GitHub and setup in the repository branches. While this may be adjusted over time, it is generally recommended that between 66-75% of the IT approve any pull request before it can be merged. 
-
-The iTC may also determine a maximum of disapproving IT members before accepting any change. The way GitHub works is by consensus, so rejections to changes mean that either the rejection must be overridden or that changes must be made to turn the rejection into approval. 
-
-This process means that in most circumstances, it isn't necessary to take a formal vote on the proposed changes (i.e. an email ballot, for example), as the results are automatically tracked as part of the approval process. This may be adjusted by an iTC if necessary.
-
-[IMPORTANT]
-====
-If voting is done outside of GitHub, it is highly recommended that the final vote tally be added as a comment to the pull request so it can be tracked along with the change. 
-
-In this case a lead IT member may override the approval process if a change has been approved by outside vote.
-====
-
-== Publishing an Interpretation
-Once an interpretation for a request has been created, the interpretation needs to be published to four locations:
-
-* Master branch - to have the fully integrated document available with the changes
-* Releases - the integrated version from the master branch should be published (PDF and or HTML as per iTC expectations)
-* Interpretation page - the interpretation itself (a cleaned up version of the change) should be posted to the Interpretation page. This should also link to the closed issue/pull request
-* Working branch - the change must be integrated back into the Working branch (this is done by a Pull Request and merge operation from the Master instead of to the Master) to ensure the change is passed forward
-
-=== Master Branch Approval
-The process for pushing the interpretation to the Master branch would be the same as for a normal maintenance update. The only difference is that the pull request comes from the Interpretation branch instead of the Working branch.
-
-=== Updating the Working Branch
-Once the Master branch has been updated, the changes need to be published back into the current Working branch so the interpretation is carried forward in the next version of the cPP/SD. This needs to be handled by the Editors.
-
-The simplest way to do this is to create a pull request from the Master to the Working branches (normally you go from the Working branch to the Master).
-
-To do this, start by creating a new Pull Request:
-
-. For the base, select Working
-. For the compare, select Master
-
-This should show the recently merged interpretation coming from the Master. The Editors can use the administrative override to immediately push the change into the Working branch.
-
-[IMPORTANT]
-====
-Depending on what the change is for the interpretation, it is possible there may be editing conflicts with the Working branch. Until these are resolved the interpretation cannot be merged into the Working branch. The Editors should work with the IT to ensure that any adjustments that need to be made for the merge do not conflict with the intent of the interpretation going forward.
-====
+In addition, the iTC may also want to publish an updated version of the cPP/SD with the changes integrated into the documents so anyone reading them does not need to also look for the latest intrepretations. This is certainly optional, and is up to the iTC to determine what they prefer. If a new version of the documents is published, it should be noted on the website what version of the document is the initial version with that interpretation (i.e. from v1.0.2 this interpretation will be included).

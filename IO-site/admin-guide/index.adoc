@@ -332,6 +332,11 @@ To manage the Interpretation branch for changes related to requests (only users 
 
 |===
 
+==== Issue Triage and Teams
+One important consideration with the use of teams is that they cannot be used everywhere in GitHub. The main point is that Issues cannot be assigned to a Team. When a new issue is created, it isn't possible to specify an entire team to be notified of the issue, only up to 10 possible users. 
+
+To simplify incoming issue triage, it is recommended that a small team  be created (this does not have to be a formal GitHub Team) that would be assigned (for <<Issue Templates>>) and would also regularly check for new issues that may have been created without having been assigned. The purpose of this group would be to assign the issue to a proper Project for review, not to necessarily issue any judgement on the contents of the issue.
+
 === Branch Protection Rules
 Once the branches, users and teams have been setup, rules should be configured to protect the branches. This protection forces changes to be reviewed before they can be merged into the document, thereby preventing accidental changes and also forcing review of the changes before they become part of the document.
 
