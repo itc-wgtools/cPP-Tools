@@ -35,7 +35,7 @@ The IT may want to have the flexibility to appoint alternate representation with
 
 One is to require prior notice from the member to the leader or team that someone else will be participating. The downside to this can be in if someone is unable to send such a notice it could leave the IT short.
 
-A second method is to allow a participating organization, when they want to, to assign a primary and secondary/alternate member to participate. Partiicpation by either would be allowed.
+A second method is to allow a participating organization, when they want to, to assign a primary and secondary/alternate member to participate. Participation by either would be allowed.
 
 In the end, the main consideration regardless of the number of people participating from any organization (as subject to the above constraints) is that each organization will only have 1 vote. So an organization that provides 2 people to participate will still only have a single vote on any issue being worked on.
 
