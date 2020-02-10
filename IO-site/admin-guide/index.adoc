@@ -332,6 +332,11 @@ To manage the Interpretation branch for changes related to requests (only users 
 
 |===
 
+==== Issue Triage and Teams
+One important consideration with the use of teams is that they cannot be used everywhere in GitHub. The main point is that Issues cannot be assigned to a Team. When a new issue is created, it isn't possible to specify an entire team to be notified of the issue, only up to 10 possible users. 
+
+To simplify incoming issue triage, it is recommended that a small team  be created (this does not have to be a formal GitHub Team) that would be assigned (for <<Issue Templates>>) and would also regularly check for new issues that may have been created without having been assigned. The purpose of this group would be to assign the issue to a proper Project for review, not to necessarily issue any judgement on the contents of the issue.
+
 === Branch Protection Rules
 Once the branches, users and teams have been setup, rules should be configured to protect the branches. This protection forces changes to be reviewed before they can be merged into the document, thereby preventing accidental changes and also forcing review of the changes before they become part of the document.
 
@@ -385,6 +390,8 @@ Do this for both the Master and the Interpretation branches. The Working branch 
 ====
 The setting to Include administrators is specifically to ensure that administrators follow the same rules on branches as everyone else. There may be times when this is a problem, and can be adjusted as needed by the organization.
 ====
+
+A good reference for additional information about protecting branches can be found https://github.community/t5/Support-Protips/Best-practices-for-protected-branches/ba-p/10224[here].
 
 === GitHub Backups
 One of the most important thing to do is have a backup of the Organization repository. While online services are usually safe, occasionally there have been reports about repositories being lost in GitHub (and not when someone actually deleted it).
