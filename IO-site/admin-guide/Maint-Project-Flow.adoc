@@ -1,0 +1,355 @@
+= iTC Documentation Workflow
+:showtitle:
+:toc:
+:toclevels: 7
+:sectnums:
+:sectnumlevels: 7
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2019-11-15
+
+include::submenu-include.adoc[]
+
+:sectnums!:
+
+== Introduction
+While this is titled the iTC Documentation Workflow, this is about both the initial creation and the ongoing updates that will happen during the lifecycle of the documents, both as general mainentance updates as well as interpretations. Generally this has been called "maintenance" in some other places in the guidance documentation, in part due to a focus on what will be done after the first version has been published. Both the general maintenance and interpretations will follow the same workflow, though they are isolated from each other since maintenance is looking towards future revisions while interpretations are looking at already published versions.
+
+The workflows described here utilize GitHub Projects to help manage the prioritization of issues and the associated work on them. The setup for the Projects are part of the link:index.html[iTC Administrator Tools Overview].
+
+:sectnums:
+== Projects & Releases
+Projects in GitHub are generally tied to specific releases, and not for "ongoing" work. The Maintenance project template has been created following this expectation. A repository can have multiple projects, so it is possible to be working towards multiple releases at the same time (usually on different timeframes).
+
+For example from a v1.0, there would be a maintenance project for v1.1. There should also be a maintenance project for a v1.2, or v2.0, that could be used to hold items that need to be worked on later. Once work was completed on v1.1 and it was published, that project would be closed, and the focus would move to the next project.
+
+In short, a project would be tied to a specific release version of the cPP/SD, and used to track progress until completion, at which time it would be closed.
+
+=== Notes for Overall Goals
+Within the project it is possible to create Notes. This can be done using the + symbol in the column header. This can be used by the Editor team to specify the list of targets for the next release (such as a bullet list of items to be tackled). This can be added in the To Do column for easy tracking (they can be in one list or per item, though with the per item they can be moved along with the issues as they are worked on, which may be useful). 
+
+=== Parking Lot/Future Undetermined "Projects"
+While this document is focused specifically on maintenance targeted to an existing document, there will be times when useful or valid requests do not have a determined need or timeframe for inclusion. 
+
+These can be handled many ways, but one way is to use the Parking Lot label and not add the issue to a specific project. Another way to handle this is to create a "futures" template (say a v2.0 if you are on v1.1) that could be "far in the future", and add these issues to that project. 
+
+Either way, the issues can be found (going to the future project or filtering on the parking lot label), and provides a way to keep track of issues to handle over time.
+
+== Maintenance vs Interpretation
+In general the process for maintaining a cPP will largely be the same as the process for issuing an interpretation. The differences are in who is responsible, the approval process itself, the timeframe for making the update, and lastly the target of the update.
+
+.Workflow Comparison
+[cols=".^1,.^2,.^2",options="header"]
+|===
+|Difference 
+|Maintenance 
+|Interpretation
+
+|Responsibility
+|Led by the Editors Team, but the whole iTC membership participates and is responsible
+|The members of the Interpretation Team are responsible until final approvals for publication
+
+|Approvals
+|Generally 25-30% of iTC membership for any particular pull request, and then 50% or higher for publication of the update to the master (usually done offline)
+|Generally 66-75% of IT membership with limits on the number of rejects allowed (such as no more than 25%), and then 50% approval from overall iTC after IT approval
+
+|Timeframe
+|No specific timeline, though the iTC may have defined a general release schedule
+|As soon as possible, though no guaranteed timeframe. Generally would be to have a completed response (assuming the request is no rejected) within 6-8 weeks from request.
+
+|Target
+|The next version(s) of the cPP/SD. This includes any changes deemed necessary by the iTC.
+|Existing, published (and still supported) versions of the cPP/SD. No changes to the requirements, only interpretations and corrections.
+
+|===
+
+== Teams
+As part of the GitHub setup, team will be created for various purposes. Here we are focused on the Editors Team and the Interpretations Team.
+
+=== Triage Team
+The purpose of the Triage team is to assign incoming issues to the correct project. The members of this team may not be a formal GitHub Team, but is a group who will be responsible for checking and properly categorizing (by Project) the incoming issues. In cases where the issues come in via templates, these members should get notifications, but some issues may come in separately. 
+
+=== Editors Team
+One of the recommended GitHub teams to setup is the Editor team. This is the team that is considered to be in charge of the final documentation. Likely, these are also the primary contributors to the cPP/SD, but that does not need to be the case.
+
+From the standpoint of maintenance and release, the Editor team is responsible for the master branch of the published version of the documents. Once the iTC has agreed that the working draft is ready for publication, it is up to the Editor team to move the draft into the master branch and to produce the final output (i.e. the HTML/PDF copies of the documents).
+
+The Editors team should be a small group (preferably at least 3, but probably not more than 8 depending on the size of the iTC membership). 
+
+=== Interpretation Team
+For the purposes of the iTC, the Interpretation Team should be setup to specifically work on the interpretations. The IT does not have the rights to make changes to the master branch (see the <<Editors Team>>), though it is possible that members of the IT may also be members of the Editors Team. 
+
+The IT is responsible for the Interpretation branch. Once the IT has determined the changes necessary for an interpretation, A pull request is made in the Interpretation branch for the Editors to approve into the master and publish the updated documents. 
+
+In addition, the IT will create the public record of the change (i.e. the more formal output of the Issue/Pull Request) to be posted on the interpretation page for the iTC.
+
+The IT should be comprised of a representative set of members of the iTC. The specific size should be based on the size of the iTC. Since the IT should be meeting on a regular basis (likely weekly), membership must be committed to participating. 
+
+== Documentation Workflow (Generalized)
+The process of maintaining documents (this could include both initial creation as well as ongoing maintaince and interpretation) would roughly go something like this:
+
+. An issue is submitted for review
+. Triage Team will triage the issue to be assigned to a project
+. The issue will be prioritized by the appropriate group for work
+. Members of the iTC will create updates based on issues for review
+. Members of the iTC will approve the changes under review (this could take several rounds of comments/edits)
+. Once a change has been approved, the Editors Team will push the changes into the appropriate master branch for publication (as either a Technical Decision or a new Release)
+
+== Workflows
+The common workflow process is listed here covering both flows. 
+
+=== Using the Projects
+Once the projects have been setup, the iTC should be able to use them to manage the open issues that are raised during the lifecycle of the documents. 
+
+To track issues (and pull requests) in a project, they must be assigned to the project. When creating/editing an issue or pull request, the specific Project must be set in the metadata on the right hand side (along with Assignees/Reviewers, Labels and Milestones).
+
+The following diagram shows the phases in a workflow.
+
+[NOTE]
+====
+These are provided as a stock workflow that is expected to be able to work well. An iTC can make any adjustments the feel necessary for their own needs. It is requested that any adjustments or issues that are found with this process be sent back to the Team Tools WG to share the information with other iTCs.
+====
+
+[#img-Workflow] 
+.Workflow 
+[ditaa,"Workflow.png"]
+....
+ +-------+    +----------+    +----------+    +----------+    +----------+
+ |       |    |          |    |          |    |          |    |          |
+ | To do |--->| Awaiting |--->| Awaiting |--->|   In     +--->| Complete |
+ |       |    | Priority |    |  Review  |    | Progress |    |          |
+ |       |    |          |    |          |    |          |    |          |
+ +-------+    +----------+    +----------+    +----------+    +----------+
+
+....
+
+The following table provides a high level overview of each phase of the workflow.
+
+.Workflow Description
+[[Workflow]]
+[cols="1,1,3",options="header"]
+|===
+|Phase/Label 
+|Involved Members 
+|Description
+
+.^|To Do/New Issue
+.^|Editor or Interpretation Team
+|This is the point where the Interpretation Team will perform an initial review of for categorization on incoming issues that have been created and assigned to this Project. 
+
+.^|Awaiting Priority
+.^|All Project members
+|Once an issue has been initially reviewed, it moves to the Project membership to prioritize the issue. Several labels are provided to help provide values to assign rank. For Interpretations this is limited to the IT, for Maintenance this is the whole iTC.
+
+For maintenance, the Editor Team manages the list of items and would be responsible for determining when an issue should be assigned for work. The IT manages this within itself.
+
+.^|Awaiting Review
+.^|Assigned Members (or all until assigned)
+|At this point an issue has been agreed to be worked on (in some sort of prioritization), and is now waiting to begin.
+
+.^|In Progress
+.^|Assigned members
+|This shows that the issue is being worked on (and should also generate a pull request associated with the issue that would appear here).
+
+.^|Complete
+.^|
+|This is automatic when the issue is closed
+|===
+
+The movement through the phases is handled by the Labels assigned to the Issue. An Issue may have labels such as enhancement or bug, but nothing related to its status. Within the project this will place them in the To do phase. To move to the next phase, the Editors (or the IT) would change the Labels, which will move the project to the next phase (or column in the display). 
+
+To readily move the issues through the workflow, removing the current label and placing the next label (for example removing the Awaiting Priority label and adding the Awaiting Review label) will move the issue automatically to the next phase of the project.
+
+==== To Do Phase
+.To Do Rules
+[cols="1,2",options="header"]
+|===
+|Label/Rule
+|Description
+
+.^|New Issue
+|When a new issue is created and added to this project it is added here.
+
+|===
+
+The To Do phase starts when a new issue has been created and added to the project. Issues may be labeled differently depending on how the issue has been created or what the author thinks is the best choice among the available options. 
+
+If a new issue is created using an Issue Template, it will be labeled as an enhancement. This is something that can be adjusted to meet the needs of the iTC.
+
+[IMPORTANT]
+====
+Issues created from the templates should have Triage members assigned (assuming those steps were followed during the setup of the repository) so they will automatically receive notifications when they are created. For issues created without the template, unless the creator specifically assigns someone, there will be no notification, so it will be up to the Triage team to check for new issues on a regular basis.
+====
+
+The Triage team here should be reviewing the new issue and categorizing it for further review. This is basically a triage point where the goal is to determine how the iTC should try to handle the Issue.
+
+Some examples of what could be done here (this should not be considered exhaustive):
+
+* Accept the Issue and assign it to the Awaiting Priority queue
+* Mark the Issue as a duplicate (reference the duplicate issue) and possibly close
+* Move the Issue to a different project (for example a later planned update)
+* Place the Issue on the agenda for discussion on the next scheduled meeting
+
+Generally triage wouldn't close issues, though it is certainly possible that the iTC may see it as acceptable for the triage team to close some incoming issues (such as issues that are obviously not relevant, or duplicates as long as the closed issue is linked to the original one). This should be determined by the iTC to meet their needs.
+
+==== Awaiting Priority Phase
+.Awaiting Priority Rules
+[cols="1,2",options="header"]
+|===
+|Label/Rule
+|Description
+
+.^|Awaiting Priority
+|Once an Issue has passed through the triage process and has been assigned to a Project, the next step is for general review on the Issue to be prioritized.
+
+|===
+
+The Awaiting Priority phase is what would be considered the first time the Issue is open to the broader group. At this point the members should review the issue to assign weighting to the issue. The weighting is designed to be fairly general but provide the Editors or IT with a way to see the relative ranking of issues to provide better prioritization.
+
+While this should be discussed in the issue (the reasons for assigning the weightings), the following table shows the labels that are provided and some ideas about why they may be assigned. These are not hard and fast rules, but should provide good guidance to get started.
+
+.Prioritization Weighting Labels
+[cols="1,2",options="header"]
+|===
+|Label
+|Examples
+
+.^|Applicability +2
+|Request is from a Scheme supporting the iTC
+
+.^|Applicability +1
+|There are/were similar requests that have not been considered previously
+
+Request originates from an unrelated organization but is similar/closely related to one already under consideration (could be a parking lot item)
+
+.^|Agreement +3
+|Request has a Scheme-proposed or iTC consensus-based solution
+
+.^|Urgency +2
+|Request is related to an active evaluation (should be moved to IT unless not critical)
+
+.^|Queue +X
+
+(options provided of 1-5)
+|Generally used for IT, the idea is that for every 2 weeks the Issue has been in the queue and not handled, its prioritization will be increased
+
+.^|Coupling -2
+|Request is unreasonably broad in scope or contains more than one unrelated issue
+
+.^|Effort -2
+|Request is lacking a clear problem description and rationale
+
+Request is lacking a clear proposed solution
+
+.^|Risk -2
+|The solution to the request is likely to impact multiple inter-related requirements
+
+.^|Risk -1
+|The request is asking to set aside reporting requirement
+
+The request is asking to set aside or modify a testing or functional requirement
+
+|===
+
+The members of the iTC can add/remove the proposed labels to the issue to assign the overall priority. The purpose of the comment tracking is to provide this justification prior to the assignment of the final priority to someone to work on
+
+[IMPORTANT]
+====
+Each added weighting label should have an associated entry in the issue comments to justify the addition (or removal) of the label.
+====
+
+Within the Project itself, the Issues can adjust the ordering of the items according to the labels assigned. This can be done by dragging the issues in the Awaiting Priority column into the desired order. While Issues that have been just added will always list at the top, it is possible to easily move them at any time (and the rest of the list will remain in the same order it has been set to).
+
+Once issues have been assigned a priority to work on it, it can be assigned to members to work on. This will help people prioritize the issues they work on, based on the agreed importance of the issue.
+
+Editors or IT should note the final agreed priority (likely determined during a meeting) in the issue at the time it is moved to the next phase and assigned.
+
+==== Awaiting Review Phase
+.Awaiting Review Rules
+[cols="1,2",options="header"]
+|===
+|Label/Rule
+|Description
+
+.^|Awaiting Review
+|Once an issue has been assigned a priority for the project, it will be assigned to members to work on.
+
+|===
+
+The Awaiting Review phase is more like a holding area until someone has time to start working on the issue. Generally an issue will stay in this state until the assigned member(s) are able to start working on it.
+
+Once someone begins work on the issue (either in research or by starting a pull request), the label should be changed to the In Progress state.
+
+==== In Progress Phase
+.In Progress Rules
+[cols="1,2",options="header"]
+|===
+|Label/Rule
+|Description
+
+|In Progress
+|The issue (pull request) is being actively worked on.
+
+|===
+
+The In Progress phase is the active phase of any issue as it symbolizes that at least one person is working towards closing the issue. This is most likely through the creation of a pull request.
+
+When a pull request is created for the issue in question, it should have a direct reference to the original issue as well as being added to the project with the In Progress label. This will help keep track of the pull request and the issue at the same time in the overall project.
+
+[NOTE]
+====
+When a pull request is created, if the in the comment the text "closes #55" where 55 is the Issue number, then when the pull request is merged, it will automatically close the issue as well.
+
+See https://help.github.com/en/github/managing-your-work-on-github/closing-issues-using-keywords[this page] for more information about keywords that can be used to activate this feature.
+====
+
+==== Closed Phase
+.Closed Rules
+[cols="1,2",options="header"]
+|===
+|Label/Rule
+|Description
+
+|Closed
+|The issue (pull request) has been closed (generally would mean a pull request has been created and merged).
+
+|===
+
+The Closed column in the project allows overall tracking on the progress of the issues that have been assigned to the project. Items will automatically be added here as issues and pull requests are closed/merged into the working branch.
+
+One difference between a maintenance and interpretation project is that on a maintenance project, when all the current issues are closed, then the release should be ready to publish. In the interpretation project though, this is just a record of closed requests that would be listed.
+
+=== Approvals & Getting to Closed
+During the entire workflow, the goal is to capture the discussion around each issue within the issue itself. Comments into the issue provide context and remain with the issue in the repository history.
+
+Yet the actual changes that will be produced from an issue must be approved before they can be merged into the working draft (and eventually into the master). This is handled automatically by the approval process built into GitHub and setup in the repository branches. The specific number of approvals needed for any changes will be dependent on the type (maintenance or interpretation) and will be determined by the iTC and the total membership (since this number would be based on a percentage of the membership within each group).
+
+When a pull request is ready for review, the author requests review and approval. This can be to specific members or to teams. Once enough reviews have occurred, the pull request can be merged into the working branch (which will close the pull request and issue).
+
+This process means that it isn't necessary to take a formal vote on the proposed changes (i.e. an email ballot, for example), as the results are automatically tracked as part of the approval process.
+
+== Publishing to the Master Branch
+Once all the issues for a project have been completed (or in the case of the IT, an individual technical decision), the next version of the cPP/SD could be ready to be published. Members of the Editors team are the only ones who can merge the working branch into the master to create the official version. 
+
+Generally it would be recommended that the membership approve the current working branch in some sort of more formal vote (i.e. outside GitHub following the ToR or other defined voting procedure) for release. Once this is done and approved, the Editor team can create the pull request to merge the working branch into the master and create the published documents (i.e. PDF/HTML copies of the documents).
+
+=== Master Branch Approval
+To prevent accidental publication, the master branch should require at least 2 members of the Editor team to approve the pull request to merge the working branch into the master branch. The exact numbers can be adjusted according to the needs of the iTC.
+
+=== Updating the Working Branch after Technical Decision
+When a technical decision has been made and published to the Master branch has been updated, the changes need to be published back into the current Working branch so the interpretation is carried forward in the next version of the cPP/SD. This needs to be handled by the Editors.
+
+The simplest way to do this is to create a pull request from the Master to the Working branches (normally you go from the Working branch to the Master).
+
+To do this, start by creating a new Pull Request:
+
+. For the base, select Working
+. For the compare, select Master
+
+This should show the recently merged interpretation coming from the Master. The Editors can use the administrative override to immediately push the change into the Working branch.
+
+[IMPORTANT]
+====
+Depending on what the change is for the interpretation, it is possible there may be editing conflicts with the Working branch. Until these are resolved the interpretation cannot be merged into the Working branch. The Editors should work with the IT to ensure that any adjustments that need to be made for the merge do not conflict with the intent of the interpretation going forward.
+====

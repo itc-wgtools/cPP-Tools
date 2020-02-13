@@ -1,0 +1,85 @@
+= iTC Interpretation Considerations
+:showtitle:
+:toc:
+:toclevels: 7
+:sectnums:
+:sectnumlevels: 7
+:imagesdir: images
+:icons: font
+:revnumber: 0.1
+:revdate: 2020-01-06
+
+include::submenu-include.adoc[]
+
+:sectnums!:
+
+== Introduction
+The IT process is a critical function for any iTC, and there are many nuances to how it will function that need to be considered. While the workflow in general would be similar to the maintenance workflow, there are some specific differences that should be considered when setting up the IT and in handling the work on incoming requests.
+
+== Purpose of the IT
+The IT is obviously a critical part of the iTC, and is mandatory for the CCDB to accept a cPP as being ready for use. The primary purposed of the IT though, is to provide a "rapid" response mechanism for issues that may arise with the published documents, as opposed to work on future iterations. 
+
+The IT is not necessarily the final decider on any particular request that is raised, but is supposed to function as a body that can deliberate fairly quickly to create a proposed resolution.
+
+== Considerations
+=== IT Membership
+IT members are expected to actively participate in the IT processes. One key point is that in general, anyone participating in the IT (as a member) must be a member of the iTC. 
+
+==== IT Size
+The size of the IT is based on the overall size and membership of the iTC. Generally it is recommended that the IT be a small subset of the overall iTC since the purpose of the IT is to make more rapid decisions. The iTC will need to determine an optimal size, and it is definitely possible for this to change over time. One recommendation would be to specify a minimum number of members to function as well as a maximum. The point would be to ensure that the IT does not become so small that too few people have total control, nor does it become too large to be able to rapidly respond to requests.
+
+==== Organization Participation
+To ensure fair representation, the IT should be limited to one voting member from each organization within the iTC (this could be vendor, lab or scheme). This is not meant to say that the IT should comprise one person from each organization, only that no more than one person from an organization should be allowed to be a voting participant.
+
+The IT may want to have the flexibility to appoint alternate representation within an organization. For example if the person who is a member is going on vacation, then they could appoint someone in their place to attend meetings and participate. There are different ways to handle this. 
+
+One is to require prior notice from the member to the leader or team that someone else will be participating. The downside to this can be in if someone is unable to send such a notice it could leave the IT short.
+
+A second method is to allow a participating organization, when they want to, to assign a primary and secondary/alternate member to participate. Participation by either would be allowed.
+
+In the end, the main consideration regardless of the number of people participating from any organization (as subject to the above constraints) is that each organization will only have 1 vote. So an organization that provides 2 people to participate will still only have a single vote on any issue being worked on.
+
+==== Individual Participation
+An individual participating in the IT is expected to attend at least 50% of the meetings (whether face-to-face or conference/web calls). In addition, a member is expected to participate in at least 75% of the voting decisions for the IT. This can include GitHub approvals as well as offline or meeting-held votes. For the purposes of these expectations, alternates from the organization would count towards the total.
+
+If a member of the IT is unable to meet these requirements, the IT could remove them from the membership to be replaced by someone else. Most likely though, it would seem that someone who is unable to meet the participation requirements will choose to leave first.
+
+==== Membership Term
+In general, the IT will probably not have any term length; someone can participate as long as they are willing. If an iTC has a lot of interest in IT participation, it may be useful to establish a rotating membership (such as a year period, as shorter is likely to not be beneficial to the overall IT). Any rotation should also not be the entirety of the IT at one time.
+
+==== Non-Voting Participation
+At times the IT may accept participation from representatives from outside the iTC. These members would be welcome to participate though they would not be allowed to vote on issues. The participation requirements would not be enforced for this class of participants.
+
+==== IT Organization
+The IT should have at least 2 officers, and possibly 3 (depending on the group). At a minimum there should be a chairperson and a deputy chairperson. The third possible position would be a secretary whose primary responsibility would be to record the meeting minutes (instead of one of the chairs needing to do it).
+
+=== Technical Resolutions
+The work of the IT is to generate resolutions to the incoming requests for interpretation. There are three general types of outcomes to any incoming request: rejection, a Technical Decision or a Technical Recommendation.
+
+The authority the iTC invests in the IT determines what the IT may decide without further approvals. In short, how big of a change can the IT make on their own.
+
+==== Technical Decisions
+Technical Decisions are by design things the IT specifically determines and issues directly. These are generally small changes, such a editorial (typos, grammatical errors) issues that do not change the meaning of the content, but need to be corrected. 
+
+The boundary of Technical Decisions will always be a judgement call, since there is no easy way to establish a single standard as to what can or cannot be changed. The IT should have a good understanding of the implications of any proposed changes so as to know where that line is.
+
+In general, the simplest statement for what should constitute a Technical Decision is a change which does not change the meaning of the cPP/SD.
+
+==== Technical Recommendations
+A Technical Recommendation is a proposed change that is beyond the bounds of a Technical Decision. This level of change must be proposed to the wider iTC before being published. 
+
+List with the Technical Decision, the boundary can be tricky, but generally the determination of being a recommendation instead of a decision is based on the amount of impact of the change on the meaning of the requirement(s). 
+
+When the IT proposes a resolution which is significant enough to be considered a Technical Recommendation, it should be provided to the iTC membership as a whole for approval. 
+
+=== Voting on Resolutions
+While many types of voting can be done simply within GitHub using the approval process, there are other additional votes that are likely to need to happen that cannot be done solely within GitHub.
+
+Generally it would be recommended that the vote on a Technical Recommendation be higher than what is normally needed when looking to approve updates to a new version. Since the update is to existing documents that have already been published, generally there should be a high bar for making the change. For example, the voting for the recommendation should likely require 66% or higher for approval.
+
+=== Publication
+The publication of the outcome of any interpretation request is likely to have several components to it. There may be multiple versions that the request will impact (i.e. more than just one older version of the document that must be updated) as well as different file formats (such as HTML and PDF).
+
+The most important part of the publication will be posting the resulting interpretation to the iTC interpretation page. This should cover the interpretation, what it applies to, etc. 
+
+In addition, the iTC may also want to publish an updated version of the cPP/SD with the changes integrated into the documents so anyone reading them does not need to also look for the latest intrepretations. This is certainly optional, and is up to the iTC to determine what they prefer. If a new version of the documents is published, it should be noted on the website what version of the document is the initial version with that interpretation (i.e. from v1.0.2 this interpretation will be included).

@@ -7,9 +7,13 @@
 :website: ./GitHubio.html[github.io Publishing]
 :adoc: ./AsciidoctorPublish.html[Asciidoctor Publishing]
 :docpub: ./DocPublishing.html[Publishing iTC Docs]
+:maint: ./Maint-Project-Flow.html[Doc Workflow]
+:interp: ./Interp-Flow.html[Interpretation]
 
 // Create the menu as an Asciidoctor table
 [.main-menu]
 |===
 |link:{home}|link:{clients}|link:{training}|link:{website}|link:{adoc}|link:{docpub}
+5.+||link:{maint}
+5.+||link:{interp}
 |===
