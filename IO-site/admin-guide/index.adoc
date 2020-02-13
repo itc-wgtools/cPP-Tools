@@ -6,8 +6,8 @@
 :sectnumlevels: 7
 :imagesdir: images
 :icons: font
-:revnumber: 0.1
-:revdate: 2019-08-01
+:revnumber: 0.2
+:revdate: 2019-11-15
 
 include::menu-include.adoc[]
 
@@ -66,10 +66,32 @@ To setup the iTC organization, do the following:
 . Click "New Organization", and enter the agreed on Organization name
 .. Select the "My personal account" option for the owner of the new Organization
 
+==== Organization Owners
+Once the Organization has been created, the first thing that should be done is to assign at least one more Owner for the organization.
+
+[NOTE]
+====
+This assumes that the other users who will be owners have already created GitHub accounts for themselves.
+====
+
+To set another Owner for the organization, go to the Organization page and click on the People tab at the top.
+
+. Click the Invite button on the top right
+. Enter the username of the person who will become another Owner
+. Choose Owner as the role in the organization and click Send Invitation
+
+Once the user accepts the invitation, they will automatically be added as an Owner.
+
+If the user already exists within the list of People in the Organization, then clicking the Gear icon to the right of their name and selecting "Change role..." will let you change their role accordingly.
+
+=== GitHub Repositories
+Within a GitHub organization, repositories are project spaces. Each repository has independent tracking of issues and changes. This section focuses on the setup of the repositories within the organization.
+
 ==== Repository Setup
-Once you have created the organization, you need to create some repositories. The number needed may depend on where you are in the process. Three template repositories have been created to help create the structure and populate the initial templates you need.
+The number of repositories needed within the organization may depend on where you are in the process. Three template repositories have been created to help create the structure and populate the initial templates you need.
 
 .Template Repositories
+[[RepoTable]]
 [cols=".^1,.^2,2",options="header"]
 |===
 |Name
@@ -96,43 +118,160 @@ Each template uses the same steps to do the initial setup of your new repository
 
 To create the new repository, follow these steps:
 
-. Go to the URL for the type of repository you are going to create
+. Go to the URL for the type of repository you are going to create from the <<RepoTable>> table
 . Click the green "Use this template" button
-. Choose the Organization as the owner (it will default to your account) and enter the Respository name, add a description if necessary, and finally click Create repository from template. The rest can be left as default
+. Choose the Organization as the owner (it will default to your account) and enter the Repository name, add a description if necessary, and finally click Create repository from template. The rest can be left as default
 . The next screen after creation is useful for getting up and running. Read the Quick setup steps, commands used, etc.
 
-===== New-iTC-Template repo-labels script
-[IMPORTANT]
-====
-This section is only needed when creating a repository for the cPP and related documents. While it can be used for any of the repositories, the labels created are only needed in the cPP repository.
-====
+===== Alternate Repository Setup (Import)
+It is also possible to copy the contents of the template repository into a blank repository. If you already have a blank repository, it is possible to import the contents of the template repository to achieve the same result.
 
-When the creating the cPP repository from the New-iTC-Template repository, it is important to run the script contained in the https://github.com/itc-wgtools/repo-labels[repo-labels] repository. The purpose of this script is to edit the labels available for Issues and Pull Requests to a standard set (and be relied upon for other tools added over time).
+To import the contents to an existing blank repository:
 
-While the repository will work fine without this script, some of the features of the template repository and some planned maintenance tools will not work correctly without this script.
+. Open the repository page
+. At the bottom of the page, click the "Import code" button
+. Enter the URL for the type of repository you are going to create from the <<RepoTable>> table and click Begin Import
 
-Instructions for running the script are at the repository.
+This only works if you created a repository but have no content in it. Once there is content you will not be able to import the templates.
+
+==== iTC Template Repository Configuration
+The iTC Template repository would be the primary work location for the cPP and SD for the iTC. As such there are a few additional steps that should be followed to provide some additional capabilities to the iTC in the management of the work of maintaining the documents over the long term. While these can be used on other repositories, they are laid out with a focus on the cPP/SD work.
+
+===== repo-labels script
+To support some level of standardization, a script has been created to edit the labels in the repository to a common set. These are then used for all Issues and Pull Requests in a standard way to support standard instructions/capabilities and provide a basis for potential future tools over time.
+
+The script and instructions for running it can be found at the https://github.com/itc-wgtools/repo-labels[repo-labels] repository.
+
+While the repository will work fine without this script, some of the features provided here in terms of templates for managing Issues and Pull Requests will not work correctly without these labels.
 
 The repository assumes the user has installed Ruby (such as by following <<Installing Ruby>>). 
 
-=== Organization Settings
-==== Organization Owners
-Once the Organization has been created, the first thing that should be done is to assign at least one more Owner for the organization.
+==== Repository Projects
+GitHub Projects allow you to track the development process (in our case, the documentation process) to the completion of the project. Projects can be very powerful, but can also be a little bit of work to setup and maintain (and GitHub doesn't provide a large amount of capabilities natively).
+
+More general information aboud GitHub Projects can be found https://help.github.com/en/github/managing-your-work-on-github/about-project-boards[here].
+
+It is recommended to have generally, 2 projects at any one time. The first project would be the "Next Release" project (called Maintenance, here), while the second project would be for the Interpretation Team.
+
+===== Installing project-bot
+To help automate some aspects of tracking projects, we are going to use https://github.com/apps/project-bot[project-bot]. This will let movement of tasks between steps be automated.
+
+To install project-bot:
+
+. Go to the https://github.com/apps/project-bot[install page]
+. Click Install
+. Select the iTC organization
+. Select All repositories (the default) and click Install
+
+Once the installation is complete you should see the Settings page for the organization.
+
+The https://github.com/philschatz/project-bot[project-bot site] provides instructions on how to create cards in the Project that can automate some tasks.
+
+===== Creating Projects
+It is possible to copy projects into the repository from the https://github.com/itc-wgtools/New-iTC-Template[New-iTC-Template] repository. This will copy the outline (the columns) of the project and built-in automations, but it will not copy the contents of the project (in this case the project-bot cards).
+
+To create the projects, follow these steps for each project in the https://github.com/itc-wgtools/New-iTC-Template[New-iTC-Template] repository:
+
+. Go to the https://github.com/itc-wgtools/New-iTC-Template/projects[Projects] tab
+. Select the project to be copied
+. Click the Menu icon in the upper right-hand corner of the Project display
+. Click the 3 dots (...) and select Copy
+. For the Owner, choose the repository for the cPP/SD documents
+. Enter the name (generally remove the [COPY] text) and the description
+. Make sure Copy automation settings is checked
+. Click Copy Project
+
+This will create 2 blank projects with the columns and a few basic automations laid out.
+
+===== Setting the Project Automation
+Once the projects have been created, the project-bot configuration needs to be added. There is no automated way to handle this, but it is a simple copy paste from the template project into the new one.
+
+The easiest way to do this is to open the template project and the new project in separate browser windows to easily copy and paste. 
+
+In all but the last column of each project there is a single "card". Cards can be anything (like notes), but the project-bot can use specially formatted cards to run automations.
+
+For each column in each project, do the following:
+
+. In a column in the template project, click the 3 dots (...) and select Edit Note
+. Copy ALL the text in the card
+. Click the + in the upper right hand corner of the matching column in the new project
+. Paste the contents into the note and click Add
+
+Once all the cards have been copied, the Projects should be complete.
 
 [NOTE]
 ====
-This assumes that the other users who will be owners have already created GitHub accounts for themselves.
+It is expected that you will make multiple copies of the Maintenance project to manage ongoing updates.
 ====
 
-To set another Owner for the organization, go to the Organization page and click on the People tab at the top.
+==== Issue Templates
+Within the template repository for the cPP/SD are Issue Templates to help users with filling out the information needed when creating a new issue. While these may not be needed for everyone, they will likely be very helpful for users who do not participate often in the group and so may not be completely familiar with the information needed to respond to their concerns. In addition it is possible to assign labels to classify the issue as well as users to review.
 
-. Click the Invite button on the top right
-. Enter the username of the person who will become another Owner
-. Choose Owner as the role in the organization and click Send Invitation
+While the default information should be sufficient overall, to help make sure new issues are properly reviewed, it is useful to assign users to review the incoming issues. 
 
-Once the user accepts the invitation, they will automatically be added as an Owner.
+.Issue Templates
+[[Workflow]]
+[cols="1,1,1,3",options="header"]
+|===
+|Name 
+|Should be Assigned
+|Project
+|Description
 
-If the user already exists within the list of People in the Organization, then clicking the Gear icon to the right of their name and selecting "Change role..." will let you change their role accordingly.
+.^|cPP change request
+.^|Editor Team
+.^|Maintenance
+|Issue specifically for the cPP (requirements, etc, but not the SD) 
+
+.^|PP-Configuration change request
+.^|Editor Team
+.^|Maintenance
+.^|Issue specifically for a PP-Configuration document
+
+.^|Request for interpretation
+.^|Interpretation Team
+.^|Interpretation
+|Issue specifically related to a request for a Technical Decision/Interpretation of the current published cPP/SD
+
+.^|SD change request
+.^|Editor Team
+.^|Maintenance
+|Issue specifically for the SD (evaluation activities, etc, but not the cPP requirements directly)
+
+|===
+
+The Issue Templates should be assigned to the members of the <<GitHub Teams,teams>>, but they must be assigned individually. The Teams cannot be used for assigning issues, only individual users.
+
+To assign the team members to the Issue Templates (do this for each template):
+
+. Open the Repository Settings
+. On the Options tab, under Features, click Set up templates
+. Click Preview and edit
+. Click the pencil icon next to the title
+. Click the Assignees gear symbol
+. Select the members of the Editors team (up to 10) to be assigned to the issue when created
+. Click Close Preview
+
+Once all the templates have been edited with the proper Assignees:
+
+. Click Propose changes
+. Select Commit directly to the Master branch (this should be the default branch)
+. Follow the steps to commit, approve and merge the changes (this may require an Administrator override at this point)
+
+=== Repository Branches
+One of the most important aspects of working in GitHub is the use of Branches. This is how you manage the process of creating the documents. When created, a repository has a single branch, Master. This should be reserved for the current "published" content. Ongoing work though, should be done in different branches, which would then be merged into the Master on some periodic basis. 
+
+Here two new branches should be created for different purposes: Working and Interpretation.
+
+To create the new branches for the repository (do this for each branch):
+
+. Go to the Code tab
+. Click the Branch: master menu button
+. Enter the name of the new branch in the dialog box and then click the Create branch at the bottom of the window
+
+The Working branch is where everyone should be submitting work to, while the Master would be considered the current "published" document.
+
+The Interpretation branch is specifically for the Interpretation Team to work in for changes to the existing Master, and will be limited to only members of the IT being able to merge changes.
 
 === GitHub Repository Collaborators
 GitHub public repositories are visible to anyone with a GitHub account. This means that anyone can submit issues or make comments. The limitation here though is that only collaborators (members) of the repository can have permissions which let them actually edit the documents contained in the repository. In GitHub, the most common permission used for collaborators is Write.
@@ -145,25 +284,63 @@ To add Collaborators, go to the Repository:
 
 They will be added to the list of collaborators. If the permission does not show Write, select the menu item and choose Write.
 
-=== Repository Branches
-One of the most important aspects of working in GitHub is the use of Branches. This is how you manage the process of creating the documents. When created, a repository has a single branch, Master. This should be reserved for the current "published" content. Ongoing work though, should be done in a different branch, which would then be merged into the Master on some periodic basis. This second, working branch needs to be created and set to the default working branch.
+=== GitHub Teams
+In addition to having collaborators in the repository, the organization can also create Teams of collaborators. Generally teams have two purposes: to control access to a branch and to request reviews on a Pull Request. Additionally, teams also have their own specific GitHub pages where discussions outside of Issues or Pull Requests can happen within the team.
 
-To create and set the new branch for the repository:
+More information about teams can be found https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-teams[here].
 
-. Go to the Code tab
-. Click the Branch: master menu button
-. Enter the name of the new branch in the dialog box (the recommended name would be working) and then click the Create branch at the bottom of the window
-. Click the Settings tab
-. Select Branches from the left side
-. Click the "master" menu button, and select the branch you just created (working)
-. Click the Update button and accept the change
+While an organization can create teams to suit their needs, there should be at least 2 specific Teams that are used in the cPP/SD repository.
 
-This will set the working branch to be the default branch that everyone will work against. This provides a more unrestricted environment since everyone will be working against a copy that is not the published version.
+[IMPORTANT]
+====
+Teams are specific to a repository, so to have the same team in multiple repositories will require creating that team in each separate repository.
+====
 
-==== Branch Protection Rules
-Once the branches have been setup, rules should be configured to protect the branches. This protection forces changes to be reviewed before they can be merged into the document, thereby preventing accidental changes and also forcing review of the changes before they become part of the document.
+To create a new team:
 
-While each branch should have protection, the amount of protection is usually different. In general, each branch should be protected based on its importance. For example, the Master is the "official" version, and so should have a higher bar of approval before being changed, while the Working branch is where work on the next iteration is being done, and so should be more easily updated.
+. Go to the Repository Settings
+. Choose the Collaborators & teams menu
+. Click +Create new team
+. Enter a team name (IT, Editor, etc) and a description
+. Click Create team
+
+Once the team has been created, you will be taken to the Team discussion page.
+
+Back on the Collaborators & team settings page, you can assign the permissions to the repository for the team. The <<Organization Teams>> table shows the recommended Teams.
+
+.Organization Teams
+[cols="1,1,1,2",options="header"]
+|===
+|Team
+|Branch
+|Permission
+|Purpose
+
+.^|Editors
+.^|Master
+.^|Maintain
+|To triage and prioritize Issues to be worked on.
+
+To manage the Master/Published versions of the cPP/SD and related docs (only users with Write access to the Master branch).
+
+.^|IT
+.^|Interpretation
+.^|Maintain
+|To handle incoming Interpretation requests.
+
+To manage the Interpretation branch for changes related to requests (only users with Write access to the Interpretation branch).
+
+|===
+
+==== Issue Triage and Teams
+One important consideration with the use of teams is that they cannot be used everywhere in GitHub. The main point is that Issues cannot be assigned to a Team. When a new issue is created, it isn't possible to specify an entire team to be notified of the issue, only up to 10 possible users. 
+
+To simplify incoming issue triage, it is recommended that a small team  be created (this does not have to be a formal GitHub Team) that would be assigned (for <<Issue Templates>>) and would also regularly check for new issues that may have been created without having been assigned. The purpose of this group would be to assign the issue to a proper Project for review, not to necessarily issue any judgement on the contents of the issue.
+
+=== Branch Protection Rules
+Once the branches, users and teams have been setup, rules should be configured to protect the branches. This protection forces changes to be reviewed before they can be merged into the document, thereby preventing accidental changes and also forcing review of the changes before they become part of the document.
+
+While each branch should have protection, the amount of protection is usually different. In general, each branch should be protected based on its importance. For example, the Master is the "official" version, and so should have a higher bar of approval as well as more limited access to the approval process to be changed, while the Working branch is where work on the next iteration is being done, and so should be more easily updated.
 
 The <<Branch Protection>> table shows some examples of the levels to set the approvals at. What these settings mean is how many users must approve a change before it can be merged into the specified branch. 
 
@@ -176,17 +353,23 @@ The <<Branch Protection>> table shows some examples of the levels to set the app
 
 |Master
 |50%
-|5 (for 10 members)
+|2 (for 3-4 members of the Editor Team)
 
 |Working
 |25%
 |2 or 3 (for 10 members)
 
+|Interpretation
+|75%
+|3 or 4 (for 4-5 members of the IT)
+
 |===
 
-The numbers should be set to something workable for the iTC. While there may be 50 members in an iTC, maybe only 14 may be active (obviously this will vary), so setting the publication to Master at 25 could prevent ever being able to make changes to the published branch. Generally it would be recommended to base these numbers on the active collaborators within the iTC, with the possibility of a slightly higher number for the Master.
+The numbers should be set to something workable for the iTC. While there may be 50 members in an iTC, maybe only 14 may be active (obviously this will vary), so setting approval requirement to 25 could prevent ever being able to make changes. Generally it would be recommended to base these numbers on the active collaborators within the iTC.
 
 These numbers can be changed at any time, so start low and work up based on the number of active collaborators.
+
+In addition to the total number of approvals needed to make a change, is the layer of permissions about who can make these changes. This is where the Editor and IT teams come in, where only members of these teams will be allowed to make changes (i.e. merge Pull Requests) to specific branches.
 
 To set a rule:
 
@@ -194,11 +377,21 @@ To set a rule:
 . Select Branches from the left side
 . Click the Add rule button on the right hand side
 . Type in the name of the branch to be protected in the Branch name pattern
-. Check the box in Require pull requewst reviews before merging
+. Check the box in Require pull request reviews before merging
 . Select the number in the Required approving reviews dropdown
+. Check the box Include administrators
+. Check the box in Restrict who can push to matching branches
+. In the dialog type in the name of the appropriate team
 . Click Create
 
-Do this for both the Master and the Working branches.
+Do this for both the Master and the Interpretation branches. The Working branch can be created without the Restrict who can push to matching branches setting being enabled.
+
+[NOTE]
+====
+The setting to Include administrators is specifically to ensure that administrators follow the same rules on branches as everyone else. There may be times when this is a problem, and can be adjusted as needed by the organization.
+====
+
+A good reference for additional information about protecting branches can be found https://github.community/t5/Support-Protips/Best-practices-for-protected-branches/ba-p/10224[here].
 
 === GitHub Backups
 One of the most important thing to do is have a backup of the Organization repository. While online services are usually safe, occasionally there have been reports about repositories being lost in GitHub (and not when someone actually deleted it).
@@ -274,7 +467,7 @@ This is not the only way to install Ruby, but is being used here as a reference.
 Once Ruby has been installed, start "Command prompt with Ruby". The execute the following commands:
 
  gem install asciidoctor
- gem install asciidoctor-pdf
+ gem install asciidoctor-pdf --pre
  gem install asciidoctor-diagram
 
 This will install the components of the Asciidoctor toolchain.
@@ -282,14 +475,14 @@ This will install the components of the Asciidoctor toolchain.
 ==== Installing CCUF Custom Components
 The following components need to be installed:
 
-* iTC-Tools Output Generation package
+* itc_gentools Output Generation package
 
-===== iTC-Tools Output Generation
+===== itc_gentools Output Generation
 This particular package can be found https://github.com/itc-wgtools/itc_gentools[here]. The site has instructions to download the Gem file needed to install the package.
 
 ==== Test the Toolchain
 To quickly test the full toolchain, pick a file and then run this command (fill in your own Asciidoctor file):
 
-  itc-gentools both <sample.adoc>
+  itc_gentools both <sample.adoc>
 
 If there are no errors or prompts that something went wrong, there should be an HTML and a PDF files in the folder.
