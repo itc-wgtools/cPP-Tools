@@ -1,8 +1,8 @@
 = CCUF Team Tools Working Group
 :showtitle:
 :imagesdir: images
-:revnumber: 0.6
-:revdate: 2019-09-13
+:revnumber: 0.7
+:revdate: 2020-03-13
 
 include::menu-include.adoc[]
 
@@ -31,23 +31,47 @@ The guidance is broken into several areas:
 Documents that are available for public review can be seen at the link:/drafts/drafts.html[Drafts] page. This will include information about submitting comments to the WG.
 
 == Current Status
-The WG is working towards the completion of the documentation in time for the https://www.iccc2019.com/[ICCC 2019]. As a volunteer effort, we were able to complete the majority of the immediate link:/files_list.html[documents] an iTC would need. As we move past the ICCC more documents related to the administration of the iTC itself will be produced. 
+The WG has released the updates targeted for the Spring 2020 CCUF meetings (even though they have been canceled). The primary focus of this effort has been to provide an outline for maintenance and interpretations, along with some tweaks to the previously released documentation.
 
-[ditaa, "Current_Status"]
+To provide a better naming convention towards the updates provided by the WG, we are moving from "Phase X" for "YYYY.ZZ" where YYYY will be the year and ZZ will be the release number (generally this will probably only be 2-4 times a year, but we could handle more if needed). So the Phase 3 update has become the 2020.01 update.
+
+[ditaa, "Current_Status_2020.png"]
 ....
                                   
-    +----------+    +----------+   +----------+   +----------+   +----------+
-    |          |    |          |   |          |   |          |   | cGRE     |
-    | Phase 1  |    |  Public  |   | Phase 2  |   |  Public  |   | Public   |
-    | Drafts   |--> |  Review  |-->| Drafts   |-->|  Review  |-->| Release  |
-    |          |    |  Phase 1 |   |          |   |  Phase 2 |   |          |
-    |          |    | (June 25)|   |          |   |  (Aug30) |   | ICCC2019 |
-    +----------+    +----------+   +----------+   +----------+   +----------+
+    +----------+    +----------+   +----------+   +----------+
+    |          |    | cYEL     |   |          |   |          |
+    | Phase 3  |    | 2020.01  |   | 2020.02  |   | 2020.02  |
+    | Updates  |--> | Release  |-->| Updates  |-->| Release  |
+    |          |    |          |   |          |   |          |
+    |          |    | CCUF 2020|   |          |   | ICCC2020 |
+    +----------+    +----------+   +----------+   +----------+
 
-....
+....    
+
+== Next Focus
+With the 2020.01 document release, the WG feels that we are at a point that the templates and guidance is usable by any iTC, and needs feedback to move further. There are additional areas beyond this set of documents that we feel could use more input, and this will be the focus of the group for new content. The WG plans to work towards an outline of dealing with document lifecycles, sunsetting and handling the integration of Technical Decisions into the documents in addition to answering questions and assisting with iTCs starting to use the templates as they exist today.
 
 == Public Presentation of the Work
-At the CCUF meetings in April 2019, the initial public presentation of the Tools WG was presented. This presentation can be found here: https://youtu.be/6Gdb4qNn0tg (note that this is 1:22 long). This focused on the thought process behind the direction and the plans at that point.
+So far the content has been presented three times publically. 
+
+[cols=".^1,.^1",options="header"]
+|====
+
+|Event
+|Link
+
+|April 2019 CCUF (Rome)
+|https://youtu.be/6Gdb4qNn0tg
+
+|October 2019 CCUF (Singapore)
+|https://youtu.be/eBwTwYS5TRE
+
+|October 2019 ICCC (Singapore)
+|image:Crystal_Clear_mimetype_pdf.png[link=./media/Team_Tools_WG-Brian_Wood_190919.pdf,40,]
+
+|====
+
+Note that the YouTube videos are both around 1.5 hours. The first one is more about thoughts and planning directions while the second one focuses on the initial set of documentation that is available for use.
 
 == Eating Our Own Dog Food
 This WG has been attempting to use what we are providing for the wider community. This has helped (and probably hurt initially as we all learned from the experience, but that was the point), but hopefully the efforts of the WG will benefit the wider community as we go forward.
