@@ -6,8 +6,8 @@
 :sectnumlevels: 7
 :imagesdir: images
 :icons: font
-:revnumber: 0.2
-:revdate: 2019-08-23
+:revnumber: 0.21
+:revdate: 2020-03-13
 
 :iTC-longname: Coffee Maker
 :iTC-shortname: CM-iTC
@@ -197,7 +197,7 @@ The sections here are boilerplate, but the content needs to be filled in.
 === Security Objectives Rationale
 The following table describes how the assumptions, threats, and organizational security policies map to the security objectives.
 
-.Mapping between Security Problem Defintion and Security Objectives
+.Mapping between Security Problem Definition and Security Objectives
 [%header,cols="1,1,1"]
 |===
 |Threat, Assumption, or OSP 
