@@ -4,8 +4,8 @@
 :sectnums:
 :imagesdir: images
 :icons: font
-:revnumber: 0.3
-:revdate: 2019-10-01
+:revnumber: 0.4
+:revdate: 2020-06-02
 :xrefstyle: full
 
 == Overview
