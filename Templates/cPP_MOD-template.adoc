@@ -6,6 +6,7 @@
 :sectnumlevels: 7
 :imagesdir: images
 :icons: font
+:doctype: book
 :revnumber: 0.2
 :revdate: 2019-08-23
 
@@ -36,8 +37,9 @@ _Government Agency Names_
 === Revision History
 
 .Revision history
-[%header,cols="1,2,4"]
+[%header,cols=".^1,.^2,.^4"]
 |===
+
 |Version 
 |Date 
 |Description
@@ -49,7 +51,6 @@ _Government Agency Names_
 |
 |
 |
-
 
 |===
 
@@ -127,7 +128,6 @@ It is possible that you don't have individual use cases and a single description
 ==== USE CASE 2: second use case
 
 
-
 == CC Conformance Claims
 As defined by the references <<CC1>>, <<CC2>> and <<CC3>>, this PP-Module:
 
@@ -186,8 +186,9 @@ The sections here are boilerplate, but the content needs to be filled in.
 The following table describes how the assumptions, threats, and organizational security policies map to the security objectives.
 
 .Mapping between Security Problem Defintion and Security Objectives
-[%header,cols="1,1,1"]
+[%header,cols=".^1,.^1,.^1"]
 |===
+
 |Threat, Assumption, or OSP 
 |Security Objectives 
 |Rationale
@@ -329,7 +330,7 @@ This component defines the requirements for the TSF to be able to enrol a user, 
 ===== Component levelling
 [#img-FIA-MBE-EXT] 
 .Component levelling 
-[ditaa]
+[ditaa, FIA_MBE_EXT, png]
 ....
                                                      +---+
                                                   +->| 1 |
@@ -491,8 +492,11 @@ These tables need to be completed to show mapping and justification that the thr
 ====
 
 .Consistency Rationale for threats and OSPs
+[%header, cols=".^1,.^1"]
 |===
-|Threats/OSPs	|Consistency Rationale
+
+|Threats/OSPs
+|Consistency Rationale
 
 |
 |
@@ -500,12 +504,14 @@ These tables need to be completed to show mapping and justification that the thr
 |===
 
 .Consistency Rationale for Assumptions
+[%header, cols=".^1,.^1"]
 |===
-|Assumptions	    |Consistency Rationale
+
+|Assumptions
+|Consistency Rationale
 
 |
 |
-
 
 |===
 
@@ -514,18 +520,23 @@ These tables need to be completed to show mapping and justification that the thr
 The objectives for the biometric system and its operational environment are consistent with the <<MDFPP>> based on the following rationale:
 
 .Consistency Rationale for TOE Objectives
+[%header, cols=".^1,.^1"]
 |===
-|TOE Objectives	|Consistency Rationale
+
+|TOE Objectives
+|Consistency Rationale
 
 |
 |
-
 
 |===
 
 .Consistency Rationale for Environmental Objectives
+[%header, cols=".^1,.^1"]
 |===
-|Environmental Objectives	|Consistency Rationale
+
+|Environmental Objectives
+|Consistency Rationale
 
 |
 |
@@ -551,8 +562,9 @@ Optional:: The requirement is optional for inclusion in the ST.
 Selection:: The requirement inclusion is determined by selections in other requirements in the ST.
 
 .Security Functional Requirements
-[Header,cols="4,8,2"]
+[%header,cols=".^4,.^8,.^2"]
 |===
+
 |Requirement Class
 |Requirement Components
 |Type
@@ -620,7 +632,9 @@ A key used to encrypt data at rest.
 [%header,cols="1,4"]
 
 |===
-|Acronym |Meaning
+
+|Acronym
+|Meaning
 
 |AES
 |Advanced Encryption Standard
