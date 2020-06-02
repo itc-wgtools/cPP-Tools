@@ -4,8 +4,8 @@
 :table-caption: Table
 :icons: font
 :doctype: book
-:revnumber: 0.9
-:revdate: 2019-08-23
+:revnumber: 0.91
+:revdate: 2020-06-02
 
 :iTC-longname: Coffee Maker
 :iTC-shortname: CM-iTC
