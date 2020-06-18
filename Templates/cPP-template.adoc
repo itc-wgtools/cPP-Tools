@@ -6,8 +6,9 @@
 :sectnumlevels: 7
 :imagesdir: images
 :icons: font
-:revnumber: 0.21
-:revdate: 2020-03-13
+:doctype: book
+:revnumber: 0.3
+:revdate: 2020-06-02
 
 :iTC-longname: Coffee Maker
 :iTC-shortname: CM-iTC
@@ -35,8 +36,9 @@ _Government Agency Names_
 === Revision History
 
 .Revision history
-[%header,cols="1,2,4"]
+[%header,cols=".^1,.^2,.^4"]
 |===
+
 |Version 
 |Date 
 |Description
@@ -48,7 +50,6 @@ _Government Agency Names_
 |
 |
 |
-
 
 |===
 
@@ -198,8 +199,9 @@ The sections here are boilerplate, but the content needs to be filled in.
 The following table describes how the assumptions, threats, and organizational security policies map to the security objectives.
 
 .Mapping between Security Problem Definition and Security Objectives
-[%header,cols="1,1,1"]
+[%header,cols=".^1,.^1,.^1"]
 |===
+
 |Threat, Assumption, or OSP 
 |Security Objectives 
 |Rationale
@@ -292,12 +294,13 @@ If the iTC decides to go above EAL1 requirements then this table (and the associ
 ====
 
 .Security Assurance Requirements
-[Header,cols="1,2"]
+[%header,cols=".^1,.^2"]
 |===
+
 |Assurance Class
 |Assurance Components
 
-.7+.^|Security Target (ASE)
+.7+|Security Target (ASE)
 |Conformance Claims (ASE_CCL.1)
 
 |Extended components definition (ASE_ECD.1)
@@ -315,12 +318,12 @@ If the iTC decides to go above EAL1 requirements then this table (and the associ
 |Development (ADV)
 |Basic functional specification (ADV_FSP.1)
 
-.2+.^|Guidance documents (AGD)
+.2+|Guidance documents (AGD)
 |Operational user guidance (AGD_OPE.1)
 
 |Preparative procedures (AGD_PRE.1)
 
-.2+.^|Life cycle support (ALC)
+.2+|Life cycle support (ALC)
 |Labeling of the TOE (ALC_CMC.1)
 
 |TOE CM coverage (ALC_CMS.1)
@@ -466,7 +469,7 @@ This component defines the requirements for the TSF to be able to enrol a user, 
 ===== Component levelling
 [#img-FIA-MBE-EXT] 
 .Component levelling 
-[ditaa]
+[ditaa, FIA_MBE_EXT, png]
 ....
                                                      +---+
                                                   +->| 1 |
@@ -629,8 +632,11 @@ These tables need to be completed to show mapping and justification that the thr
 ====
 
 .Consistency Rationale for threats and OSPs
+[%header, cols=".^1,.^1"]
 |===
-|Threats/OSPs	|Consistency Rationale
+
+|Threats/OSPs	
+|Consistency Rationale
 
 |
 |
@@ -638,12 +644,14 @@ These tables need to be completed to show mapping and justification that the thr
 |===
 
 .Consistency Rationale for Assumptions
+[%header, cols=".^1,.^1"]
 |===
-|Assumptions	    |Consistency Rationale
+
+|Assumptions
+|Consistency Rationale
 
 |
 |
-
 
 |===
 
@@ -652,18 +660,23 @@ These tables need to be completed to show mapping and justification that the thr
 The objectives for the biometric system and its operational environment are consistent with the <<MDFPP>> based on the following rationale:
 
 .Consistency Rationale for TOE Objectives
+[%header, cols=".^1,.^1"]
 |===
-|TOE Objectives	|Consistency Rationale
+
+|TOE Objectives
+|Consistency Rationale
 
 |
 |
-
 
 |===
 
 .Consistency Rationale for Environmental Objectives
+[%header, cols=".^1,.^1"]
 |===
-|Environmental Objectives	|Consistency Rationale
+
+|Environmental Objectives
+|Consistency Rationale
 
 |
 |
@@ -689,8 +702,9 @@ Optional:: The requirement is optional for inclusion in the ST.
 Selection:: The requirement inclusion is determined by selections in other requirements in the ST.
 
 .Security Functional Requirements
-[Header,cols="4,8,2"]
+[%header,cols=".^4,.^8,.^2"]
 |===
+
 |Requirement Class
 |Requirement Components
 |Type
@@ -738,6 +752,7 @@ Selection:: The requirement inclusion is determined by selections in other requi
 |Trusted Channels (FTP)
 |
 |
+
 |===
 
 [appendix]
@@ -755,10 +770,12 @@ A key used to encrypt data at rest.
 [appendix]
 == Acronyms
 .Acronyms
-[%header,cols="1,4"]
+[%header,cols=".^1,.^4"]
 
 |===
-|Acronym |Meaning
+
+|Acronym 
+|Meaning
 
 |AES
 |Advanced Encryption Standard

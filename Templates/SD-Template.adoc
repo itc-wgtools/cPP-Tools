@@ -6,8 +6,9 @@
 :table-caption: Table
 :imagesdir: images
 :icons: font
-:revnumber: 0.2
-:revdate: 2019-08-23
+:doctype: book
+:revnumber: 0.3
+:revdate: 2020-06-02
 :xrefstyle: full
 
 :iTC-longname: Coffee Maker
@@ -42,8 +43,12 @@ _List iTC and Common Criteria Portal page_
 === Revision History
 
 .Revision history
+[%header,cols=".^1,.^2,.^4"]]
 |===
-|Version |Date |Description
+
+|Version
+|Date
+|Description
 
 |0.1
 |<DATE>
@@ -52,7 +57,6 @@ _List iTC and Common Criteria Portal page_
 |
 |
 |
-
 
 |===
 
@@ -513,6 +517,7 @@ In order to meet these goals some refinement of the AVA_VAN.1 CEM work units is 
 .Mapping of AVA_VAN.1 CEM Work Units to Evaluation Activities
 [cols="1,.^2",options="header",]
 |===
+
 |CEM AVA_VAN.1 Work Units
 |Evaluator Activities
 
@@ -857,11 +862,13 @@ A key used to encrypt data at rest.
 == Acronyms
 
 .Acronyms
-[cols="1,4",options="header",]
+[cols=".^1,.^4",options="header",]
 |===
+
 |Acronym
 |Meaning
 
 |
 |
+
 |===
