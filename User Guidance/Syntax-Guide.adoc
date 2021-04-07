@@ -5,7 +5,7 @@
 :imagesdir: images
 :icons: font
 :revnumber: 0.4
-:revdate: 2020-06-02
+:revdate: 2021-04-07
 :xrefstyle: full
 
 == Overview
@@ -161,11 +161,11 @@ Extra line breaks within the document will be ignored when rendering the file, s
 
 *Bold*
 
-[underline]#Underline#
+pass:q[<u>Underline</u>]
 
 _Italics_
 
-[line-through]#Strikethrough#
+pass:q[<del>Strikethrough</del>]
 
 === Admonitions
 There are several "admonitions" that can be used.
