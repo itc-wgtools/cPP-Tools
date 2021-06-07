@@ -6,8 +6,8 @@
 :sectnumlevels: 7
 :imagesdir: images
 :icons: font
-:revnumber: 0.2
-:revdate: 2019-11-15
+:revnumber: 0.3
+:revdate: 2021-06-07
 
 include::menu-include.adoc[]
 
@@ -184,16 +184,15 @@ To create the projects, follow these steps for each project in the https://githu
 This will create 2 blank projects with the columns and a few basic automations laid out.
 
 ===== Setting the Project Automation
-Once the projects have been created, the project-bot configuration needs to be added. There is no automated way to handle this, but it is a simple copy paste from the template project into the new one.
-
-The easiest way to do this is to open the template project and the new project in separate browser windows to easily copy and paste. 
+Once the projects have been created, the project-bot configuration needs to be added. There is no automated way to handle this, but it is a simple copy paste from the examples below to fill it out.
 
 In all but the last column of each project there is a single "card". Cards can be anything (like notes), but the project-bot can use specially formatted cards to run automations.
 
-For each column in each project, do the following:
+There are two provided project templates, one for Maintenance and one for the Interpretation Team. Most of these are common, but there are some differences. The examples below are noted for which project they are applicable to (Maintenance, Interpretation Team or both).
 
-. In a column in the template project, click the 3 dots (...) and select Edit Note
-. Copy ALL the text in the card
+To create the card, do the following for each column that is noted:
+
+. Copy ALL the text in the card example (below)
 . Click the + in the upper right hand corner of the matching column in the new project
 . Paste the contents into the note and click Add
 
@@ -203,6 +202,53 @@ Once all the cards have been copied, the Projects should be complete.
 ====
 It is expected that you will make multiple copies of the Maintenance project to manage ongoing updates.
 ====
+
+====== To Do (Both)
+....
+###### Automation Rules
+
+<!-- Documentation: https://github.com/philschatz/project-bot -->
+
+- `added_label` **Interpretation**
+- `new_issue`
+....
+
+====== Awaiting Priority (Both)
+....
+###### Automation Rules
+
+<!-- Documentation: https://github.com/philschatz/project-bot -->
+
+- `added_label` **Awaiting Priority**
+....
+
+====== Awaiting Review (Both)
+....
+###### Automation Rules
+
+<!-- Documentation: https://github.com/philschatz/project-bot -->
+
+- `added_label` **Awaiting Review**
+....
+
+====== In Progress (Maintenance only)
+....
+###### Automation Rules
+
+<!-- Documentation: https://github.com/philschatz/project-bot -->
+
+- `added_label` **In Progress**
+- `new_pullrequest`
+....
+
+====== In Progress (Interpretation Team only)
+....
+###### Automation Rules
+
+<!-- Documentation: https://github.com/philschatz/project-bot -->
+
+- `added_label` **In Progess**
+....
 
 ==== Issue Templates
 Within the template repository for the cPP/SD are Issue Templates to help users with filling out the information needed when creating a new issue. While these may not be needed for everyone, they will likely be very helpful for users who do not participate often in the group and so may not be completely familiar with the information needed to respond to their concerns. In addition it is possible to assign labels to classify the issue as well as users to review.
