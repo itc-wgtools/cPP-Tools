@@ -1,0 +1,75 @@
+<This is a template for an allowed-with list to specify objects allowed to be used with a particular PP when claiming exact conformance. When completing the template all text in angled brackets, such as this, needs to be replaced or deleted. There is a Word bookmark defined to insert the list version number in the header using the Allowed-with list version below>
+
+[width="100%",cols="44%,56%",options="header",]
+|===
+|*Allowed-with list version* |<version number>
+|Date |<dd-mm-yyyy>
+|===
+
+[width="100%",cols="35%,65%",options="header",]
+|===
+|cPP to which this list applies |<title>
+|Latest definitive cPP version |v<version number of latest definitive version of the cPP – this does not therefore include any versions that may currently be under preparation or review>, <dd-mm-yyyy>
+|Supporting Document for cPP a|
+<title>
+
+<note that if multiple SDs apply to the cPP then the title and version of each should be stated>
+
+|Latest definitive SD version |v<version number of latest definitive version of the SD – this does not therefore include any versions that may currently be under preparation or review>, <dd-mm-yyyy>
+|===
+
+This document contains the lists of allowed packages and PP-Modules to which exact conformance can be claimed in conjunction with the above cPP. It is used in conjunction with the ‘CC Conformance’ section of the cPP to provides the complete conformance statement for the cPP.
+
+Inclusion of an object on one of these lists does not imply endorsement of the object by the iTC, nor does it imply that the relevant object has been checked for compliance with the assurance requirements applicable to a PP-Configuration or ST that uses the cPP in conjunction with the relevant object.
+
+Conformance claims from other Protection Profiles (apart from PP-Configurations that may be defined using the PP above and the allowed objects below) are not allowed by cPP.
+
+== Allowed Packages:
+
+<If no packages are yet included then replace this table with the statement “No objects of this type are currently allowed with the cPP”>
+
+[width="100%",cols="8%,26%,66%",options="header",]
+|===
+a|
+[arabic]
+. {blank}
+
+|Object ID: |<identifier for the package>
+| |Object version: |<version number of the package>
+| |Owner: |<object owner’s contact details>
+| |Notes: |
+a|
+[arabic, start=2]
+. {blank}
+
+|Object ID: |<identifier for the package>
+| |Object version: |<version number of the package>
+| |Owner: |<object owner’s contact details>
+| |Notes: |
+| | |
+|===
+
+== Allowed PP-Modules:
+
+<If no PP-Modules are yet included then replace this table with the statement “No objects of this type are currently allowed with the cPP”>
+
+[width="100%",cols="8%,26%,66%",options="header",]
+|===
+a|
+[arabic]
+. {blank}
+
+|Object ID: |<identifier for the PP-module >
+| |Object version: |<version number of the PP-Module>
+| |Owner: |<object owner’s contact details>
+| |Notes: |
+a|
+[arabic, start=2]
+. {blank}
+
+|Object ID: |<identifier for the PP-module >
+| |Object version: |<version number of the PP-Module>
+| |Owner: |<object owner’s contact details>
+| |Notes: |
+| | |
+|===
